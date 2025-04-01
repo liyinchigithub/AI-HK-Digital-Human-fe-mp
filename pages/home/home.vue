@@ -192,17 +192,21 @@ export default {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden; 
 }
 
 .message-list {
   flex: 1;
   padding: 20rpx;
   background-color: #f5f5f5;
+  width: 100vw; /* 确保宽度不超过视口 */
+  overflow-x: hidden; /* 禁用横向滚动 */
 }
 
 .message-item {
   margin: 20rpx 0;
   max-width: 80%;
+  width: fit-content;
 }
 
 .message-content {
@@ -210,17 +214,28 @@ export default {
   border-radius: 10rpx;
   font-size: 28rpx;
   line-height: 1.5;
+  word-break: break-word; /* 新增：长文本自动换行 */
+}
+
+.input-area {
+  display: flex;
+  padding: 20rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #eee;
+  width: 100vw; /* 确保不超出视口 */
 }
 
 .user-message {
   margin-left: auto;
+  margin-right: 25rpx;  /* 右侧留出安全边距 */
 }
 
 .user-message .message-content {
   background-color: #007AFF;
   color: white;
+  max-width: 100%;     /* 防止内容溢出 */
+  padding: 20rpx 25rpx; /* 优化左右内边距 */
 }
-
 .ai-message .message-content {
   background-color: #FFFFFF;
   border: 1rpx solid #eee;
@@ -233,12 +248,6 @@ export default {
   text-align: right;
 }
 
-.input-area {
-  display: flex;
-  padding: 20rpx;
-  background-color: #fff;
-  border-top: 1rpx solid #eee;
-}
 
 .input {
   flex: 1;

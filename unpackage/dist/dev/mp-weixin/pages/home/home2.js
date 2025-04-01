@@ -139,7 +139,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni, uniCloud) {
+/* WEBPACK VAR INJECTION */(function(uni) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
@@ -147,27 +147,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 29));
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 32));
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -203,19 +184,15 @@ var _default = {
       // 输入内容
       loading: false,
       // 加载状态
-      scrollTop: 0,
-      // 滚动位置
-      isRecording: false,
-      tempFilePath: ''
+      scrollTop: 0 // 滚动位置
     };
   },
+
   methods: {
-    // 发送消息
     sendMessage: function sendMessage() {
       var _this = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-        var _session, _session2;
-        var session, _yield$uniCloud$callF, result, userMessage, question, _yield$uniCloud$callF2, _result, _result$data, aiResponse;
+        var userMessage, question, _res$header, _res$header2, _data$choices, _data$choices$, _data$choices$$messag, _yield$uni$request, _yield$uni$request2, err, res, data, responseContent, _this$parseResponse, _this$parseResponse2, thinkPart, answerPart, _error$data, errorMessage;
         return _regenerator.default.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -226,39 +203,6 @@ var _default = {
                 }
                 return _context.abrupt("return");
               case 2:
-                // 获取或创建会话
-                session = uni.getStorageSync('qianfan_session'); // 如果没有会话，创建一个新的会话
-                if (!(!((_session = session) !== null && _session !== void 0 && _session.conversation_id) || !((_session2 = session) !== null && _session2 !== void 0 && _session2.request_id))) {
-                  _context.next = 16;
-                  break;
-                }
-                _context.prev = 4;
-                _context.next = 7;
-                return uniCloud.callFunction({
-                  name: 'qianfan-chat',
-                  data: {
-                    action: 'create_session'
-                  }
-                });
-              case 7:
-                _yield$uniCloud$callF = _context.sent;
-                result = _yield$uniCloud$callF.result;
-                if (result.code === 0) {
-                  session = {
-                    conversation_id: result.data.conversation_id,
-                    request_id: result.data.request_id
-                  };
-                  uni.setStorageSync('qianfan_session', session);
-                }
-                _context.next = 16;
-                break;
-              case 12:
-                _context.prev = 12;
-                _context.t0 = _context["catch"](4);
-                console.error('会话创建失败:', _context.t0);
-                return _context.abrupt("return");
-              case 16:
-                // 发送消息逻辑
                 userMessage = {
                   role: 'user',
                   content: _this.inputText,
@@ -268,109 +212,104 @@ var _default = {
                 question = _this.inputText;
                 _this.inputText = '';
                 _this.scrollToBottom();
-                _context.prev = 21;
+                _context.prev = 7;
                 _this.loading = true;
-                _context.next = 25;
-                return uniCloud.callFunction({
-                  name: 'qianfan-chat',
+                _context.next = 11;
+                return uni.request({
+                  url: 'http://homechat-effassits-popgjiyphu.cn-hangzhou.fcapp.run/v1/chat/completions',
+                  method: 'POST',
+                  header: {
+                    'Content-Type': 'application/json',
+                    'Cookie': 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDM5MTAyMjcsInVpZCI6MX0.T_R6-qar4YY7GsZh0iIE9psjw0XmeGB29CqIAI9KnOU'
+                  },
+                  timeout: 15000,
                   data: {
-                    query: question,
-                    conversation_id: session.conversation_id
-                    // request_id: session.request_id
+                    messages: [{
+                      role: 'user',
+                      content: question
+                    }],
+                    stream: false
                   }
                 });
-              case 25:
-                _yield$uniCloud$callF2 = _context.sent;
-                _result = _yield$uniCloud$callF2.result;
-                if (_result.code === 0) {
-                  aiResponse = _result.data.response || '未收到有效回复';
+              case 11:
+                _yield$uni$request = _context.sent;
+                _yield$uni$request2 = (0, _slicedToArray2.default)(_yield$uni$request, 2);
+                err = _yield$uni$request2[0];
+                res = _yield$uni$request2[1];
+                // 添加网络诊断日志
+                console.log('[网络诊断] 请求耗时:', res === null || res === void 0 ? void 0 : (_res$header = res.header) === null || _res$header === void 0 ? void 0 : _res$header['X-Response-Time']);
+                console.log('[网络诊断] 服务端地址:', res === null || res === void 0 ? void 0 : (_res$header2 = res.header) === null || _res$header2 === void 0 ? void 0 : _res$header2['X-Served-From']);
+
+                // 处理网络错误
+                if (!err) {
+                  _context.next = 19;
+                  break;
+                }
+                throw {
+                  errMsg: "\u8BF7\u6C42\u5931\u8D25: ".concat(err.errMsg)
+                };
+              case 19:
+                if (!(res.statusCode !== 200)) {
+                  _context.next = 21;
+                  break;
+                }
+                throw {
+                  errMsg: "HTTP\u9519\u8BEF: ".concat(res.statusCode),
+                  data: res.data // 传递原始响应数据
+                };
+              case 21:
+                data = res.data; // 获取响应数据
+                // 处理业务逻辑错误
+                if ((_data$choices = data.choices) !== null && _data$choices !== void 0 && (_data$choices$ = _data$choices[0]) !== null && _data$choices$ !== void 0 && (_data$choices$$messag = _data$choices$.message) !== null && _data$choices$$messag !== void 0 && _data$choices$$messag.content) {
+                  _context.next = 24;
+                  break;
+                }
+                throw {
+                  data: {
+                    errorMessage: '无效的响应格式'
+                  }
+                };
+              case 24:
+                // 新增响应处理逻辑
+                responseContent = data.choices[0].message.content;
+                _this$parseResponse = _this.parseResponse(responseContent), _this$parseResponse2 = (0, _slicedToArray2.default)(_this$parseResponse, 2), thinkPart = _this$parseResponse2[0], answerPart = _this$parseResponse2[1]; // 添加思考消息
+                if (thinkPart) {
                   _this.messages.push({
-                    role: 'ai',
-                    content: aiResponse,
+                    role: 'think',
+                    content: thinkPart,
                     time: _this.getCurrentTime()
                   });
-
-                  // 更新会话信息
-                  if ((_result$data = _result.data) !== null && _result$data !== void 0 && _result$data.conversation_id) {
-                    session.conversation_id = _result.data.conversation_id;
-                    uni.setStorageSync('qianfan_session', session);
-                  }
                 }
-                _context.next = 33;
+
+                // 添加回答消息
+                _this.messages.push({
+                  role: 'ai',
+                  content: answerPart || responseContent,
+                  // 兼容无标记的情况
+                  time: _this.getCurrentTime()
+                });
+                _context.next = 34;
                 break;
               case 30:
                 _context.prev = 30;
-                _context.t1 = _context["catch"](21);
+                _context.t0 = _context["catch"](7);
+                errorMessage = ((_error$data = _context.t0.data) === null || _error$data === void 0 ? void 0 : _error$data.errorMessage) || _context.t0.errMsg || '请求失败';
                 _this.messages.push({
                   role: 'ai',
-                  content: "\u51FA\u9519\u5566\uFF1A".concat(_context.t1.message),
+                  content: "\u51FA\u9519\u5566\uFF1A".concat(errorMessage),
                   time: _this.getCurrentTime()
                 });
-              case 33:
-                _context.prev = 33;
+              case 34:
+                _context.prev = 34;
                 _this.loading = false;
                 _this.scrollToBottom();
-                return _context.finish(33);
-              case 37:
+                return _context.finish(34);
+              case 38:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[4, 12], [21, 30, 33, 37]]);
-      }))();
-    },
-    // 语音处理方法
-    startVoiceInput: function startVoiceInput() {
-      var _this2 = this;
-      this.isRecording = true;
-      uni.startRecord({
-        success: function success(res) {
-          _this2.tempFilePath = res.tempFilePath;
-        }
-      });
-    },
-    endVoiceInput: function endVoiceInput() {
-      var _this3 = this;
-      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
-        var res, _yield$uniCloud$callF3, result;
-        return _regenerator.default.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                _this3.isRecording = false;
-                uni.stopRecord();
-
-                // 上传语音文件
-                _context2.next = 4;
-                return uniCloud.uploadFile({
-                  filePath: _this3.tempFilePath,
-                  cloudPath: "voice/".concat(Date.now(), ".wav")
-                });
-              case 4:
-                res = _context2.sent;
-                _context2.next = 7;
-                return uniCloud.callFunction({
-                  name: 'speech-to-text',
-                  data: {
-                    fileID: res.fileID
-                  }
-                });
-              case 7:
-                _yield$uniCloud$callF3 = _context2.sent;
-                result = _yield$uniCloud$callF3.result;
-                if (!(result.code === 0)) {
-                  _context2.next = 13;
-                  break;
-                }
-                _this3.inputText = result.text;
-                _context2.next = 13;
-                return _this3.sendMessage();
-              case 13:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2);
+        }, _callee, null, [[7, 30, 34, 38]]);
       }))();
     },
     // 获取当前时间（HH:MM）
@@ -380,22 +319,35 @@ var _default = {
     },
     // 滚动到底部
     scrollToBottom: function scrollToBottom() {
-      var _this4 = this;
+      var _this2 = this;
       this.$nextTick(function () {
-        var query = uni.createSelectorQuery().in(_this4);
+        var query = uni.createSelectorQuery().in(_this2);
         query.select('.message-list').boundingClientRect();
         query.exec(function (res) {
           var _res$;
           if (res !== null && res !== void 0 && (_res$ = res[0]) !== null && _res$ !== void 0 && _res$.height) {
-            _this4.scrollTop = res[0].height + Math.random();
+            _this2.scrollTop = res[0].height + Math.random();
           }
         });
       });
+    },
+    // 新增响应解析方法
+    parseResponse: function parseResponse(content) {
+      try {
+        // 优化后的正则表达式，支持跨行匹配和标签格式变化
+        var thinkPattern = /think\s*([\s\S]*?)\s*answer/i;
+        var answerPattern = /answer\s*([\s\S]*)/i;
+        var thinkMatch = content.match(thinkPattern);
+        var answerMatch = content.match(answerPattern);
+        return [thinkMatch ? thinkMatch[1].trim() : null, answerMatch ? answerMatch[1].trim() : content];
+      } catch (_unused) {
+        return [null, content];
+      }
     }
   }
 };
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 28)["uniCloud"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

@@ -1,18 +1,9 @@
 <template>
   <view class="container">
     <!-- 消息列表 -->
-    <scroll-view 
-      class="message-list" 
-      scroll-y 
-      :scroll-top="scrollTop"
-      :scroll-with-animation="true"
-    >
-      <view 
-        v-for="(item, index) in messages" 
-        :key="index"
-        class="message-item"
-        :class="[item.role === 'user' ? 'user-message' : 'ai-message']"
-      >
+    <scroll-view class="message-list" scroll-y :scroll-top="scrollTop" :scroll-with-animation="true">
+      <view v-for="(item, index) in messages" :key="index" class="message-item"
+        :class="[item.role === 'user' ? 'user-message' : 'ai-message']">
         <view class="message-content">
           {{ item.content }}
         </view>
@@ -23,21 +14,10 @@
       <view v-if="loading" class="loading-text">AI正在思考中...</view>
     </scroll-view>
 
-     <!-- 输入区域 -->
-     <view class="input-area">
-      <button class="voice-button" 
-              @touchstart="startVoiceInput" 
-              @touchend="endVoiceInput"
-              :class="{ recording: isRecording }">
-        {{ isRecording ? '录音中...' : '按住说话' }}
-      </button>
-      
-      <input class="input" v-model="inputText" 
-             placeholder="请输入问题" @confirm="sendMessage"
-             :disabled="loading"/>
-      
-      <button class="send-button" @click="sendMessage"
-              :disabled="loading">
+    <!-- 输入区域 -->
+    <view class="input-area">
+      <input class="input" v-model="inputText" placeholder="请输入问题" @confirm="sendMessage" :disabled="loading" />
+      <button class="send-button" @click="sendMessage" :disabled="loading">
         {{ loading ? '发送中...' : '发送' }}
       </button>
     </view>
@@ -52,39 +32,12 @@ export default {
       inputText: '',      // 输入内容
       loading: false,     // 加载状态
       scrollTop: 0,       // 滚动位置
-      isRecording: false,
-      tempFilePath: ''
     };
   },
   methods: {
-    // 发送消息
     async sendMessage() {
       if (!this.inputText.trim() || this.loading) return;
 
-      // 获取或创建会话
-      let session = uni.getStorageSync('qianfan_session');
-      // 如果没有会话，创建一个新的会话
-      if (!session?.conversation_id || !session?.request_id) {
-        try {
-          const { result } = await uniCloud.callFunction({
-            name: 'qianfan-chat',
-            data: { action: 'create_session' }
-          });
-          
-          if (result.code === 0) {
-            session = {
-              conversation_id: result.data.conversation_id,
-              request_id: result.data.request_id
-            };
-            uni.setStorageSync('qianfan_session', session);
-          }
-        } catch (e) {
-          console.error('会话创建失败:', e);
-          return;
-        }
-      }
-
-      // 发送消息逻辑
       const userMessage = {
         role: 'user',
         content: this.inputText,
@@ -97,33 +50,66 @@ export default {
 
       try {
         this.loading = true;
-        const { result } = await uniCloud.callFunction({
-          name: 'qianfan-chat',
+        const [err, res] = await uni.request({
+          url: 'http://homechat-effassits-popgjiyphu.cn-hangzhou.fcapp.run/v1/chat/completions',
+          method: 'POST',
+          header: {
+            'Content-Type': 'application/json',
+            'Cookie': 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDM5MTAyMjcsInVpZCI6MX0.T_R6-qar4YY7GsZh0iIE9psjw0XmeGB29CqIAI9KnOU'
+          },
+          timeout: 15000,
           data: {
-            query: question,
-            conversation_id: session.conversation_id,
-            // request_id: session.request_id
+            messages: [{ role: 'user', content: question }],
+            stream: false
           }
         });
+        // 添加网络诊断日志
+        console.log('[网络诊断] 请求耗时:', res?.header?.['X-Response-Time']);
+        console.log('[网络诊断] 服务端地址:', res?.header?.['X-Served-From']);
 
-        if (result.code === 0) {
-          const aiResponse = result.data.response || '未收到有效回复';
+        // 处理网络错误
+        if (err) {
+          throw { errMsg: `请求失败: ${err.errMsg}` };
+        }
+
+        // 处理HTTP状态码错误
+        if (res.statusCode !== 200) {
+          throw {
+            errMsg: `HTTP错误: ${res.statusCode}`,
+            data: res.data // 传递原始响应数据
+          };
+        }
+
+        const data = res.data;  // 获取响应数据
+
+        // 处理业务逻辑错误
+        if (!data.choices?.[0]?.message?.content) {
+          throw { data: { errorMessage: '无效的响应格式' } };
+        }
+        // 新增响应处理逻辑
+        const responseContent = data.choices[0].message.content;
+        const [thinkPart, answerPart] = this.parseResponse(responseContent);
+
+        // 添加思考消息
+        if (thinkPart) {
           this.messages.push({
-            role: 'ai',
-            content: aiResponse,
+            role: 'think',
+            content: thinkPart,
             time: this.getCurrentTime()
           });
-          
-          // 更新会话信息
-          if (result.data?.conversation_id) {
-            session.conversation_id = result.data.conversation_id;
-            uni.setStorageSync('qianfan_session', session);
-          }
         }
-      } catch (error) {
+
+        // 添加回答消息
         this.messages.push({
           role: 'ai',
-          content: `出错啦：${error.message}`,
+          content: answerPart || responseContent, // 兼容无标记的情况
+          time: this.getCurrentTime()
+        });
+      } catch (error) {
+        const errorMessage = error.data?.errorMessage || error.errMsg || '请求失败';
+        this.messages.push({
+          role: 'ai',
+          content: `出错啦：${errorMessage}`,
           time: this.getCurrentTime()
         });
       } finally {
@@ -132,37 +118,6 @@ export default {
       }
     },
 
-    // 语音处理方法
-    startVoiceInput() {
-      this.isRecording = true;
-      uni.startRecord({
-        success: res => {
-          this.tempFilePath = res.tempFilePath;
-        }
-      });
-    },
-
-    async endVoiceInput() {
-      this.isRecording = false;
-      uni.stopRecord();
-
-      // 上传语音文件
-      const res = await uniCloud.uploadFile({
-        filePath: this.tempFilePath,
-        cloudPath: `voice/${Date.now()}.wav`
-      });
-
-      // 调用语音识别云函数
-      const { result } = await uniCloud.callFunction({
-        name: 'speech-to-text',
-        data: { fileID: res.fileID }
-      });
-
-      if (result.code === 0) {
-        this.inputText = result.text;
-        await this.sendMessage();
-      }
-    },
     // 获取当前时间（HH:MM）
     getCurrentTime() {
       const now = new Date();
@@ -180,13 +135,31 @@ export default {
           }
         });
       });
+    },
+    // 新增响应解析方法
+    parseResponse(content) {
+      try {
+        // 优化后的正则表达式，支持跨行匹配和标签格式变化
+        const thinkPattern = /think\s*([\s\S]*?)\s*answer/i;
+        const answerPattern = /answer\s*([\s\S]*)/i;
+
+        const thinkMatch = content.match(thinkPattern);
+        const answerMatch = content.match(answerPattern);
+
+        return [
+          thinkMatch ? thinkMatch[1].trim() : null,
+          answerMatch ? answerMatch[1].trim() : content
+        ];
+      } catch {
+        return [null, content];
+      }
     }
   }
 }
 </script>
 
 <style scoped>
-/* 样式部分与之前保持一致 */
+/* 从home.vue复制的样式 */
 .container {
   height: 100vh;
   display: flex;
@@ -232,6 +205,24 @@ export default {
   text-align: right;
 }
 
+/* 新增思考消息样式 */
+.think-message .message-content {
+  background-color: #fff3d4 !important;
+  /* 浅黄色背景 */
+  border: 1rpx solid #ffe6b3;
+}
+
+/* 调整消息项样式 */
+.message-item[class*="-message"] {
+  margin: 20rpx 0;
+  max-width: 90%;
+}
+
+/* 修改AI消息最大宽度 */
+.ai-message {
+  max-width: 85%;
+}
+
 .input-area {
   display: flex;
   padding: 20rpx;
@@ -263,19 +254,5 @@ export default {
   color: #999;
   text-align: center;
   padding: 20rpx;
-}
-
-
-/* 添加语音按钮样式 */
-.voice-button {
-  padding: 10px 15px;
-  background-color: #71d5a1;
-  color: white;
-  border-radius: 20px;
-  margin-right: 10px;
-}
-
-.recording {
-  background-color: #ff4d4d;
 }
 </style>

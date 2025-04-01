@@ -6,8 +6,8 @@
   },
   "version": "1.0.0",
   "cloudfunction-config": {
-    "memorySize": 256,
-    "timeout": 60,
+    "memorySize": 512,
+    "timeout": 300,  
     "triggers": [],
     "path": ""
   }

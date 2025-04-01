@@ -159,34 +159,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 样式部分与之前保持一致 */
+/* 从home.vue复制的样式 */
 .container.data-v-1dbc7dbc {
   height: 100vh;
   display: flex;
@@ -224,6 +197,21 @@
   margin-top: 10rpx;
   text-align: right;
 }
+/* 新增思考消息样式 */
+.think-message .message-content.data-v-1dbc7dbc {
+  background-color: #fff3d4 !important;
+  /* 浅黄色背景 */
+  border: 1rpx solid #ffe6b3;
+}
+/* 调整消息项样式 */
+.message-item[class*="-message"].data-v-1dbc7dbc {
+  margin: 20rpx 0;
+  max-width: 90%;
+}
+/* 修改AI消息最大宽度 */
+.ai-message.data-v-1dbc7dbc {
+  max-width: 85%;
+}
 .input-area.data-v-1dbc7dbc {
   display: flex;
   padding: 20rpx;
@@ -251,16 +239,5 @@
   color: #999;
   text-align: center;
   padding: 20rpx;
-}
-/* 添加语音按钮样式 */
-.voice-button.data-v-1dbc7dbc {
-  padding: 10px 15px;
-  background-color: #71d5a1;
-  color: white;
-  border-radius: 20px;
-  margin-right: 10px;
-}
-.recording.data-v-1dbc7dbc {
-  background-color: #ff4d4d;
 }
 
