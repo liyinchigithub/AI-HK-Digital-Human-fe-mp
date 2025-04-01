@@ -1,0 +1,141 @@
+{
+	"bsonType": "object",
+	"required": [
+		"content"
+	],
+	"version": "1.0.0",
+	"fieldRules": [
+		{
+			"rule": "updated == null || created != null && created<updated",
+			"errorMessage": "更新时间需大于创建时间"
+		}
+	],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"name": {
+			"bsonType": "string",
+			"description": "姓名",
+			"label": "姓名",
+			"trim": "both",
+			"title": "姓名",
+			"order": 1
+		},
+		"phone": {
+			"bsonType": "string",
+			"description": "请输入",
+			"pattern": "^\\+?[0-9-]{3,20}$",
+			"label": "手机号",
+			"trim": "both",
+			"title": "手机号",
+			"order": 2
+		},
+		"type": {
+			"bsonType": "int",
+			"defaultValue": 1,
+			"title": "所属类型",
+			"description": "所属类型",
+			"enum": [
+				{
+					"text": "酒店/民宿",
+					"value": 1
+				},
+				{
+					"text": "娱乐场所",
+					"value": 2
+				},{
+					"text": "餐饮",
+					"value": 3
+				},
+				{
+					"text": "网约/出租车",
+					"value": 4
+				},
+				{
+					"text": "其他",
+					"value": 5
+				}
+			],
+			"order": 3
+		},
+		"region": {
+			"bsonType": "string",
+			"description": "分销城市",
+			"label": "分销城市",
+			"trim": "both",
+			"title": "分销城市",
+			"order": 4
+		},
+		"address": {
+			"bsonType": "string",
+			"description": "地址",
+			"label": "地址",
+			"trim": "both",
+			"title": "地址",
+			"order": 5
+		},
+		"content": {
+			"bsonType": "string",
+			"title": "备注",
+			"description": "请输入",
+			"component": {
+				"name": "textarea"
+			},
+			"order": 6
+		},
+		"feedbackStatus": {
+			"bsonType": "int",
+			"defaultValue": 1,
+			"title": "审核状态",
+			"description": "申请分销当前状态",
+			"enum": [
+				{
+					"text": "未处理",
+					"value": 1
+				},
+				{
+					"text": "联系中",
+					"value": 2
+				},
+				{
+					"text": "通过",
+					"value": 3
+				},
+				{
+					"text": "不通过",
+					"value": 4
+				}
+			],
+			"order": 7
+		},
+		"updated": {
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 8
+		},
+		"created": {
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 9
+		},
+		"isEnable": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "生效状态",
+			"order": 10
+		}
+	}
+}

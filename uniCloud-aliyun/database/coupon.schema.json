@@ -1,0 +1,97 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["openID", "couponName", "fullAmount", "discountAmount", "alidityBeginTime", "alidityEndtTime"],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"openID": {
+			"bsonType": "string",
+			"title": "用户微信openID",
+			"description": "请输入",
+			"foreignKey": "user.openID",
+			"enum": {
+				"collection": "user",
+				"field": "username as text,openID as value"
+			},
+			"order": 1
+		},
+		"couponName": {
+			"bsonType": "string",
+			"title": "优惠券名称",
+			"description": "请输入",
+			"order": 2
+		},
+		"fullAmount": {
+			"bsonType": "double",
+			"title": "满",
+			"description": "请输入",
+			"order": 3
+		},
+		"discountAmount": {
+			"bsonType": "double",
+			"title": "减",
+			"description": "请输入",
+			"order": 4
+		},
+		"alidityBeginTime": {
+			"bsonType": "timestamp",
+			"label": "使用有效期开始时间",
+			"defaultValue": {
+				"$env": "now"
+			},
+			"order": 5
+		},
+		"alidityEndTime": {
+			"bsonType": "timestamp",
+			"label": "使用有效期结束时间",
+			"defaultValue": {
+				"$env": "now"
+			},
+			"order": 6
+		},
+		"remark": {
+			"bsonType": "string",
+			"title": "备注",
+			"component": {
+				"name": "textarea"
+			},
+			"order": 7
+		},
+		"updated": {
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 8
+		},
+		"created": {
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 9
+		},
+		"isUsed": {
+			"bsonType": "bool",
+			"defaultValue": false,
+			"title": "已被使用",
+			"order": 10
+		},
+		"isEnable": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "生效状态",
+			"order": 11
+		}
+	}
+}

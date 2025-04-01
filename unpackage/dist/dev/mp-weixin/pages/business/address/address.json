@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "我的地址",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "u-cell-group": "/uni_modules/uview-ui/components/u-cell-group/u-cell-group",
+    "u-cell": "/uni_modules/uview-ui/components/u-cell/u-cell",
+    "u-empty": "/uni_modules/uview-ui/components/u-empty/u-empty",
+    "u-swipe-action": "/uni_modules/uview-ui/components/u-swipe-action/u-swipe-action",
+    "u-swipe-action-item": "/uni_modules/uview-ui/components/u-swipe-action-item/u-swipe-action-item",
+    "u-modal": "/uni_modules/uview-ui/components/u-modal/u-modal",
+    "u-back-top": "/uni_modules/uview-ui/components/u-back-top/u-back-top"
+  }
+}

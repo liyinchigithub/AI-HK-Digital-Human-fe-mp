@@ -1,0 +1,62 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["province", "city", "area", "region"],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"province": {
+			"bsonType": "string",
+			"title": "省份",
+			"description": "请输入",
+			"order": 1
+		},
+		"city": {
+			"bsonType": "string",
+			"title": "城市",
+			"description": "请输入",
+			"order": 2
+		},
+		"area": {
+			"bsonType": "string",
+			"title": "区",
+			"description": "请输入",
+			"order": 3
+		},
+		"region": {
+			"bsonType": "string",
+			"title": "街道",
+			"description": "请输入",
+			"order": 4
+		},
+		"updated": {
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 7
+		},
+		"created": {
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 8
+		},
+		"isEnable": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "生效状态",
+			"order": 9
+		}
+	}
+}

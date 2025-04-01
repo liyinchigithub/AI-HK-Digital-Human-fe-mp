@@ -1,0 +1,14 @@
+{
+    "id": "zjc-scroll-nav",
+    "name": "scroll-view",
+    "version": "1.0.0",
+    "description": "scroll-view 横向滚动菜单",
+    "keywords": [
+        "小程序,APP",
+        ",安卓，其他端未测"
+    ],
+    "dependencies": {
+        "node-sass": "4.14.1",
+        "sass-loader": "7.3.1"
+    }
+}

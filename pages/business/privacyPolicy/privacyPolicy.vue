@@ -1,0 +1,840 @@
+<template>
+	<view>
+		<!-- 隐私政策 -->
+		<view class="content">
+			<p>
+				<strong><span style="font-weight: bold;font-size: 30rpx;margin-bottom: 40rpx;">概 述</span></strong>
+			</p>
+
+			<p>
+				<span
+					style="font-size: 28rpx;">XXX（APP）是一款由YYY科技有限公司运营并提供按摩、保健等生活服务的产品。我们深知个人信息对您而言的重要性，也感谢您对我们的信任。我们将通过本政策向您说明XXX会如何收集、存储、保护、使用及对外提供您的信息，并说明您享有的权利，其中要点如下：</span>
+			</p>
+			<p></p>
+			<u-row>
+				<p><u><strong><span
+								class="underline">1、为了便于您了解您在使用我们的服务时，我们需要收集的信息类型与用途，我们将结合具体服务向您逐一说明。</span></strong></u>
+				</p>
+				<p></p>
+			</u-row>
+			<!-- 下划线 -->
+			<u-row>
+				<p><u><strong><span class="underline">2、为了向您提供服务所需，我们会按照合法、正当、必要的原则收集您的信息。</span></strong></u></p>
+				<p></p>
+			</u-row>
+			<u-row>
+				<p><u><strong><span
+								class="underline">3、原则上，为了保护您的个人信息，XXX不会将您的信息共享给任何第三方。如果为了向您提供服务而需要将您的信息共享至第三方，我们将评估该第三方收集信息的合法性、正当性、必要性。我们将要求第三方对您的信息采取保护措施并且严格遵守相关法律法规与监管要求。另外，我们会按照法律法规及国家标准的要求以确认协议、具体场景下的文案确认、弹窗提示等形式征得您的同意或确认第三方已经征得您的同意。</span></strong></u>
+				</p>
+			</u-row>
+			<u-row>
+				<p><u><strong><span
+								class="underline">4、如果为了向您提供服务而需要从第三方获取您的信息，我们将要求第三方说明信息来源，并要求第三方保障其提供信息的合法性；如果我们开展业务需进行的个人信息处理活动超出您原本向第三方提供个人信息时的授权范围，我们将征得您的明确同意。</span></strong></u>
+				</p>
+			</u-row>
+			<u-row>
+				<p><u><strong><span
+								class="underline">5、您可以通过本政策介绍的方式访问和管理您的信息、设置隐私功能、注销XXX账户或进行投诉举报。</span></strong></u>
+				</p>
+			</u-row>
+			<u-row>
+				<p><u><strong><span class="underline">本政策将帮助您了解以下内容：</span></strong></u></p>
+			</u-row>
+			<u-row>
+				<p><u><strong><span class="underline">一、我们如何收集和使用您的个人信息</span></strong></u></p>
+			</u-row>
+			<u-row>
+				<p><u><strong><span class="underline">二、我们如何使用Cookie、Beacon等同类技术</span></strong></u></p>
+			</u-row>
+			<u-row>
+				<p><u><strong><span class="underline">三、我们如何共享、转让、公开披露您的个人信息</span></strong></u></p>
+			</u-row>
+			<u-row>
+				<p><u><strong><span class="underline">四、我们如何保存和保护您的个人信息</span></strong></u></p>
+			</u-row>
+			<u-row>
+				<p><u><strong><span class="underline">五、您如何管理您的个人信息</span></strong></u></p>
+			</u-row>
+			<u-row>
+				<p><u><strong><span class="underline">六、未成年人的个人信息保护</span></strong></u></p>
+			</u-row>
+			<u-row>
+				<p><u><strong><span class="underline">七、通知和修订</span></strong></u></p>
+			</u-row>
+			<u-row>
+				<p><u><strong><span class="underline">八、如何联系我们</span></strong></u></p>
+			</u-row>
+			<u-row>
+				<p><u><strong><span class="underline">九、附录</span></strong></u></p>
+			</u-row>
+			<p><u><strong><span
+							class="underline">【特别提示】请您在使用我们提供的各项产品/服务前，仔细阅读并充分理解本《隐私政策》（重点内容我们已将字体加粗请您特别关注）并做出相应选择。一旦您使用或继续使用我们的产品/服务时，即意味着您同意我们按照本隐私政策处理您的相关信息。</span></strong></u>
+			</p>
+			<p></p>
+			<p><u><span
+						style="display: block ;text-decoration: underline;margin-bottom: 50rpx;margin-top: 50rpx;">如对本隐私政策有任何疑问，您可以通过本隐私政策“如何联系我们”中提供的方式与我们联系）。</span></u>
+			</p>
+			<p></p>
+			<p>
+				<span>XXX及关联公司（定义见附录）提供的产品/服务（包括未设独立隐私政策的XXX及关联公司提供的产品/服务），均适用本隐私政策，除非相关服务已有独立的隐私权政策或相应的用户服务协议当中存在特殊约定。</span><strong
+					style="font-weight: bold;"><span>这些产品/服务包括XXX网站(</span><a href="https://www.xxx.cn/" target="_blank"
+						class="url">https://www.xxx.cn/</a><span>)以及相关微信开放平台账号或小程序等。</span></strong>
+				<span>此外，针对某些特定的产品/服务，我们可能还将制定单独的隐私政策，向您说明这些产品/服务的特殊政策。如相关特定的隐私政策与本隐私政策有不一致之处，适用该特定隐私政策。</span>
+			</p>
+			<p></p>
+			<p></p>
+			<p><strong
+					style="font-weight: bold;display:block;margin-top: 50rpx;margin-bottom: 100rpx;"><span>请您注意，本政策不适用于您通过我们的产品/服务而接入的其他第三方产品/服务（“其他第三方”，包括您的交易相对方、任何第三方网站以及第三方服务提供者等），具体规定请参照该第三方的隐私政策或类似声明。</span></strong>
+			</p>
+			<p>&nbsp;</p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<h3 id="" style="font-weight: bold;font-size: 40rpx;"><span>一、我们如何收集和使用您的个人信息</span></h3>
+			<p></p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">在您使用我们的产品/服务时，您需要/可以选择授权我们收集和使用个人信息的场景包括：</span>
+			</p>
+			<p></p>
+			<p></p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">1、为了向您提供我们产品/服务的基本功能，您需要授权我们收集、使用必要信息的情形，如您拒绝提供前述必要信息，您将无法正常使用我们的产品/服务；</span>
+			</p>
+			<p></p>
+			<p></p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">2、为了向您提供我们产品/服务的拓展功能，您可以选择授权我们收集、使用信息的情形，如您拒绝提供前述信息，您将无法正常使用相关附加功能或无法实现我们拟达到的功能效果，但并不会影响您正常使用我们产品/服务的基本功能。</span>
+			</p>
+			<p></p>
+			<p></p>
+			<p><strong
+					style="font-weight: bold;font-size: 35rpx;margin-bottom: 30rpx;margin-top: 30rpx;"><span>（一）您需要授权我们收集和使用个人信息的场景</span></strong>
+			</p>
+			<p></p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">我们会遵循正当、合法、必要的原则，出于本政策所述的下列目的收集和使用您的个人信息。</span>
+			</p>
+			<p></p>
+			<p><strong
+					style="font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;"><span>1、帮助您成为我们的用户</span></strong>
+			</p>
+			<p></p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">为遵守法律法规的要求，以及向您提供更安全的服务，在您注册成为XXX用户时，您需要至少提供手机号码以创建XXX账号，并完善相关的网络身份识别信息（如头像、昵称及登录密码等）；如果您仅需使用浏览、搜索等功能，您无需注册成为我们的用户以及提供上述信息。</span>
+			</p>
+			<p></p>
+			<p></p>
+			<p>
+				<strong><span
+						style="font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;text-indent: 2em;">在提供账号信息的过程中，如果您愿意额外补充如下个人信息，将有助于我们向您提供更为优质的服务：包括您的微信账号、性别、年龄等。如果您不提供该等信息，不会影响您享受XXX服务的基本功能。</span></strong>
+			</p>
+			<p><strong
+					style="font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;"><span>如您选择授权使用第三方账号登录时，我们会从第三方获取您共享的账号信息（如头像、昵称、地区、性别等信息）与您的XXX账号进行绑定用于快捷登录，我们会依据与第三方的约定，在符合相关法规的前提下，使用您的个人信息。</span></strong>
+			</p>
+			<p></p>
+			<p></p>
+			<p><strong
+					style="font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;"><span>2、向您提供基于地理位置的信息展示</span></strong>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">为了向您提供周边按摩保健服务信息的展示和搜索服务，提升我们的服务表现、效率和功能，经您授权我们会收集您在使用我们服务过程中产生的相关信息，包括：</span>
+			</p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p>
+				<strong
+					style="font-weight: bold;margin-top: 30rpx;"><span>（1）位置信息。当您通过系统授权开启移动设备的定位功能并使用基于位置提供的服务时，我们会收集和使用您的位置信息以便为您展示所在城市及周边的按摩保健服务</span></strong><span>（例如您不需要手动输入所在地理位置就可获得相关服务，估算商家与您之间的实际距离方便您进行消费决策，为您展示附近的服务品类和优惠信息等）。我们会使用有关技术获取您的</span><strong
+					style="font-weight: bold;"><span>位置信息</span></strong><span>（准确度会有所不同），这些技术包括IP地址、GPS以及能够提供相关信息的WLAN（如Wi-Fi）接入点、蓝牙和基站等。</span><strong
+					style="font-weight: bold;"><span>您使用服务中提供的信息中可能包含相应地理位置信息，例如您在账号资料中设置的地区信息或您上传的图片、视频中的地理标记信息。您可以在移动设备的系统中关闭定位服务停止我们对您所在位置信息的收集，但可能因此无法使用我们基于地理位置为您提供的服务，或者无法达到相关服务的预期效果。</span></strong>
+			</p>
+			<p></p>
+			<p></p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">（2）日志信息。当您使用我们提供的产品/服务时，我们会收集您的浏览、搜索、点击、交易、售后、分享、发布等信息并作为有关网络日志进行保存，其中包括您的IP地址、浏览器的类型、使用的语言、操作系统的版本、访问的日期和时间、电信运营商、网络请求等。</span>
+			</p>
+			<p></p>
+			<p></p>
+			<p><strong><span
+						style="font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">3、为您提供预订、下单、订单、售后管理功能</span></strong>
+			</p>
+			<p><span style="display: block;">您在XXX上预订/下单上门按摩保健、到店按摩保健等服务时，您需要根据所选择的服务类型提供</span><strong><span
+						style="font-weight: bold;">联系人信息（姓名、性别、电话号码等）、地址信息、紧急联系人（包含紧急联系人真实姓名、关系、电话号码）。</span></strong>
+			</p>
+			<p></p>
+			<p></p>
+			<p><strong
+					style="font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;"><span>4、为您提供服务评价的信息发布功能</span></strong>
+			</p>
+			<p><span>您在XXX上主动对商家的产品/服务进行评价时，我们将收集您发布的信息，并展示您的昵称、头像和发布内容。若您选择以匿名方式发布评价信息时，我们将不展示您的昵称、头像。</span></p>
+			<p></p>
+			<p></p>
+			<p><strong
+					style="font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;"><span>5、为您提供客服和售后服务</span></strong>
+			</p>
+			<p><span>为完成身份核验，保障账号安全，确认交易状态及为您提供售后与争议解决等目的，经您授权后我们可能会从第三方获取您的个人信息（例如通过您选择的交易对象和交易直接涉及的第三方信息系统、支付机构等收集与交易进度相关的信息，以便于我们处理您的订单并保证服务的顺利完成，或者更好地预防诈骗、刷单等恶意行为）。</span>
+			</p>
+			<p></p>
+			<p></p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">并且，当您与我们的客服取得联系时，我们的系统可能会记录您与客服之间的通讯记录、信息内容及通话录音等，以及使用您的账号信息以便核验身份；当您需要我们提供与您订单相关的客户服务时，我们可能会查询您的相关订单信息以便给予您适当的帮助和处理；当您需要客服协助您修改有关信息（如服务地址、联系方式等）时，您可能还需要提供上述信息外的其他信息以便完成修改。为了保证服务体验、处理服务纠纷。有关上述信息的收集和使用规则如下，或参见订单页面中的提示内容。</span>
+			</p>
+			<p></p>
+			<p></p>
+			<p><span style="display: block;margin-top: 30rpx;">（1）经授权，当您与商家、理疗师间出现服务纠纷时，平台可调取并使用录音信息作为解决纠纷的参考依据。
+					<p></p>
+					（2）平台将切实保障通话双方的隐私安全，录音将由XXX保存，各方无法自行下载、调取或播放录音；除以下情形外，平台不会将录音提供给任何人（包括通话主、被叫方）：a.有权机关依法定程序调取；b.被录音的一方持司法机关出具的法律文件依法调取。（3）录音在保存7天后将自动永久删除，如遇差评、投诉、尚未处理完毕的纠纷等，平台将适当延长录音保存期限。
+				</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">前述信息属于您的个人敏感信息，如您不提供前述信息，不影响您使用我们提供的其他服务。</span></strong>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">6、对违规服务的举报、投诉功能</span></strong>
+			</p>
+			<p><span
+					style="display: block;">为了防止虚假投诉、商家/理疗师间的不正当竞争等行为，在您针对XXX内相关商家、理疗师进行投诉、举报时，要求您提供身份信息（包括但不限于您的身份证、军官证、护照、驾驶证、学生证等载明您身份的证件照片、复印件、号码等）进行实名投诉、举报，并提供相关投诉举报凭证（包括但不限于订单信息及商家、理疗师违规操作的视频录像、照片），以便于平台对您的投诉、举报内容进行核实。</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">7、支付功能</span></strong>
+			</p>
+			<p><span
+					style="display: block;">在您下单后，您可通过XXX支持的第三方支付机构完成支付，支付功能本身并不收集您的个人信息，但我们需将您的订单号、交易金额以及其他您选择的支付机构要求的交易信息与您选择的支付机构共享以实现其确认您的支付指令并完成支付。</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">8、为您提供安全保障</span></strong>
+			</p>
+			<p><span
+					style="display: block;">为了保障您的账号安全、交易安全以及系统运行安全，满足法律法规和我们协议规则的相关要求，在您使用我们的产品/服务过程中，经您授权我们会获取您的设备信息，</span><strong><span
+						style="font-weight: bold;display: block;">包括您使用的设备品牌、设备型号、设备名称、IP地址、MAC地址、软件安装列表、设备软件版本信息、设备识别码、设备标识符、所在地区、网络使用习惯、设备相关应用信息以及其他与XXX服务相关的日志信息。</span></strong><span>前述信息当中包含您的</span><strong><span
+						style="font-weight: bold;display: block;">个人敏感信息，</span></strong><span>如您不同意我们记录前述信息，可能无法完成风控验证。</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">（一）您可以选择授权我们收集和使用个人信息的场景</span></strong>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">为向您提供优质的服务，您可以选择使用我们提供的拓展功能，我们会在符合法律规定并根据您具体授权的情况下收集并使用如下信息。这类信息将在您选择的具体功能和业务场景中进行收集，如果您不提供这些信息，不会影响您使用XXX的基本功能。</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">1、基于相册授权的拓展功能</span></strong>
+			</p>
+			<p><strong><span
+						style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">您可以选择开启系统的相册权限，通过主动上传图片、视频等方式授权我们访问您的相册，以便于您通过上传照片或上传视频等方式发布内容。</span></strong><span>我们会收集您选择上传发布的上述信息，此项功能您可以在系统权限中关闭，一旦关闭您将可能无法通过上传图片、视频等方式进行更换头像、发布带图点评等，但不会影响您享受XXX服务的基本功能。</span>
+			</p>
+			<p></p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">2、基于相机授权的拓展功能</span></strong>
+			</p>
+			<p></p>
+			<p><strong><span
+						style="font-weight: bold;display: block;margin-bottom: 30rpx;margin-top: 30rpx;">您可以选择开启系统的相机权限，通过使用拍照、录视频，扫码等功能授权XXX访问您的相机，以便于您通过拍摄照片或录制视频等方式发布内容，</span></strong><span>如果您需要录制并发布有声视频时，您还需开启麦克风权限。我们会收集您上传发布的上述信息，此项功能您可以在系统权限中关闭，一旦关闭您将可能无法实现扫码功能，或者无法通过拍摄图片、视频等方式进行发布介绍视频或语音进行推广，</span><strong><span
+						style="font-weight: bold;display: block;">但不会影响您享受XXX服务的基本功能。</span></strong><span></span>
+			</p>
+			<p></p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">3、您理解并同意，在上述情形下，我们可能需要您在您的设备中开启您的摄像头（相机）、相册（图片库）、麦克风（语音）以及日历等访问权限，以实现这些权限所涉及信息的收集和使用。您可在您的设备中逐项查看上述权限的状态，并可自行决定这些权限的开启或关闭（如适用）。当您开启任一权限即代表您授权我们收集和使用该项信息来实现对应目标。您一旦关闭任一权限即代表您取消了授权，我们将不再继续收集和使用该项个人信息，也无法为您实现该授权所对应目标。但是，您关闭权限的决定不会影响此前基于您的授权所进行的信息的收集、处理与使用。</span>
+			</p>
+			<p></p>
+			<p></p>
+			<p><strong><span
+						style="display: block;font-weight: bold;font-size: 35rpx;margin-bottom: 30rpx;margin-top: 30rpx;">（二）其他</span></strong>
+			</p>
+			<p><span
+					style="display: block;">请您理解，我们向您提供的服务是不断更新和发展的。如您选择使用了前述说明当中尚未涵盖的其他服务，基于该服务我们需要收集您的信息的，我们会通过页面提示、交互流程、协议约定的方式另行向您说明信息收集的范围与目的，并征得您的同意。我们会按照本政策以及相应的用户协议约定使用、存储、对外提供及保护您的信息；如您选择不提供前述信息，您可能无法使用某项或某部分服务，但不影响您使用我们提供的其他服务。此外，第三方主体可能会通过XXXAPP向您提供服务。当您进入第三方主体运营的服务页面时，请注意相关服务由第三方主体向您提供。涉及到第三方主体向您收集个人信息的，建议您仔细查看第三方主体的隐私政策或协议约定。</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;font-size: 35rpx;margin-bottom: 30rpx;margin-top: 30rpx;">（三）征得同意的例外</span></strong>
+			</p>
+			<p><strong><span style="display: block;font-weight: bold;">请您知悉，以下情形中，我们收集、使用个人信息无需征得您的授权同意：</span></strong>
+			</p>
+			<p><span style="display: block;margin-top: 10rpx;">1、与国家安全、国安全直接相关的；</span></p>
+			<p><span style="display: block;margin-top: 10rpx;">2、与公共安全、公共卫生、重大公共利益有关的；</span></p>
+			<p><span style="display: block;margin-top: 10rpx;">3、与犯罪侦查、起诉、审判和判决执行等有关的；</span></p>
+			<p><span style="display: block;margin-top: 10rpx;">4、出于维护个人信息主体或其他个人的生命、财产等重大合法权益但又很难得到本人同意的；</span></p>
+			<p><span style="display: block;margin-top: 10rpx;">5、所收集的个人信息是个人信息主体自行向社会公众公开的；</span></p>
+			<p><span
+					style="display: block;margin-top: 10rpx;">6、从合法公开披露的信息中收集的您的个人信息的，如合法的新闻报道、政府信息公开等渠道；但是您明确拒绝或者处理该信息侵害您重大利益的除外。</span>
+			</p>
+			<p><span style="display: block;margin-top: 10rpx;">7、根据您的要求签订合同所必需的</span></p>
+			<p><span style="display: block;margin-top: 10rpx;">8、用于维护所提供的产品与/或服务的安全稳定运行所必需的，例如发现、处置产品与/或服务的故障；</span>
+			</p>
+			<p><span style="display: block;margin-top: 10rpx;">9、为合法的新闻报道所必需的；</span></p>
+			<p><span
+					style="display: block;margin-top: 10rpx;">10、学术研究机构基于公共利益开展统计或学术研究所必要，且对外提供学术研究或描述的结果时，对结果中所包含的个人信息进行去标识化处理的；</span>
+			</p>
+			<p><span style="display: block;margin-top: 10rpx;">11、法律法规规定的其他情形。</span></p>
+			<p><strong><span
+						style="display: block;margin-top: 10rpx;">请注意，单独或与其他信息相结合无法识别您的身份或者与您直接建立联系的信息，不属于个人信息。如果我们将单独无法与任何特定个人建立联系的信息与其他信息结合用于识别自然人个人身份，或者将其与个人信息结合使用，则在结合使用期间，此类信息将被视为个人信息。</span></strong>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;font-size: 35rpx;margin-bottom: 30rpx;margin-top: 50rpx;">（四）个人信息的使用规则</span></strong>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">为了维护、改进我们的产品或服务质量，我们会在符合法律规定并根据您具体授权的情况下使用如下信息：</span>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">1、我们可能会收集您在参与产品/服务调查时主动向我们提供的信息，以及您与我们的关联方、合作伙伴之间互动时提供的相关信息，以便于您追踪订单情况、发起用户投诉以及我们优化客户服务的质量与流程。</span>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">2、我们可能将业务中收集的个人信息用于统计分析和改进运营，将已经去标识化无法识别您身份且不能复原的信息用于建立数据库并进行商业化利用。例如通过您所在的位置等进行统计分析，从而改进我们的系统而进行的技术改造、网络维护、故障排除、内部政策与流程制定、生成内部报告等。</span>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">3、提高您使用XXX及XXX关联公司、合作伙伴提供服务的安全性，确保操作环境安全与识别您的账号异常状态，保护您或其他用户或公众的人身财产安全免遭侵害，更好地预防网络漏洞、计算机病毒、网络攻击等安全风险，我们可能自行或通过第三方机构使用或整合您的交易信息、设备信息、有关网络日志以及我们关联公司、合作伙伴取得您授权或依法律法规共享的信息，综合判断您的账户及交易风险、进行身份验证、检测及防范安全事件，并依法采取必要的记录、审计、分析、处置措施。</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;font-size: 35rpx;margin-bottom: 40rpx;margin-top: 50rpx;">（五）设备权限调用</span></strong>
+			</p>
+			<p></p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">为确保相关业务功能的正常实现，我们需要根据具体的使用场景调用对应的必要权限，并在调用前向您弹窗询问，具体的权限调用说明请见下表：</span>
+			</p>
+			<p></p>
+			<p><span style="display: block;font-size: 20;margin-bottom: 30rpx;margin-top: 30rpx;">XXX权限列表</span></p>
+			<p></p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">1、IOS系统权限调用说明</span></p>
+			<p></p>
+			<view class="table">
+				<view class="table-header">
+					<view class="table-row">
+						<view class="table-cell"><text>设备权限</text></view>
+						<view class="table-cell"><text>使用目的</text></view>
+						<view class="table-cell"><text>是否询问</text></view>
+						<view class="table-cell"><text>是否可关闭</text></view>
+					</view>
+				</view>
+				<view class="table-body">
+					<block v-for="(item, index) in tableData" :key="index">
+						<view class="table-row">
+							<view class="table-cell"><text>{{ item.permission }}</text></view>
+							<view class="table-cell"><text>{{ item.purpose }}</text></view>
+							<view class="table-cell"><text>{{ item.ask }}</text></view>
+							<view class="table-cell"><text>{{ item.closeable }}</text></view>
+						</view>
+					</block>
+				</view>
+			</view>
+			<p><span
+					style="display: block;font-size: 35rpx;margin-bottom: 30rpx;margin-top: 30rpx;">2、Android系统权限调用说明</span>
+			</p>
+			<view class="table">
+				<view class="table-header">
+					<view class="table-row">
+						<view class="table-cell"><text>设备权限</text></view>
+						<view class="table-cell"><text>使用目的</text></view>
+						<view class="table-cell"><text>是否询问</text></view>
+						<view class="table-cell"><text>是否可关闭</text></view>
+					</view>
+				</view>
+				<view class="table-body">
+					<block v-for="(item, index) in tableData2" :key="index">
+						<view class="table-row">
+							<view class="table-cell"><text>{{ item.permission }}</text></view>
+							<view class="table-cell"><text>{{ item.purpose }}</text></view>
+							<view class="table-cell"><text>{{ item.ask }}</text></view>
+							<view class="table-cell"><text>{{ item.closeable }}</text></view>
+						</view>
+					</block>
+				</view>
+			</view>
+			<p><span> </span></p>
+			<h3 id=""><span
+					style="font-weight: bold;font-size: 40rpx;display: block;margin-bottom: 30rpx;margin-top: 30rpx;">二、我们如何使用Cookie、Beacon等同类技术</span>
+			</h3>
+			<p><strong><span
+						style="font-weight: bold;font-size: 35rpx;display: block;margin-bottom: 30rpx;margin-top: 30rpx;">（一）Cookie的使用</span></strong>
+			</p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">为确保网站正常高效运转、为您获得更轻松的访问体验，我们会在您的设备终端/系统上存储名为Cookie的小数据文件。Cookie会帮助您在后续访问我们网站时调用您的信息，简化您填写个人信息（例如一键登录等）的流程；保护您的数据安全等。我们不会将Cookie用于本隐私政策所述目的之外的任何用途。您通过XXX及设备系统管理或删除Cookie。您可以清除计算机或移动设备上保存的所有Cookie，您有权接受或拒绝
+					Cookie。大多数浏览器会自动接受Cookie，但您通常可根据自己的需要来修改浏览器的设置以拒绝Cookie；另外，您也可以清除软件内保存的所有Cookie。但您可能因此无法完全体验我们某些优质和安全性的服务功能。</span>
+			</p>
+			<p><strong><span
+						style="font-weight: bold;font-size: 35rpx;display: block;margin-bottom: 30rpx;margin-top: 30rpx;">（二）网络Beacon和同类技术的使用</span></strong>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">除Cookie外，我们网页上常会包含一些电子图像（称为"单像素"GIF文件或"网络Beacon"）等其他同类技术，它们可以帮助网站计算浏览网页的用户或访问某些Cookie。我们使用网络Beacon的方式有：</span>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">1、我们通过在我们网站上使用网络Beacon，计算用户访问数量，并通过访问Cookie辨认注册用户。</span>
+			</p>
+			<p>&nbsp;</p>
+			<h3 id=""><span
+					style="font-weight: bold;font-size: 40rpx;display: block;margin-bottom: 30rpx;margin-top: 30rpx;">三、我们如何共享、转让、公开披露您的个人信息</span>
+			</h3>
+			<p><strong><span
+						style="font-weight: bold;font-size: 35rpx;display: block;margin-bottom: 30rpx;margin-top: 30rpx;">（一）共享</span></strong>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">我们不会与XXX以外的任何公司、组织和个人共享您的个人信息，但以下情况除外：</span>
+			</p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">1、获得您明确同意或授权的共享。</span></p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">2、基于法定情形下：根据法律法规的规定、诉讼争议解决需要，或行政、司法等有权机关依法提出的要求。</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">3、与关联公司共享：为向您提供一致化服务以及便于您进行统一管理，我们可能会将您的个人信息与我们的关联公司共享。但我们只会共享必要的个人信息，如果我们共享您的个人敏感信息或者关联方改变个人信息的使用目的，将再次征求您的授权同意。</span></strong>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">4、与合作伙伴分享：我们可能会向业务合作伙伴共享为您提供服务所必要的订单信息、账户信息、支付信息等。</span></strong><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">我们的业务合作伙伴包括以下类型：</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">服务合作商。</span></strong><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">仅为实现本政策中声明的目的，我们的某些服务将由业务合作伙伴提供。以保障为您提供的服务顺利完成，我们可能会将您的个人信息共享给上述合作伙伴，包括上门按摩业务、到店按摩业务等。其中可能包括您的联络信息、订单信息、支付信息、地址信息等，以保障为您提供的服务顺利完成。例如在您使用我们的服务时，我们必须与服务提供商共享您的订单和服务地址信息，以保证订单的安全准确进行；又如我们需要将您的订单号和订单金额与第三方支付机构共享以实现其确认您的支付指令并完成支付等。**其中您的联络信息和地址信息属于个人敏感信息，我们已经采取了默认开启的“号码保护”单据上的“地址隐藏”等举措尽全力保护您的个人信息。</span>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">5、基于协议约定：依据您与我们签署的相关协议（包括在线签署的电子协议及平台规则）或法律文件，有必要向第三方共享时。</span>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">6、基于合理商业习惯：例如与第三方共享联合营销活动中的中奖信息，以便第三方能及时向您发放奖品；或者在我们计划与其他公司进行资本市场活动（包括但不限于IPO，债券发行）接受尽职调查时。</span>
+			</p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">7、基于学术研究：例如为科研机构开展统计或学术研究之必要。</span>
+			</p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">8、基于符合法律法规的社会公共利益等。</span></p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">我们会通过应用程序接口（API）、软件工具开发包（SDK）与第三方进行必要的数据共享，不同版本的第三方SDK会有所不同，一般包括第三方账号登录类、第三方支付类、地图导航类等，我们会对第三方进行严格的安全检测并约定数据保护措施，以保障数据安全。您可以选择通过以下SDK列表查看第三方的数据使用和保护规则：</span>
+			</p>
+			<view class="table">
+				<view class="table-header">
+					<view class="table-row">
+						<view class="table-cell"><text>SDK名称</text></view>
+						<view class="table-cell"><text>SDK用途</text></view>
+						<view class="table-cell"><text>共享个人信息字段</text></view>
+						<view class="table-cell"><text>服务方式</text></view>
+						<view class="table-cell"><text>官网链接</text></view>
+					</view>
+				</view>
+				<view class="table-body">
+					<block v-for="(item, index) in tableData3" :key="index">
+						<view class="table-row">
+							<view class="table-cell"><text>{{ item.name }}</text></view>
+							<view class="table-cell"><text>{{ item.purpose }}</text></view>
+							<view class="table-cell"><text>{{ item.sharedInfo }}</text></view>
+							<view class="table-cell"><text>{{ item.serviceMethod }}</text></view>
+							<view class="table-cell">
+								<navigator :url="item.link" target="_blank" class="url">{{ item.link }}</navigator>
+							</view>
+						</view>
+					</block>
+				</view>
+			</view>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">请您知悉，我们仅会出于合法、正当、必要、特定、明确的目的共享您的个人信息，对我们仅为实现本政策中声明的目的与之共享个人信息的公司、组织和个人，我们会与其签署严格的信息保护和保密协定，要求他们遵守协议并采取相关的安全措施来保护您的个人信息。</span></strong>
+			</p>
+			<p><strong><span
+						style="font-weight: bold;font-size: 35rpx;display: block;margin-bottom: 30rpx;margin-top: 30rpx;">（二）转让</span></strong>
+			</p>
+			<p><span>随着我们业务的发展，我们及我们的关联方有可能进行合并、收购、资产转让或类似的交易，如涉及个人信息的转让，我们会要求受让您个人信息的公司、组织继续接受本隐私政策的约束，否则，我们将要求该公司、组织重新征求您的授权同意。</span>
+			</p>
+			<p><strong><span
+						style="font-weight: bold;font-size: 35rpx;display: block;margin-bottom: 30rpx;margin-top: 30rpx;">（三）公开披露</span></strong>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">我们仅会在以下情况下，且采取符合业界标准的安全防护措施的前提下，才可能公开披露您的个人信息：</span>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">1、根据您的需求，在您明确同意的披露方式下披露您所指定的个人信息；</span>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">2、根据法律、法规的要求、强制性的行政执法或司法要求所必须提供您个人信息的情况下，我们可能会依据所要求的个人信息类型和披露方式公开披露您的个人信息。在符合法律法规的前提下，当我们收到上述披露信息的请求时，我们会要求必须出具与之相应的法律文件，如传票或调查函。</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">请注意，您在使用我们服务时自愿发布甚至公开分享的信息，可能会涉及您或他人的个人信息甚至个人敏感信息，如您的交易信息，以及您在评价时选择上传包含个人信息的文字、图片或视频等各种形式的信息。请您在使用我们的服务时更加谨慎地考虑，是否要发布甚至公开分享相关信息。</span></strong>
+			</p>
+			<p><strong><span
+						style="font-weight: bold;font-size: 35rpx;display: block;margin-bottom: 30rpx;margin-top: 30rpx;">（四）共享、转让、公开披露个人信息时事先征得授权同意的例外</span></strong>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">以下情形中，共享、转让、公开披露您的个人信息无需事先征得您的授权同意：</span>
+			</p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">1、与国家安全、国防安全有关的；</span></p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">2、与公共安全、公共卫生、重大公共利益有关的；</span></p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">3、与犯罪侦查、起诉、审判和判决执行等有关的；</span></p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">4、出于维护您或其他个人的生命、财产等重大合法权益但又很难得到本人同意的；</span>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">5、其他维护公共利益的情形，例如您的信用评价信息需要被公开/共享；</span>
+			</p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">6、您自行向社会公众公开的个人信息；</span></p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">7、从合法公开披露的信息中收集个人信息的，如合法的新闻报道、政府信息公开等渠道。但是您明确拒绝或者处理该信息侵害您重大利益的除外。</span>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">根据法律规定，共享、转让、公开披露经去标识化处理的个人信息，且确保数据接收方无法复原并重新识别个人信息主体的，我们对此类数据的处理将无需另行向您通知并征得您的同意。</span>
+			</p>
+			<p>&nbsp;</p>
+			<h3 id=""><span
+					style="display: block;font-weight: bold;font-size: 40rpx;margin-bottom: 30rpx;margin-top: 50rpx;">四、我们如何保存和保护您的个人信息</span>
+			</h3>
+			<p><strong><span style="display: block;font-weight: bold;font-size: 35rpx;">（一）个人信息的保存</span></strong></p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">1、保存期限：除非依据法律法规或双方约定，我们仅会在实现目的所必需的最短时间内留存您的相关个人信息。在您主动注销账号时，我们将根据法律法规的要求尽快删除您的个人信息或匿名化处理，有关注销账号的相关规则和流程，请参见本政策附件中的《用户注销协议》。</span></strong>
+			</p>
+			<p><strong><span
+						style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">2、保存地域：</span></strong><span>我们在中华人民共和国境内收集和产生的个人信息，将存储在中国境内，但以下情形除外：</span>
+			</p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">法律法规有明确规定的；</span></p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">单独征得您的授权同意；</span></p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">在上述情形中，我们会并要求数据接收方按照本隐私政策以及其他相关的安全保密措施来处理个人信息。</span>
+			</p>
+			<p><strong><span
+						style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">3、终止运营：</span></strong><span>如果发生终止运营等情形，我们将会至少提前30天通知您，并在终止运营后对您的个人信息进行删除或匿名化处理。</span>
+			</p>
+			<p><strong><span
+						style="font-weight: bold;font-size: 35rpx;display: block;margin-bottom: 30rpx;margin-top: 30rpx;">（二）个人信息的保护措施</span></strong>
+			</p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">1、数据安全措施</span></p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">为保障您的信息安全，我们努力采取各种符合业界标准的物理、电子和管理方面的安全措施来保护您的个人信息，建立数据分类分级制度、数据安全管理规范、数据安全开发规范来管理规范个人信息的存储和使用。XXX通过信息接触者保密协议、监控和审计机制来对数据进行全面安全控制。防止您的个人信息遭到未经授权访问、公开披露、使用、修改、损坏或丢失。例如在您的浏览器与“服务”之间交换数据（如信用卡信息）时采用SSL加密保护技术；同时对网站本身提供https安全浏览方式；使用加密技术确保数据的保密性；使用受信赖的保护机制防止数据遭到恶意攻击；部署访问控制机制，确保只有授权人员才可访问个人信息；以及举办安全和隐私保护培训课程，加强员工对于保护个人信息重要性的认识。</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">2、请您知悉并理解，互联网并非绝对安全的环境，我们强烈建议您通过安全方式、使用复杂密码，协助我们保证您的账号安全。如您发现自己的个人信息泄密，尤其是您的账户或密码发生泄露，请您立即根据本隐私政策中提供的联系方式联络我们，以便我们采取相应措施。</span></strong>
+			</p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">3、安全事件</span></p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">在不幸发生个人信息安全事件后，我们会立即成立专项应急小组，启动应急预案，防止安全事件扩大，并按照法律法规的要求及时向您告知：安全事件的基本情况和可能的影响、我们已采取或将要采取的处置措施、您可自主防范和降低风险的建议、对您的补救措施等。我们将及时将事件相关情况以邮件、信函、电话等方式告知您，难逐一告知个人信息主体时，我们会采取合理、有效的方式发布公告。同时，我们还将按照监管部门要求，主动上报个人信息安全事件的处置情况。</span>
+			</p>
+			<p>&nbsp;</p>
+			<h3 id=""><span
+					style="font-weight: bold;font-size: 40rpx;display: block;margin-bottom: 30rpx;margin-top: 50rpx;">五、您如何管理您的个人信息</span>
+			</h3>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">您对您的个人信息享有以下权利：</span></p>
+			<p><strong><span
+						style="font-weight: bold;font-size: 35rpx;display: block;margin-bottom: 30rpx;margin-top: 30rpx;">（一）您有权访问、更正、删除您的个人信息，法律法规规定的例外情况除外。</span></strong><span>您可以通过以下方式管理您的信息：</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-top: 30rpx;margin-bottom: 30rpx;">账户信息</span></strong><span>——您可以访问、更正您账户中的个人资料及账号信息（身份认证信息除外）、支付信息、账号绑定信息等，也可以更改您的密码、添加安全信息或进行第三方账号的解绑等，您可以通过访问网页及App在设置中执行此类操作。</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-top: 30rpx;margin-bottom: 30rpx;">地址信息</span></strong><span>——您可以通过访问XXX网页/App页面上的“我的”&gt;”设置“&gt;”常用地址“中随时添加、更改、删除您的服务地址信息（包括联系人姓名、性别、服务地址、电话号码等）。</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-top: 30rpx;margin-bottom: 30rpx;">订单信息</span></strong><span>——您可以通过访问“我的订单”页面查看您的所有已经完成、待付款、待售后、待评价的订单。您可以选择删除已完成的订单信息，但这样可能导致我们无法根据您的购买信息而准确提供相应的售后服务。</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-top: 30rpx;margin-bottom: 30rpx;">评论信息</span></strong><span>——您可以通过访问XXXApp页面上的“评价”访问、更正、清除您的评论内容。</span>
+			</p>
+			<p><span>如果您无法通过上述链接管理这些个人信息，您可以随时通过本隐私政策中提供的反馈方式联系我们。我们将在15天内回复您的访问请求。</span></p>
+			<p><strong><span
+						style="display: block;font-weight: bold;font-size: 35rpx;margin-bottom: 30rpx;margin-top: 30rpx;">（二）改变您授权同意的范围或撤回授权</span></strong>
+			</p>
+			<p><span>您可以通过在XXXApp中删除信息、更改隐私设置或者在系统中关闭设备权限功能等方式改变同意范围或撤回您的授权。</span></p>
+			<p><span>请您理解，当您执行上述操作后，我们将无法继续为您提供撤回同意或授权所对应的服务，但不会影响此前基于您的授权已经开展的个人信息处理。</span></p>
+			<p><strong><span
+						style="display: block;font-weight: bold;font-size: 35rpx;margin-bottom: 30rpx;margin-top: 30rpx;">（三）注销账户</span></strong>
+			</p>
+			<p><span>您可以通过联系XXX客服要求注销您的XXX账户，或点击”我的“&gt;”设置“&gt;”注销“，</span><strong><span>有关注销账户的相关规则和流程，请参见附件中的《用户注销协议》。您注销成功后，我们将根据法律法规的要求尽快删除您的个人信息或做匿名化处理。</span></strong>
+			</p>
+			<p><span>如果您无法通过上述方式访问、更正或删除您的个人信息以及注销账号，或者如果您认为XXX存在违反法律的规定收集、使用您个人信息的情形，您可以通过我们的客服或通过本隐私政策提供的其他方式与我们取得联系。为了保障安全，我们可能需要您提供相应方式证明您的身份和请求的正当性，我们将在收到您反馈并验证您的身份后的15
+					天内答复您的请求。对于您合理的请求，我们原则上不收取费用，但对多次重复、超出合理限度的请求，我们将视情收取一定成本费用。对于那些无端重复、需要过多技术手段（例如，需要开发新系统或从根本上改变现行惯例）、给他人合法权益带来风险或者非常不切实际（例如，涉及备份磁带上存放的信息）的请求，我们可能会予以拒绝。</span>
+			</p>
+			<p>&nbsp;</p>
+			<h3 id=""><span
+					style="display: block;font-weight: bold;font-size: 40rpx;margin-bottom: 30rpx;margin-top: 30rpx;">六、未成年人的个人信息保护</span>
+			</h3>
+			<p><span
+					style="display: block;margin-top: 30rpx;margin-bottom: 40rpx;">1、XXX非常重视对未成年人个人信息的保护。我们的网站和服务主要面向成人。</span><strong><span>如您为未成年人的，建议您请您的父母或监护人仔细阅读本隐私权政策，并在征得您的父母或监护人同意的前提下使用我们的服务或向我们提供信息。</span></strong><span>对于经父母或监护人同意使用我们的产品或服务而收集未成年人个人信息的情况，我们只会在法律法规允许、父母或监护人明确同意或者保护未成年人所必要的情况下使用、共享、转让或披露此信息。如果我们发现自己在未事先获得可证实的父母或法定监护人同意的情况下收集了未成年人的个人信息，则会设法尽快删除相关数据。</span>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">2、如您为未成年人的父母或监护人，当您对您所监护的未成年人的信息处理存在疑问时，请通过下文中的联系方式联系我们。</span>
+			</p>
+			<p>&nbsp;</p>
+			<h3 id=""><span
+					style="font-weight: bold;font-size: 40rpx;display: block;margin-bottom: 30rpx;margin-top: 30rpx;">七、通知和修订</span>
+			</h3>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">为给您提供更好的服务，我们的业务将不时变化，本隐私政策也将随之调整。未经您明确同意，我们不会削减您依据本隐私政策所应享有的权利。我们会通过在我们网站、移动端上发出更新版本或以其他方式提醒您相关内容的更新，也请您访问我们以便及时了解最新的隐私政策。在前述情况下，若您继续使用我们的服务，即表示同意接受修订后的本政策并受之约束。</span>
+			</p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">发生下列重大变化情形时，我们会适时对本政策进行更新：</span>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">（1）我们的基本情况发生变化，例如：兼并、收购、重组引起的所有者变更；</span>
+			</p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">（2）收集、存储、使用个人信息的范围、目的、规则发生变化；</span>
+			</p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">（3）对外提供个人信息的对象、范围、目的发生变化；</span></p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">（4）您访问和管理个人信息的方式发生变化；</span></p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">（5）数据安全能力、信息安全风险发生变化；</span></p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">（6）用户询问、投诉的渠道和机制，以及外部纠纷解决机构及联络方式发生变化；</span>
+			</p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">（7）其他可能对您的个人信息权益产生重大影响的变化。</span>
+			</p>
+			<p>&nbsp;</p>
+			<h3 id=""><span style="font-weight: bold;font-size: 40rpx;">八、如何联系我们</span></h3>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">您可以通过以下方式与我们联系，我们将在15
+					天内答复您的请求；</span></p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">1、您可以通过XXX网站（如</span><a
+					href="https://www.XXX.cn/" target="_blank" class="url">https://www.XXX.cn/</a><span>）与我们联系；</span>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">2、您可以联系XXX的客服电话进行反馈（联系方式：400-XXX-XXX）。</span>
+			</p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">3、您可以通过 </span><a
+					href="mailto:XXX@qq.com" target="_blank" class="url">xxx@qq.com</a><span>
+					联系我们，或者寄信到如下地址：</span></p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">福建省泉州市XXX号（收），邮编：362201。</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">附录（本政策中关键词说明）：</span></strong>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">1、个人信息：指以电子或者其他方式记录的能够单独或者与其他信息结合识别特定自然人身份或者反映特定自然人活动情况的各种信息。本隐私政策中可能涉及的个人信息包括但不限于：个人基本信息（包括姓名、电话号码、性别、住址、生日等）；个人身份信息（包括身份证、军官证、护照、驾驶证等）；网络身份标识信息（包括系统账号、IP
+						地址、邮箱地址及与前述有关的密码、口令、口令保护答案）；个人财产信息（包括银行账号、交易和消费记录、信贷记录以及虚拟财产信息等）；个人健康生理信息（包括病症、病历、病史等）；联系人信息（包括通讯录信息、好友列表等）；个人上网记录（包括网站浏览记录、点击记录等）；个人设备信息（包括唯一设备识别码等描述个人常用设备基本情况的信息）；个人位置信息（包括行踪轨迹、精准定位信息、住宿信息等）。</span></strong>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">2、个人敏感信息：是指一旦泄露、非法提供或滥用可能危害人身和财产安全，极易导致个人名誉、身心健康受到损害或歧视性待遇等的个人信息。本隐私政策中可能涉及的个人敏感信息包括：个人身份认证信息（包括身份证、军官证、护照、驾驶证、学生证等）；个人财产信息（银行账号、交易和消费记录、信贷记录以及虚拟财产信息等）；其他信息（行踪轨迹、通讯录信息、住宿信息、精准定位信息等）；14
+						周岁以下的儿童信息。</span></strong></p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">3、XXX：</span></strong><span>本政策中所指的“XXX”是指YYY旗下所有公司及其附属、关联公司。</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">4、关联公司：</span></strong><span>YYY。</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">5、关联账号：</span></strong><span>您可以使用相同的手机号码登录XXX所提供的产品/服务，并授权使用您的XXX账号信息（如头像、昵称、收货地址），以便于我们基于关联账号向您提供一致的服务以及您进行统一管理。</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">6、设备信息：</span></strong><span>设备标识符（IMEI、IDFA、Android
+					ID、MAC、OAID等相关信息）、应用信息（应用崩溃信息、通知开关状态、软件列表等相关信息）、设备参数及系统信息（设备类型、设备型号、操作系统及硬件相关信息）</span></p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">7、去标识化：</span></strong><span>指通过对个人信息的技术处理，使其在不借助额外信息的情况下，无法识别个人信息主体的过程。</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">8、匿名化：</span></strong><span>指通过对个人信息的技术处理，使得个人信息主体无法被识别，且处理后的信息不能被复原的过程</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">附件一：</span></strong>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">《用户注销协议》</span></strong>
+			</p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">在您注销您的账户之前，请充分阅读、理解并同意下列事项：</span>
+			</p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">在此善意地提醒您，您注销XXX账户的行为，将导致我们终止对您提供本服务，也会给您的售后维权带来诸多不便。注销成功后，我们将删除您的个人信息，使其保持不可被检索、访问的状态，或对其进行匿名化处理。您知晓并理解，根据相关法律规定相关交易记录须在XXX保存3
+					年甚至更长的时间。</span></p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">1、如果您仍执意注销账户，您的账户需同时满足以下条件：</span></strong>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">（1）账户在XXX系统中无资产、无欠款；</span></strong>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">（2）账户内无未完成的订单、已提供服务但未支付的订单/服务；</span></strong>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">（3）账户无任何纠纷，包括投诉举报或被投诉举报；</span></strong>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">（4）账户为正常使用中的账户且无任何账户被限制的记录。</span></strong>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">2、在XXX账户注销期间，如果您的XXX账户涉及争议纠纷，包括但不限于投诉、举报、诉讼、仲裁、国家有权机关调查等，XXX有权自行终止本XXX账户的注销而无需另行得到您的同意。</span>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">3、请您在提交注销申请前，务必解绑其他相关账户，具体可与我们的客服联系。</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">4、XXX账户一旦被注销将不可恢复，请您在操作之前自行备份账户相关的所有信息和数据。注销XXX账户，您将无法再使用本XXX账户，也将无法找回您XXX账户中及与账户相关的任何内容或信息（即使您使用相同的手机号码再次注册并使用XXX），包括但不限于：</span></strong>
+			</p>
+			<p><span style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">（1）您将无法登录、使用XXX账户；</span></p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">（2）XXX账户的个人资料和历史信息（包括但不限于用户名、昵称、头像、预订/团购记录等）都将无法找回；</span>
+			</p>
+			<p><span
+					style="display: block;margin-bottom: 30rpx;margin-top: 30rpx;">（3）您通过XXX账号进行登录的XXX旗下各网站/APP所有记录将无法找回。您将无法再登录、使用前述服务，您曾获得的优惠券、积分、及其他卡券等视为您自行放弃，将无法继续使用。您理解并同意，XXX无法协助您重新恢复前述服务。</span>
+			</p>
+			<p><strong><span
+						style="display: block;font-weight: bold; margin-bottom: 30rpx;margin-top: 30rpx;">5、注销本XXX账户并不代表本XXX账户注销前的账户行为和相关责任得到豁免或减轻。</span></strong>
+			</p>
+			<p>&nbsp;</p>
+			<p><strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">更新日期：2025年01月10日</span></strong>
+				<strong><span
+						style="display: block;font-weight: bold;margin-bottom: 30rpx;margin-top: 30rpx;">生效日期：2025年01月10日</span></strong>
+			</p>
+		</view>
+	</view>
+</template>
+
+<script>
+export default {
+	name: 'PrivacyPolicy',
+	data() {
+		return {
+			// 在这里添加需要的数据
+			tableData: [
+				{
+					permission: '位置',
+					purpose: '用于向用户展示所在城市及周边可为您提供按摩保健服务的商家和理疗师。',
+					ask: '查看所在城市的理疗师列表时弹窗询问',
+					closeable: '是'
+				},
+				{
+					permission: '相机',
+					purpose: '用于拍照、上传照片',
+					ask: '用户主动拍照、上传图片时询问',
+					closeable: '是'
+				},
+				{
+					permission: '照片',
+					purpose: '用于写入和读取用户相册信息',
+					ask: '用户主动上传前询问',
+					closeable: '是'
+				}
+			],
+
+			tableData2: [
+				{
+					permission: '位置',
+					purpose: '用于向用户展示所在城市及周边可为您提供按摩保健服务的商家和理疗师。',
+					ask: '查看所在城市的理疗师列表时弹窗询问',
+					closeable: '是'
+				},
+				{
+					permission: '读取设备上的照片及文件',
+					purpose: '用于缓存用户基本信息，可为您提供项目定制化服务',
+					ask: '首次打开客户端时弹窗询问',
+					closeable: '是'
+				},
+				{
+					permission: '相机',
+					purpose: '用于拍照、上传照片',
+					ask: '用户主动拍照、上传图片时询问',
+					closeable: '是'
+				},
+				{
+					permission: '照片',
+					purpose: '用于写入和读取用户相册信息',
+					ask: '用户主动上传前询问',
+					closeable: '是'
+				},
+				{
+					permission: '直接拨打电话',
+					purpose: '用于联系客服或联系理疗师',
+					ask: '用户主动拨打前询问',
+					closeable: '是'
+				},
+				{
+					permission: 'ANDROID ID',
+					purpose: '用于向用户推送订单改变状态',
+					ask: '登录客户端时获取',
+					closeable: '是'
+				}
+			], tableData3: [
+				{
+					name: '高德地图SDK',
+					purpose: '提供配送地理位置信息服务',
+					sharedInfo: '读取 IMEI、设备序列号等设备信息等作为设备标识、网络访问相关、设备MAC地址、唯一设备识别码、获取传感器信息、位置信息、软件安装列表',
+					serviceMethod: '嵌入该SDK，SDK将传输个人信息',
+					link: 'https://lbs.amap.com/pages/privacy/'
+				},
+				{
+					name: '微信登录验证',
+					purpose: '提供用户登录服务',
+					sharedInfo: '读取 IMEI等设备信息等作为设备标识、设备MAC地址、唯一设备识别码、位置信息',
+					serviceMethod: '嵌入该SDK，SDK将传输个人信息',
+					link: 'https://www.tencent.com/zh-cn/privacy-policy.html'
+				},
+				{
+					name: '微信支付',
+					purpose: '提供用户支付服务',
+					sharedInfo: '读取 IMEI等设备信息等作为设备标识、设备MAC地址、唯一设备识别码、位置信息',
+					serviceMethod: '嵌入该SDK，SDK将传输个人信息',
+					link: 'https://pay.weixin.qq.com/index.php/public/apply_sign/protocol_v2'
+				},
+				{
+					name: '支付宝开放平台',
+					purpose: '提供用户支付服务',
+					sharedInfo: '读取 IMEI等设备信息等作为设备标识、设备MAC地址、唯一设备识别码、位置信息',
+					serviceMethod: '嵌入该SDK，SDK将传输个人信息',
+					link: 'https://render.alipay.com/p/yuyan/180020010001196791/preview.html?agreementId=AG00000132'
+				},
+				{
+					name: '图片选择器',
+					purpose: '帮助用户选择并上传图片',
+					sharedInfo: '读取 IMEI等设备信息等作为设备标识、设备MAC地址、唯一设备识别码、位置信息、网络访问相关',
+					serviceMethod: '嵌入该SDK，SDK将传输个人信息',
+					link: 'https://github.com/LuckSiege/PictureSelector'
+				},
+				{
+					name: '腾讯地图',
+					purpose: '为用户提供位置及地图导航功能',
+					sharedInfo: '读取 IMEI等设备信息等作为设备标识、网络访问相关、设备MAC地址、唯一设备识别码、位置信息',
+					serviceMethod: '嵌入该SDK，SDK将传输个人信息',
+					link: 'https://lbs.amap.com/pages/privacy/'
+				},
+				{
+					name: '个推，一键认证',
+					purpose: '为客户提供登录功能',
+					sharedInfo: '存储个人文件、读取手机状态和身份、网络信息',
+					serviceMethod: '嵌入该SDK，SDK将传输个人信息',
+					link: 'http://docs.getui.com/privacy'
+				}
+			]
+		};
+	},
+	methods: {
+		// 在这里添加需要的方法
+	}
+};
+</script>
+
+<style scoped>
+/* 在这里添加样式 */
+.content {
+	margin-left: 40rpx;
+	margin-right: 40rpx;
+}
+
+.underline {
+	display: block;
+	/* 确保元素是块级元素 */
+	text-decoration: underline;
+	font-weight: bold;
+	margin-top: 30rpx;
+	margin-bottom: 20rpx;
+}
+
+.table {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	border: 1px solid #ccc;
+	/* 为整个表格设置边框 */
+}
+
+.table-header, .table-row {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #ccc;
+}
+
+
+.table-cell {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border-right: 1px solid #ccc;
+  max-width: 150px;
+  max-height: 800px;
+  overflow: hidden;
+  white-space: normal; /* 允许文本换行 */
+  word-wrap: break-word; /* 强制长单词换行 */
+  word-break: break-all; /* 强制长链接换行 */
+}
+
+.url {
+  color: #007aff;
+  text-decoration: underline;
+  word-wrap: break-word; /* 强制长链接换行 */
+  word-break: break-all; /* 强制长链接换行 */
+}
+
+.table-cell:last-child {
+	border-right: none;
+}
+</style>

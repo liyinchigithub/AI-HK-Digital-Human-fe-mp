@@ -1,0 +1,165 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["orderGoodsID", "orderGoodsName", "orderGoodsCount", "orderType", "orderStatus", "orderOriginalAmount",
+		"orderCurrentAmount", "orderDiscountAmount", "amountPayable", "actualAmountPaid",
+		"orderPayType", "discountMethod", "openID", "userID",
+		"isAssociatedBookingSheet",
+		"orderServiceAddress"
+	],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"orderNo": {
+			"bsonType": "string",
+			"title": "微信支付订单编号",
+			"description": "请输入",
+			"order": 1
+		},
+		"orderGoodsID": {
+			"bsonType": "string",
+			"title": "商品ID",
+			"description": "请输入",
+			"order": 1
+		},
+		"orderGoodsName": {
+			"bsonType": "string",
+			"title": "商品名称",
+			"description": "请输入",
+			"order": 2
+		},
+		"orderGoodsCount": {
+			"bsonType": "int",
+			"title": "购买数量",
+			"description": "请输入",
+			"order": 3
+		},
+		"orderType": {
+			"bsonType": "int",
+			"title": "订单类型",
+			"description": "请输入",
+			"order": 4
+		},
+		"orderStatus": {
+			"bsonType": "int",
+			"title": "订单状态",
+			"description": "订单状态：1-进行中（已付款/待服务）、2-已完成、3-待评价、4-已取消、5-已退款",
+			"order": 5
+		},
+		"orderOriginalAmount": {
+			"bsonType": "double",
+			"title": "原价",
+			"description": "请输入",
+			"order": 6
+		},
+		"orderCurrentAmount": {
+			"bsonType": "double",
+			"title": "现价（优惠后的金额）",
+			"description": "请输入",
+			"order": 7
+		},
+		"orderDiscountAmount": {
+			"bsonType": "double",
+			"title": "优惠金额",
+			"description": "自动计算：原价-现价=优惠金额",
+			"order": 8
+		},
+		"amountPayable": {
+			"bsonType": "double",
+			"title": "应付金额",
+			"description": "请输入",
+			"order": 9
+		},
+		"actualAmountPaid": {
+			"bsonType": "double",
+			"title": "实际支付金额",
+			"description": "请输入",
+			"order": 10
+		},
+		"isPaid":{
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "是否已支付",
+			"description": "默认否",
+			"order": 11
+		},
+		"discountMethod": {
+			"bsonType": "int",
+			"title": "优惠方式",
+			"description": "1-优惠券、2-积分、3-会员卡打折",
+			"order": 12
+		},
+		"isAssociatedBookingSheet": {
+			"bsonType": "bool",
+			"defaultValue": false,
+			"title": "是否关联预约单",
+			"order": 13
+		},
+		"ReservationID": {
+			"bsonType": "string",
+			"title": "预约单ID",
+			"description": "请输入",
+			"order": 14
+		},
+		"useCouponID": {
+			"bsonType": "string",
+			"title": "优惠券ID",
+			"description": "请输入",
+			"defaultValue": "优惠券ID",
+			"order": 15
+		},
+		"openID": {
+			"bsonType": "string",
+			"title": "微信openID",
+			"description": "请输入",
+			"order": 16
+		},
+		"userID": {
+			"bsonType": "string",
+			"title": "userID",
+			"description": "请输入",
+			"order": 17
+		},
+		"sharerOpenID": {
+			"bsonType": "string",
+			"title": "邀请人openID",
+			"description": "请输入",
+			"order": 17
+		},
+		"updated": {
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 18
+		},
+		"created": {
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 19
+		},
+		"isRefund": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "是否退款",
+			"order": 20
+		},
+		"isEnable": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "生效状态",
+			"order": 21
+		}
+	}
+}

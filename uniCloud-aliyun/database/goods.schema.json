@@ -1,0 +1,205 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["classTypeID","brandID","commissionScheme","title", "originalPrice", "favourPrice", "tip","desc", "image",
+		"isEnable","sort","expressCharge","monthlySales","salesVolume","goodReputation"
+	],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"classTypeID": {
+			"bsonType": "string",
+			"description": "请选择分类",
+			"foreignKey": "classType._id",
+			"enum": {
+				"collection": "classType",
+				"field": "classTypeName as text,_id as value"
+			},
+			"label": "分类",
+			"trim": "both",
+			"title": "分类",
+			"order": 2
+		},
+		"cityID": {
+			"bsonType": "string",
+			"description": "请选开通城市",
+			"foreignKey": "cities._id",
+			"enum": {
+				"collection": "cities",
+				"field": "cityName as text,_id as value"
+			},
+			"label": "开通城市",
+			"trim": "both",
+			"title": "开通城市",
+			"order": 3
+		},
+		"brandID": {
+			"bsonType": "string",
+			"description": "请选择品牌",
+			"foreignKey": "brand._id",
+			"enum": {
+				"collection": "brand",
+				"field": "brandName as text,_id as value"
+			},
+			"label": "品牌",
+			"trim": "both",
+			"title": "品牌",
+			"order": 2
+		},
+		"commissionScheme": {
+			"bsonType": "string",
+			"description": "请选择佣金方案",
+			"foreignKey": "commissionScheme._id",
+			"enum": {
+				"collection": "commissionScheme",
+				"field": "commissionSchemeName as text,_id as value"
+			},
+			"label": "佣金方案",
+			"trim": "both",
+			"title": "佣金方案",
+			"order": 3
+		},
+		"title": {
+			"bsonType": "string",
+			"title": "商品名称",
+			"description": "请输入",
+			"order": 4
+		},
+		"originalPrice": {
+			"bsonType": "double",
+			"title": "原价格",
+			"description": "请输入",
+			"order": 5
+		},
+		"favourPrice": {
+			"bsonType": "double",
+			"title": "现价（优惠价格）",
+			"description": "请输入",
+			"order": 6
+		},
+		"tip": {
+			"bsonType": "string",
+			"title": "标签",
+			"description": "请输入",
+			"order": 7
+		},
+		"desc": {
+			"bsonType": "string",
+			"title": "商品介绍",
+			"description": "请输入",
+			"component": {
+				"name": "textarea",
+				"maxLength": 2000 // 设置最大文本长度为500
+			},
+			"order":8
+		},
+		"OrderInstructions": {
+			"bsonType": "string",
+			"title": "下单须知",
+			"description": "请输入",
+			"component": {
+				"name": "textarea",
+				"maxLength": 2000 // 设置最大文本长度为500
+			},
+			"order":8
+		},
+		"image": {
+			"bsonType": "file",
+			"title": "商品封面图片",
+			"description": "商品封面图片",
+			"fileMediaType": "image", // 可选值 all|image|video 默认值为all,表示所有文件，image表示图片类型文件，video表示视频类型文件
+			"fileExtName": "jpg,png,gif,bmp,jpeg", // 扩展名过滤，多个用 , 分割
+			"order": 9
+		},
+		"imageList": {
+			"bsonType": "array",
+			"title": "商品介绍图片",
+			"description": "多张图片，最多1张",
+			"arrayType": "file",
+			"multiple": true, // 允许选择多张图片
+			"fileMediaType": "image", // 可选值 all|image|video 默认值为all,表示所有文件，image表示图片类型文件，video表示视频类型文件
+			"fileExtName": "jpg,png,gif,bmp,jpeg", // 扩展名过滤，多个用 , 分割
+			"maxLength": 1, // 限制最大数量
+			"order": 10
+		},
+		"video": {
+			"bsonType": "file",
+			"title": "商品视频",
+			"description": "请上传视频",
+			"fileMediaType": "video",
+			"fileExtName": "mp4,",
+			"order": 11
+		},
+		"expressCharge": {
+			"bsonType": "double",
+			"title": "快递费",
+			"description": "请输入",
+			"order": 12
+		},
+		"monthlySales": {
+			"bsonType": "double",
+			"title": "月销量",
+			"description": "请输入",
+			"order": 13
+		},
+		"salesVolume": {
+			"bsonType": "int",
+			"title": "销量",
+			"description": "数值越大越排序越靠前",
+			"order": 13
+		},
+		"sort": {
+			"bsonType": "int",
+			"title": "商品排序",
+			"description": "数值越大越排序越靠前",
+			"order": 14
+		},
+		"serviceDuration": {
+			"bsonType": "int",
+			"title": "服务时长",
+			"description": "分钟",
+			"order": 15
+		},
+		"goodReputation": {
+			"bsonType": "int",
+			"title": "好评度",
+			"description": "数值越大越排序越靠前",
+			"order": 17
+		},
+		"isNoInventory": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "是否无库存",
+			"order": 18，
+		},
+		"updated": {
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 19
+		},
+		"created": {
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 20
+		},
+		"isEnable": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "生效状态",
+			"order": 16
+		}
+	}
+}

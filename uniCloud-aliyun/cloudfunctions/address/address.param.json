@@ -1,0 +1,16 @@
+// 本文件中的json内容将在云函数【运行】时作为参数传给云函数。
+// 配置教程参考：https://uniapp.dcloud.net.cn/uniCloud/quickstart?id=runparam
+{
+	"openID":"oTDxt5Rg2FLfsGHXY9BJ2lsBmog4",
+	"userID": "1680847197000-oTDxt5Rg2FLfsGHXY9BJ2lsBmog4",
+	"method":"deleteAddress",// addAddress、updateAddress、getAddress、deleteAddress
+	"_id":"6464f52c28064a7587800c6b",
+	// "method":"deleteAddress",
+	"deliveryAddress":"厦门市集美区杏林村苑北路9号",
+	"addressee":"张三5",
+	"phone":15959950529,
+	"pageNum": 1,
+	"pageSize": 4,
+	"isEnable": true
+	
+}

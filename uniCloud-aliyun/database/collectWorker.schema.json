@@ -1,0 +1,104 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["workerID","openID","userID"],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"workerID": {
+			"bsonType": "string",
+			"description": "请输入",
+			"label": "师傅ID",
+			"trim": "both",
+			"title": "师傅ID",
+			"unique": true, // 确保唯一性
+			"index": true,   // 创建索引以优化搜索
+			"order": 1
+		},
+		"workerName": {
+			"bsonType": "string",
+			"description": "请输入姓名",
+			"label": "师傅姓名",
+			"trim": "both",
+			"title": "师傅姓名",
+			"unique": true, // 确保唯一性
+			"index": true,   // 创建索引以优化搜索
+			"order": 2
+		},
+		"workPhoto": {
+			"bsonType": "array",
+			"title": "工作照",
+			"description": "多张图片，最多1张",
+			"arrayType": "file",
+			"multiple": true,
+			"fileMediaType": "image",
+			"fileExtName": "jpg,png,gif,bmp,jpeg",
+			"maxLength": 1,
+			"order": 3
+		},
+		"lifePhoto": {
+			"bsonType": "array",
+			"title": "生活照",
+			"description": "多张图片，最多3张",
+			"arrayType": "file",
+			"multiple": true,
+			"fileMediaType": "image",
+			"fileExtName": "jpg,png,gif,bmp,jpeg",
+			"maxLength": 3,
+			"order": 4
+		},
+		"userID": {
+			"bsonType": "string",
+			"description": "请输入",
+			"label": "用户ID",
+			"trim": "both",
+			"title": "用户ID",
+			"unique": true, // 确保唯一性
+			"index": true,   // 创建索引以优化搜索
+			"order": 5
+		},
+		"openID": {
+			"bsonType": "string",
+			"description": "请输入",
+			"label": "微信用户ID",
+			"trim": "both",
+			"title": "微信用户ID",
+			"unique": true, // 确保唯一性
+			"index": true,   // 创建索引以优化搜索
+			"order": 6
+		},
+		"updated": {
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"index": true,
+			"order": 7
+		},
+		"created": {
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"index": true,
+			"order": 8
+		},
+		"isEnable": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "生效状态",
+			"description": "是否生效",
+			"index": true,
+			"order": 9
+		}
+	}
+}

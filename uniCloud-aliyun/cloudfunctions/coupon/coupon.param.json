@@ -1,0 +1,14 @@
+// 本文件中的json内容将在云函数【运行】时作为参数传给云函数。
+// 配置教程参考：https://uniapp.dcloud.net.cn/uniCloud/quickstart?id=runparam
+{
+	
+	"method":"deleteCoupon", // getCoupon、getCouponDetail、deleteCoupon
+	"_id": "640efd80e766bb2975496bc1",
+	"pageNum": 1,
+	"pageSize": 4,
+	"isEnable": true,
+	"userID": "1680847197000-oTDxt5Rg2FLfsGHXY9BJ2lsBmog4",
+	"openID": "oTDxt5Rg2FLfsGHXY9BJ2lsBmog4",
+	"updated": 1680430800111,
+	"created": 1680430800111
+}

@@ -1,0 +1,151 @@
+{
+	"name": "AI-HK-Digital-Human-fe-mp",
+	"appid": "__UNI__1F09267",
+	"description": "AI数字人-用户端",
+	"versionName": "1.0.0",
+	"versionCode": "100",
+	"transformPx": false,
+	"app-plus": {
+		"usingComponents": true,
+		"nvueStyleCompiler": "uni-app",
+		"compilerVersion": 3,
+		"splashscreen": {
+			"alwaysShowBeforeRender": true,
+			"waiting": true,
+			"autoclose": true,
+			"delay": 0
+		},
+		"modules": {},
+		"distribute": {
+			"android": {
+				"permissions": [
+					"<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+					"<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+					"<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+					"<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.CAMERA\"/>",
+					"<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+					"<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+					"<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+					"<uses-feature android:name=\"android.hardware.camera\"/>",
+					"<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+				]
+			},
+			"ios": {
+				"dSYMs": false
+			},
+			"sdkConfigs": {
+				"ad": {}
+			}
+		},
+		"uniStatistics": {
+			"enable": false
+		}
+	},
+	"quickapp": {},
+	"mp-weixin": {
+		"appid": "wx9d6bd1da77d1287f",
+		"setting": {
+			"urlCheck": false,
+			"es6": true,
+			"postcss": true,
+			"minified": true
+		},
+		"usingComponents": true,
+		"requiredPrivateInfos": [
+			// "getFuzzyLocation",
+			"choosePoi",
+			"chooseAddress", // 选择地址
+			"getLocation" // 定位  与getFuzzyLocation互斥
+		],
+		"permission": {
+			"scope.userLocation": {
+				"desc": "获取用户当前位置，以提供更好的服务"
+			},
+			"scope.record": {
+				"desc": "需要您的授权来使用语音输入"
+			}
+		},
+		// ,
+		// "scope.userFuzzyLocation" : {
+		//     "desc" : "获取用户当前位置，以提供更好的服务"
+		// }
+		"unipush": {
+			"enable": true
+		},
+		"optimization": {
+			"subPackages": true
+		}, //开启分包
+		"lazyCodeLoading": "requiredComponents", //按需注入
+		"uniStatistics": {
+			"enable": true
+		}
+	},
+	"mp-alipay": {
+		"usingComponents": true,
+		"uniStatistics": {
+			"enable": false
+		}
+	},
+	"mp-baidu": {
+		"usingComponents": true,
+		"uniStatistics": {
+			"enable": false
+		}
+	},
+	"mp-toutiao": {
+		"usingComponents": true,
+		"uniStatistics": {
+			"enable": false
+		}
+	},
+	"uniStatistics": {
+		"enable": false,
+		"version": "2"
+	},
+	"vueVersion": "2",
+	"h5": {
+		"uniStatistics": {
+			"enable": false
+		},
+		"sdkConfigs": {
+			"maps": {}
+		}
+	},
+	"mp-jd": {
+		"uniStatistics": {
+			"enable": false
+		}
+	},
+	"mp-kuaishou": {
+		"uniStatistics": {
+			"enable": false
+		}
+	},
+	"mp-lark": {
+		"uniStatistics": {
+			"enable": false
+		}
+	},
+	"mp-qq": {
+		"uniStatistics": {
+			"enable": false
+		}
+	},
+	"quickapp-webview-huawei": {
+		"uniStatistics": {
+			"enable": false
+		}
+	},
+	"quickapp-webview-union": {
+		"uniStatistics": {
+			"enable": false
+		}
+	},
+	"fallbackLocale": "zh-Hans"
+}

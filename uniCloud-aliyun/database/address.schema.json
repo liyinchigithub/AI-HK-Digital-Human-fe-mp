@@ -1,0 +1,62 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["openID", "deliveryAddress", "addressee", "phone"],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"openID": {
+			"bsonType": "string",
+			"title": "微信openID",
+			"description": "请输入",
+			"order": 1
+		},
+		"deliveryAddress": {
+			"bsonType": "string",
+			"title": "收件地址",
+			"description": "请输入",
+			"order": 2
+		},
+		"addressee": {
+			"bsonType": "string",
+			"title": "收件人",
+			"description": "请输入",
+			"order": 3
+		},
+		"phone": {
+			"bsonType": "string",
+			"title": "联系电话",
+			"description": "请输入",
+			"order": 4
+		},
+		"updated": {
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 7
+		},
+		"created": {
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 8
+		},
+		"isEnable": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "生效状态",
+			"order": 9
+		}
+	}
+}

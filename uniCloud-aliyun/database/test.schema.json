@@ -1,0 +1,64 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["order_no","out_trade_no","total_fee"],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"sort": {
+			"bsonType": "int",
+			"title": "商品排序",
+			"description": "数值越大越排序越靠前",
+			"order": 1
+		},
+		"order_no": {
+			"bsonType": "string",
+			"description": "order_no",
+			"label": "order_no",
+			"trim": "both",
+			"title": "order_no",
+			"order": 3
+		},
+		"out_trade_no": {
+			"bsonType": "string",
+			"title": "out_trade_no",
+			"description": "请输入",
+			"order": 4
+		},
+		"total_fee": {
+			"bsonType": "double",
+			"title": "total_fee",
+			"description": "请输入",
+			"order": 5
+		},
+		"updated": {
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 14
+		},
+		"created": {
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 15
+		},
+		"isEnable": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "生效状态",
+			"order": 16
+		}
+	}
+}

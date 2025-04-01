@@ -1,0 +1,16 @@
+// 本文件中的json内容将在云函数【运行】时作为参数传给云函数。
+// 配置教程参考：https://uniapp.dcloud.net.cn/uniCloud/rundebug.html#runparam
+{
+	"methods":"getWorkers", // getWorkerDetail、getWorkersSearch、getWorkers、addwWrkers
+	"workerID":"67734afc99c624a18a85cddd",
+	"pageNum": 1,
+	"sortType":1,// 排序方式：sort 综合排序 0、orderNumber 订单量 1、favorited 被收藏  2、accumulatedIncome 累计收入 3
+	"pageSize": 4,
+	"isEnable":true,
+	"username": "黄珊珊",
+	"gender": 2, // 男1、女2
+	"age": 20,
+	"phone": "13800138000",
+	"cityName": "厦门市",
+	"cityID":"677365c199c624a18a88fe18"
+}

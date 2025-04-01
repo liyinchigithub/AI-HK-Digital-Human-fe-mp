@@ -1,0 +1,7 @@
+{
+  "name": "speech-to-text",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

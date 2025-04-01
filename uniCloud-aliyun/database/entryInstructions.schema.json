@@ -1,0 +1,61 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["title", "content"],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"title": {
+			"bsonType": "string",
+			"title": "标题",
+			"description": "请输入",
+			"order": 1
+		},
+		"content": {
+			"bsonType": "string",
+			"title": "内容",
+			"description": "请输入",
+			"component": {
+				"name": "textarea"
+			},
+			"maxlength": 500,
+			"order": 2
+		},
+		"version": {
+			"bsonType": "string",
+			"label": "版本号",
+			"title": "版本号",
+			"description": "建议按日期年月日时分秒，如：202303011000",
+			"order": 3
+		},
+		"updated": {
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 4
+		},
+		"created": {
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 5
+		},
+		"isEnable": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "生效状态",
+			"order": 6
+		}
+	}
+}

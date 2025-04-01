@@ -1,0 +1,1 @@
+<view><u-overlay vue-id="3dc1c871-1" show="{{maskShow}}" data-event-opts="{{[['^click',[['e0']]]]}}" bind:click="__e" bind:__l="__l"></u-overlay><text>{{''+title}}</text><text>{{''+content}}</text></view>

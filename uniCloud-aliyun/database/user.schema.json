@@ -1,0 +1,171 @@
+{
+	"bsonType": "object",
+	"required": ["openID"],
+	"version": "1.0.0",
+	"fieldRules": [{
+		"rule": "updated == null || created != null && created<updated",
+		"errorMessage": "更新时间需大于创建时间"
+	}],
+	"permission": {
+		"read": true,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"phone": {
+			"bsonType": "string",
+			"description": "请输入",
+			"pattern": "^\\+?[0-9-]{3,20}$",
+			"label": "手机号",
+			"trim": "both",
+			"title": "手机号",
+			"order": 1
+		},
+		"userID":{
+			"bsonType": "string",
+			"description": "用户ID",
+			"label": "用户ID",
+			"trim": "both",
+			"title": "用户ID",
+			"order": 1
+		},
+		"openID": {
+			"bsonType": "string",
+			"description": "微信openID",
+			"label": "微信openID",
+			"trim": "both",
+			"title": "微信openID",
+			"order": 1
+		},
+		"nickName": {
+			"bsonType": "string",
+			"description": "微信昵称",
+			"label": "微信昵称",
+			"trim": "both",
+			"title": "微信昵称",
+			"order": 2
+		},
+		"avatarUrl": {
+			"bsonType": "file",
+			"title": "图片",
+			"description": "图片",
+			"fileMediaType": "image", // 可选值 all|image|video 默认值为all,表示所有文件，image表示图片类型文件，video表示视频类型文件
+			"fileExtName": "jpg,png", // 扩展名过滤，多个用 , 分割
+			"order": 3
+		},
+		"gender": {
+			"bsonType": "string",
+			"description": "请选择",
+			"defaultValue": "男",
+			"label": "性别",
+			"title": "性别",
+			"order": 4,
+			"enum": [{
+				"text": "男",
+				"value": "男"
+			}, {
+				"text": "女",
+				"value": "女"
+			}]
+		},
+		"city": {
+			"bsonType": "string",
+			"description": "城市",
+			"label": "城市",
+			"trim": "both",
+			"title": "城市",
+			"order": 5
+		},
+		"province": {
+			"bsonType": "string",
+			"description": "省份",
+			"label": "省份",
+			"trim": "both",
+			"title": "省份",
+			"order": 6
+		},
+		"country": {
+			"bsonType": "string",
+			"description": "国家",
+			"label": "国家",
+			"trim": "both",
+			"title": "国家",
+			"order": 7
+		},
+		"username": {
+			"bsonType": "string",
+			"description": "请输入姓名",
+			"label": "姓名",
+			"trim": "both",
+			"title": "姓名",
+			"order": 8
+		},
+		
+		"balance": {
+			"bsonType": "int",
+			"description": "请输入余额",
+			"label": "余额",
+			"trim": "both",
+			"title": "余额",
+			"order": 10
+		},
+		"level ": {
+			"bsonType": "int",
+			"description": "请输入",
+			"label": "会员等级",
+			"trim": "both",
+			"title": "会员等级",
+			"order": 11
+		},
+		"is_block_user": {
+			"bsonType": "int",
+			"description": "请选择",
+			"defaultValue": 0,
+			"label": "黑用户",
+			"title": "黑用户",
+			"order": 12,
+			"enum": [{
+				"text": "否",
+				"value": 0
+			}, {
+				"text": "是",
+				"value": 1
+			}]
+		},
+		"updated": {
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 13
+		},
+		"created": {
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 14
+		},
+		"isEnable": {
+			"bsonType": "int",
+			"description": "默认为启用",
+			"defaultValue": 1,
+			"label": "是否启用",
+			"title": "是否启用",
+			"enum": [{
+				"text": "否",
+				"value": 0
+			}, {
+				"text": "是",
+				"value": 1
+			}],
+			"order": 15
+		}
+	}
+}

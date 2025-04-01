@@ -1,0 +1,14 @@
+// 本文件中的json内容将在云函数【运行】时作为参数传给云函数。
+// 配置教程参考：https://uniapp.dcloud.net.cn/uniCloud/rundebug.html#runparam
+{
+	"methods":"getGoods", // getGoodsDetail、getGoodsSearch、getGoods、getBrandGoods、addGoods、brandIDSearchGoods、classificationIDSearchGoods
+	"pageNum": 1,
+	"sortType":1,// 排序方式：sort 综合排序 0、favourPrice 价格 1、salesVolume 销量 2 、goodReputation 好评度 3
+	"pageSize": 4,
+	"orderGoodsID": "64744cc609e2989198eb5fa8",
+	"isEnable":true,
+	"title": "T7",
+	"brandID":"645600aa28064a7587f560f5",
+	"classificationID":"644772b528064a7587ea0c7c"
+	
+}

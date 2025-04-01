@@ -1,0 +1,64 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["commissionSchemeName", "sharerCommissionScheme", "purchaserCommissionScheme", "isEnable"],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"commissionSchemeName": {
+			"bsonType": "string",
+			"title": "方案名称",
+			"description": "请输入",
+			"order": 1
+		},
+		"sharerCommissionScheme": {
+			"bsonType": "double",
+			"title": "邀请者",
+			"description": "请输入",
+			"order": 2
+		},
+		"purchaserCommissionScheme": {
+			"bsonType": "double",
+			"title": "被邀请者",
+			"description": "请输入",
+			"order": 3
+		},
+		"remark": {
+			"bsonType": "string",
+			"title": "备注",
+			"component": {
+				"name": "textarea"
+			},
+			"order": 4
+		},
+		"updated": {
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 5
+		},
+		"created": {
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 6
+		},
+		"isEnable": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "生效状态",
+			"order": 7
+		}
+	}
+}

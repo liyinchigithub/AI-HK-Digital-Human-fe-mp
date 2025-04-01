@@ -1,0 +1,33 @@
+// 本文件中的json内容将在云函数【运行】时作为参数传给云函数。
+// 配置教程参考：https://uniapp.dcloud.net.cn/uniCloud/quickstart?id=runparam
+{
+
+	"methods": "createOrder", // getOrderList、createOrder、getOrderDetail
+	"pageNum": 1,
+	"pageSize": 4,
+	"isAllStatus": false, // 订单列表，是否全部状态订单
+	"openID": "oTDxt5Rg2FLfsGHXY9BJ2lsBmog4", // 微信用户ID
+	"userID": "1736230882000-oTDxt5Rg2FLfsGHXY9BJ2lsBmog4",
+	"isEnable": true,
+
+	// 创建
+	"orderGoodsName": "云函数本地创建", // 商品名称
+	"orderGoodsID": "6454d1de09e298919848b09d",
+	"orderGoodsCount": 1, // 商品I数量
+	"orderType": 1, // 订单类型（1-普通商品订单、2-服务商品订单）
+	"orderStatus": 0,  // 订单状态：0-全部、1-进行中、2-待评价、3-已完成、4-已取消
+	// "orderOriginalAmount": 150, // 原价
+	// "orderCurrentAmount": 50, // 现价
+	// "orderDiscountAmount": 100, // 优惠金额(原价-现价)
+	// "amountPayable": 50, // 应付金额
+	"actualAmountPaid": 50, // 实际支付金额
+	// "orderPayType": 1, // 支付方式（1-微信）
+	// "discountMethod": 1, // 优惠方式：1-优惠券、2-积分、3-会员卡打折
+	// "isAssociatedBookingSheet": true, // 是否关联预约单
+	// "reservationID": "62de902e5c1f6c0001017807", // 预约记录ID
+	// "created": 12312423423,
+	// "expectedAppointmentDateTime": "2023-05-01 14:00:00", // 期望预约日期时间
+	// "actualAppointmentDateTime": "2023-05-01 10:00:00", // 实际上门服务日期时间
+	// 订单详情
+	"orderID": "646dd99d28064a7587d69641"
+}

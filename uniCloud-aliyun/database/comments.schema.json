@@ -1,0 +1,105 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["openID","rating","orderID"],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"orderID": {
+			"bsonType": "string",
+			"description": "请选择",
+			"foreignKey": "order._id",
+			"enum": {
+				"collection": "order",
+				"field": "_id as text,_id as value"
+			},
+			"label": "微信支付订单编号",
+			"trim": "both",
+			"title": "微信支付订单编号",
+			"order": 1
+			// "defaultValue": "" // 设置默认值
+		},
+		"userPhone": {
+			"bsonType": "string",
+			"title": "用户手机号",
+			"description": "请输入",
+			"order": 1
+		},
+		"nickName": {
+			"bsonType": "string",
+			"title": "微信昵称（用户名）",
+			"description": "请输入",
+			"order": 2
+		},
+		"openID": {
+			"bsonType": "string",
+			"title": "微信openID",
+			"description": "请输入",
+			"order": 2
+		},
+		"rating": {
+			"bsonType": "int",
+			"title": "星星",
+			"description": "请输入",
+			"order": 3
+		},
+		"tags": {
+		  "bsonType": "array",
+		  "title": "标签",
+		  "description": "请输入标签",
+		  "items": {
+		    "bsonType": "string"
+		  },
+		  "order": 4
+		},
+		"content": {
+			"bsonType": "string",
+			"title": "评价内容",
+			"description": "请输入",
+			"order": 5
+		},
+		"sort": {
+			"bsonType": "int",
+			"title": "排序",
+			"description": "值越大越靠前",
+			"order": 6
+		},
+		"remark": {
+			"bsonType": "string",
+			"title": "备注",
+			"component": {
+				"name": "textarea"
+			},
+			"order": 7
+		},
+		"updated": {
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 8
+		},
+		"created": {
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 9
+		},
+		"isEnable": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "生效状态",
+			"order": 10
+		}
+	}
+}

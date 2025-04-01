@@ -1,0 +1,17 @@
+{
+  "navigationBarTitleText": "理疗师",
+  "usingComponents": {
+    "u-row": "/uni_modules/uview-ui/components/u-row/u-row",
+    "u-col": "/uni_modules/uview-ui/components/u-col/u-col",
+    "u--text": "/uni_modules/uview-ui/components/u--text/u--text",
+    "u-icon": "/uni_modules/uview-ui/components/u-icon/u-icon",
+    "u-search": "/uni_modules/uview-ui/components/u-search/u-search",
+    "u-action-sheet": "/uni_modules/uview-ui/components/u-action-sheet/u-action-sheet",
+    "u-empty": "/uni_modules/uview-ui/components/u-empty/u-empty",
+    "u-tag": "/uni_modules/uview-ui/components/u-tag/u-tag",
+    "u-overlay": "/uni_modules/uview-ui/components/u-overlay/u-overlay",
+    "u-popup": "/uni_modules/uview-ui/components/u-popup/u-popup",
+    "u-number-box": "/uni_modules/uview-ui/components/u-number-box/u-number-box",
+    "u-back-top": "/uni_modules/uview-ui/components/u-back-top/u-back-top"
+  }
+}

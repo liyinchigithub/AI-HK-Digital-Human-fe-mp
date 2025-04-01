@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "商品",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "u-overlay": "/uni_modules/uview-ui/components/u-overlay/u-overlay",
+    "u-loading-icon": "/uni_modules/uview-ui/components/u-loading-icon/u-loading-icon",
+    "u-search": "/uni_modules/uview-ui/components/u-search/u-search",
+    "u-empty": "/uni_modules/uview-ui/components/u-empty/u-empty",
+    "u-row": "/uni_modules/uview-ui/components/u-row/u-row",
+    "u-col": "/uni_modules/uview-ui/components/u-col/u-col",
+    "u-back-top": "/uni_modules/uview-ui/components/u-back-top/u-back-top"
+  }
+}

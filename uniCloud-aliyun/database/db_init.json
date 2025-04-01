@@ -1,0 +1,3686 @@
+{
+    "address": {
+        "data": [
+            {
+                "userID": "1680847197000-oTDxt5Rg2FLfsGHXY9BJ2lsBmog4",
+                "openID": "oTDxt5Rg2FLfsGHXY9BJ2lsBmog4",
+                "deliveryAddress": "厦门市集美区杏林村苑北路9号",
+                "addressee": "张三5",
+                "phone": 15959950529,
+                "isEnable": false
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "openID",
+                "deliveryAddress",
+                "addressee",
+                "phone"
+            ],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "openID": {
+                    "bsonType": "string",
+                    "title": "微信openID",
+                    "description": "请输入",
+                    "order": 1
+                },
+                "deliveryAddress": {
+                    "bsonType": "string",
+                    "title": "收件地址",
+                    "description": "请输入",
+                    "order": 2
+                },
+                "addressee": {
+                    "bsonType": "string",
+                    "title": "收件人",
+                    "description": "请输入",
+                    "order": 3
+                },
+                "phone": {
+                    "bsonType": "string",
+                    "title": "联系电话",
+                    "description": "请输入",
+                    "order": 4
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 7
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 8
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 9
+                }
+            }
+        }
+    },
+    "articlesAgreement": {
+        "data": [
+            {
+                "articlesAgreementType": 0,
+                "isEnable": true,
+                "title": "用户协议和隐私条款",
+                "content": "用户协议\n  尊敬的用户，欢迎使用由技术人员提供的服务。在使用前请您阅读如下服务协议，使用本应用即表示您同意接受本协议，本协议产生法律效力，特别涉及免除或者限制技术人责任的条款，请仔细阅读。如有任何问题，可向技术人咨询。\n1. 服务条款的确认和接受\n通过访问或使用本应用，表示用户同意接受本协议的所有条件和条款。\n2. 服务条款的变更和修改\n技术人有权在必要时修改服务条款，服务条款一旦发生变更，将会在重要页面上提示修改内容。如果不同意所改动的内容，用户可以放弃获得的本应用信息服务。 如果用户继续享用本应用的信息服务，则视为接受服务条款的变更。本应用保留随时修改或中断服务而不需要通知用户的权利。 本应用行使修改或中断服务的权利，不需对用户或第三方负责。\n3. 用户行为\n3.1 用户账号、密码和安全\n用户一旦注册成功，便成为白犀牛的合法用户，将得到一个密码和帐号。同时，此账号密码可登录白犀牛的所有网页和APP。因此用户应采取合理措施维护其密码和帐号的安全。用户对利用该密码和帐号所进行的一切活动负全部责任；由该等活动所导致的任何损失或损害由用户承担，技术人不承担任何责任。 用户的密码和帐号遭到未授权的使用或发生其他任何安全问题，用户可以立即通知技术人，并且用户在每次连线结束，应结束帐号使用，否则用户可能得不到技术人的安全保护。对于用户长时间未使用的帐号，技术人有权予以关闭并注销其内容。\n3.2 账号注册时的禁止行为\n（1）请勿以党和国家领导人或其他社会名人的真实姓名、字号、艺名、笔名注册；\n（2）冒充任何人或机构，或以虚伪不实的方式谎称或使人误认为与任何人或任何机构有关的名称；\n（3）请勿注册和其他网友之名相近、相仿的名字；\n（4）请勿注册不文明、不健康名字，或包含歧视、侮辱、猥亵类词语的名字；\n（5）请勿注册易产生歧义、引起他人误解的名字；\n3.3 用户在本应用上不得发布下列违法信息和照片：\n（1）反对宪法所确定的基本原则的；\n（2）危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；\n（3）损害国家荣誉和利益的；\n4. 上传或发布的内容\n用户上传的内容是指用户在技术人上传或发布的视频或其它任何形式的内容包括文字、图片、音频等。除非技术人收到相关通知，否则技术人将用户视为其在本应用上传或发布的内容的版权拥有人。作为内容的发表者，需自行对所发表内容负责，因所发表内容引发的一切纠纷，由该内容的发表者承担全部法律及连带责任。技术人不承担任何法律及连带责任。 对于经由本应用而传送的内容，技术人不保证前述其合法性、正当性、准确性、完整性或品质。用户在使用本应用时，有可能会接触到令人不快、不适当或令人厌恶的内容。在任何情况下，技术人均不对任何内容承担任何责任，包括但不限于任何内容发生任何错误或纰漏以及衍生的任何损失或损害。技术人有权（但无义务）自行拒绝或删除经由本应用提供的任何内容。\n隐私条款\n1.用户信息公开情况说明\n尊重用户个人隐私是技术人的一项基本政策。所以，技术人不会在未经合法用户授权时公开、编辑或透露其注册资料及保存在本应用中的非公开内容，除非有下列情况：\n（1）有关法律规定或技术人合法服务程序规定；\n（2）在紧急情况下，为维护用户及公众的权益；\n（3）为维护技术人的商标权、专利权及其他任何合法权益；\n2.用户信息收集\n（1）用户信息收集使用目的：技术人APP会收集用户的手机号或邮箱进行账号的注册与登录，技术人APP还会收集用户的IP地址，用来判别用户所在区域；\n（2）用户信息收集使用方式：技术人APP通过用户自己注册填写时收集手机号或邮箱号；\n（3）用户信息收集使用范围：技术人APP保证不会泄露用户信息；\n（4）技术人APP可能获取用户的IMEI,软件安装列表,MAC地址行为进行手机短信验证登录与技术人APP更新下载功能；\n（5）技术人APP使用了com.igexin.sdk(个推;个推推送;)可能收集个人信息的类型：设备信息、位置信息、网络信息、读写外部储存；\n（6）技术人APP使用了com.g.gysdk(个推)可能收集个人信息的类型：设备信息、位置信息、网络信息、读写外部储存；\n（7）技术人APP使用了com.xiaomi.mipush(小米;小米推送)可能收集个人信息的类型：设备信息、位置信息、网络信息、读写外部储存；\n（8）技术人APP使用了com.getui(个推;个数应用统计;个像)可能收集个人信息的类型：设备信息、位置信息、网络信息、读写外部储存；\n（9）技术人APP使用了com.huawei.hms(华为;华为推送)可能收集个人信息的类型：设备信息、位置信息、网络信息、读写外部储存；\n（10）技术人APP使用了com.huawei.agconnect(华为;华为联运应用)可能收集个人信息的类型：设备信息、位置信息、网络信息、读写外部储存；\n（11）技术人APP使用了com.xiaomi.push(小米;小米推送)可能收集个人信息的类型：设备信息、位置信息、网络信息、读写外部储存\n设备信息：设备标识符（IMEI、IDFA、Android ID、MAC、OAID等相关信息）\n应用信息（应用崩溃信息、通知开关状态、软件列表等相关信息）、设备参数及系统信息（设备类型、设备型号、操作系统及硬件相关信息；\n网络信息：IP地址，WiFi信息，基站信息等相关信息网络信息：IP地址，WiFi信息，基站信息等相关信息；\n3.隐私权政策适用范围\n（1）用户在登录本应用服务器时留下的个人身份信息；\n（2）用户通过本应用服务器与其他用户或非用户之间传送的各种资讯；\n（3）本应用与商业伙伴共享的其他用户或非用户的各种信息；\n4.资讯公开与共享\n（1）用户本人同意与第三方共享信息和资讯;\n（2）只有透露用户的个人信息和资讯，才能提供用户所要求的某种产品和服务;\n（3）应代表本应用提供产品或服务的主体的要求提供（除非我们另行通知，否则该等主体无权 将相关用户个人信息和资讯用于提供产品和服务之外的其他用途）：根据法律法规或行政命令的要求提供;因外部审计需要而提供;用户违反了本应用服务条款或任何其他产品及服务的使用规定;经本站评估，用户的帐户存在风险，需要加以保护。\n5.Cookies、日志档案和webbeacon\n通过使用cookies，本应用向用户提供简单易行并富个性化的网络体验。cookies能帮助我们确定用户连接的页面和内容，并将该等信息储存。我们使用自己的cookies和webbeacon，用于以下用途：\n（1）记住用户身份。例如：cookies和webbeacon有助于我们辨认用户作为我们的注册用户的身份，或保存用户向我们提供有关用户的喜好或其他信息；\n（2）分析用户使用我们服务的情况。我们可利用cookies和webbeacon来了解用户使用我们的服务进行什么活动、或哪些网页或服务最受欢迎； 我们为上述目的使用cookies和webbeacon的同时，可能将通过cookies和webbeacon收集的非个人身份信息汇总提供给广告商和其他伙伴，用于分析您和其他用户如何使用我们的服务并用于广告服务。用户可以通过浏览器或用户选择机制拒绝或管理cookies或webbeacon。但请用户注意，如果用户停用cookies或webbeacon，我们有可能无法为您提供最佳的服务体验，某些服务也可能无法正常使用。\n（3）当你使用本站的服务时，我们的主机会自动记录用户的浏览器在访问网站时所发送的信息和资讯。主机日志资讯包括但不限于用户的网路请求、IP地址、浏览器类型、浏览器使用的语言、请求的日期和时间，以及一个或多个可以对用户的浏览器进行辨识的cookie。\n6.账户删除申请\n用户有权在任何时候编辑用户在技术人的帐户信息和资讯，用户也可以填写相关申请表格，要求删除个人帐户，但是用户无条件同意在你的帐户删除后，该帐户内及与该帐户相关的信息和资讯仍然保留在本网站档案记录中，除上述第三条规定的情况外，技术人将为用户保密。\n          陕西省技术转移中心坚持以“技术转移引导创新，专业服 务创造价值”为宗旨，努力提高服务品质，积极探索服务模 式，着力打造技术转移创新服务平台，逐步形成了以科技型中小企业为主要服务对象，通过互联网有机融合涵盖企业、高校、 科研院所、管理机构以及服务机构等技术转移各参与方的创新型技术转移服务体系。\n关于“技术人”\n        “技术人”技术转移互动平台是陕西省技术转移中心倾力打造的，基于社会化网络的，致力于实现技术研发者之间、技术研发者和应用者之间交流 与沟通的专业性技术转移互联网应用服务平台。\n        “技术人”以企业技术需求为导向，以互联网技术手段为支撑，将技术转 移与SNS（社交网络）有效结合，高效整合分散于各机构及个体的技术信息和服务资源，集成技术转移中介服务资源，并以此为依托建立起全社会共享 的技术转移网络互动服务平台，最终在大学、科研院所、企业之间，通过市场要素的整合，形成以网络为平台，以企业为主体，以市场为导向，促进技术研发者和应用者网上网下互动的有效技术供需交互机制，帮助解决技术转移过程中技术人员交流渠道少、技术转移信息有效性差及技术转移对接难等问题。用户协议\n  尊敬的用户，欢迎使用由技术人员提供的服务。在使用前请您阅读如下服务协议，使用本应用即表示您同意接受本协议，本协议产生法律效力，特别涉及免除或者限制技术人责任的条款，请仔细阅读。如有任何问题，可向技术人咨询。\n1. 服务条款的确认和接受\n通过访问或使用本应用，表示用户同意接受本协议的所有条件和条款。\n2. 服务条款的变更和修改\n技术人有权在必要时修改服务条款，服务条款一旦发生变更，将会在重要页面上提示修改内容。如果不同意所改动的内容，用户可以放弃获得的本应用信息服务。 如果用户继续享用本应用的信息服务，则视为接受服务条款的变更。本应用保留随时修改或中断服务而不需要通知用户的权利。 本应用行使修改或中断服务的权利，不需对用户或第三方负责。\n3. 用户行为\n3.1 用户账号、密码和安全\n用户一旦注册成功，便成为白犀牛的合法用户，将得到一个密码和帐号。同时，此账号密码可登录白犀牛的所有网页和APP。因此用户应采取合理措施维护其密码和帐号的安全。用户对利用该密码和帐号所进行的一切活动负全部责任；由该等活动所导致的任何损失或损害由用户承担，技术人不承担任何责任。 用户的密码和帐号遭到未授权的使用或发生其他任何安全问题，用户可以立即通知技术人，并且用户在每次连线结束，应结束帐号使用，否则用户可能得不到技术人的安全保护。对于用户长时间未使用的帐号，技术人有权予以关闭并注销其内容。\n3.2 账号注册时的禁止行为\n（1）请勿以党和国家领导人或其他社会名人的真实姓名、字号、艺名、笔名注册；\n（2）冒充任何人或机构，或以虚伪不实的方式谎称或使人误认为与任何人或任何机构有关的名称；\n（3）请勿注册和其他网友之名相近、相仿的名字；\n（4）请勿注册不文明、不健康名字，或包含歧视、侮辱、猥亵类词语的名字；\n（5）请勿注册易产生歧义、引起他人误解的名字；\n3.3 用户在本应用上不得发布下列违法信息和照片：\n（1）反对宪法所确定的基本原则的；\n（2）危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；\n（3）损害国家荣誉和利益的；\n4. 上传或发布的内容\n用户上传的内容是指用户在技术人上传或发布的视频或其它任何形式的内容包括文字、图片、音频等。除非技术人收到相关通知，否则技术人将用户视为其在本应用上传或发布的内容的版权拥有人。作为内容的发表者，需自行对所发表内容负责，因所发表内容引发的一切纠纷，由该内容的发表者承担全部法律及连带责任。技术人不承担任何法律及连带责任。 对于经由本应用而传送的内容，技术人不保证前述其合法性、正当性、准确性、完整性或品质。用户在使用本应用时，有可能会接触到令人不快、不适当或令人厌恶的内容。在任何情况下，技术人均不对任何内容承担任何责任，包括但不限于任何内容发生任何错误或纰漏以及衍生的任何损失或损害。技术人有权（但无义务）自行拒绝或删除经由本应用提供的任何内容。\n隐私条款\n1.用户信息公开情况说明\n尊重用户个人隐私是技术人的一项基本政策。所以，技术人不会在未经合法用户授权时公开、编辑或透露其注册资料及保存在本应用中的非公开内容，除非有下列情况：\n（1）有关法律规定或技术人合法服务程序规定；\n（2）在紧急情况下，为维护用户及公众的权益；\n（3）为维护技术人的商标权、专利权及其他任何合法权益；\n2.用户信息收集\n（1）用户信息收集使用目的：技术人APP会收集用户的手机号或邮箱进行账号的注册与登录，技术人APP还会收集用户的IP地址，用来判别用户所在区域；\n（2）用户信息收集使用方式：技术人APP通过用户自己注册填写时收集手机号或邮箱号；\n（3）用户信息收集使用范围：技术人APP保证不会泄露用户信息；\n（4）技术人APP可能获取用户的IMEI,软件安装列表,MAC地址行为进行手机短信验证登录与技术人APP更新下载功能；\n（5）技术人APP使用了com.igexin.sdk(个推;个推推送;)可能收集个人信息的类型：设备信息、位置信息、网络信息、读写外部储存；\n（6）技术人APP使用了com.g.gysdk(个推)可能收集个人信息的类型：设备信息、位置信息、网络信息、读写外部储存；\n（7）技术人APP使用了com.xiaomi.mipush(小米;小米推送)可能收集个人信息的类型：设备信息、位置信息、网络信息、读写外部储存；\n（8）技术人APP使用了com.getui(个推;个数应用统计;个像)可能收集个人信息的类型：设备信息、位置信息、网络信息、读写外部储存；\n（9）技术人APP使用了com.huawei.hms(华为;华为推送)可能收集个人信息的类型：设备信息、位置信息、网络信息、读写外部储存；\n（10）技术人APP使用了com.huawei.agconnect(华为;华为联运应用)可能收集个人信息的类型：设备信息、位置信息、网络信息、读写外部储存；\n（11）技术人APP使用了com.xiaomi.push(小米;小米推送)可能收集个人信息的类型：设备信息、位置信息、网络信息、读写外部储存\n设备信息：设备标识符（IMEI、IDFA、Android ID、MAC、OAID等相关信息）\n应用信息（应用崩溃信息、通知开关状态、软件列表等相关信息）、设备参数及系统信息（设备类型、设备型号、操作系统及硬件相关信息；\n网络信息：IP地址，WiFi信息，基站信息等相关信息网络信息：IP地址，WiFi信息，基站信息等相关信息；\n3.隐私权政策适用范围\n（1）用户在登录本应用服务器时留下的个人身份信息；\n（2）用户通过本应用服务器与其他用户或非用户之间传送的各种资讯；\n（3）本应用与商业伙伴共享的其他用户或非用户的各种信息；\n4.资讯公开与共享\n（1）用户本人同意与第三方共享信息和资讯;\n（2）只有透露用户的个人信息和资讯，才能提供用户所要求的某种产品和服务;\n（3）应代表本应用提供产品或服务的主体的要求提供（除非我们另行通知，否则该等主体无权 将相关用户个人信息和资讯用于提供产品和服务之外的其他用途）：根据法律法规或行政命令的要求提供;因外部审计需要而提供;用户违反了本应用服务条款或任何其他产品及服务的使用规定;经本站评估，用户的帐户存在风险，需要加以保护。\n5.Cookies、日志档案和webbeacon\n通过使用cookies，本应用向用户提供简单易行并富个性化的网络体验。cookies能帮助我们确定用户连接的页面和内容，并将该等信息储存。我们使用自己的cookies和webbeacon，用于以下用途：\n（1）记住用户身份。例如：cookies和webbeacon有助于我们辨认用户作为我们的注册用户的身份，或保存用户向我们提供有关用户的喜好或其他信息；\n（2）分析用户使用我们服务的情况。我们可利用cookies和webbeacon来了解用户使用我们的服务进行什么活动、或哪些网页或服务最受欢迎； 我们为上述目的使用cookies和webbeacon的同时，可能将通过cookies和webbeacon收集的非个人身份信息汇总提供给广告商和其他伙伴，用于分析您和其他用户如何使用我们的服务并用于广告服务。用户可以通过浏览器或用户选择机制拒绝或管理cookies或webbeacon。但请用户注意，如果用户停用cookies或webbeacon，我们有可能无法为您提供最佳的服务体验，某些服务也可能无法正常使用。\n（3）当你使用本站的服务时，我们的主机会自动记录用户的浏览器在访问网站时所发送的信息和资讯。主机日志资讯包括但不限于用户的网路请求、IP地址、浏览器类型、浏览器使用的语言、请求的日期和时间，以及一个或多个可以对用户的浏览器进行辨识的cookie。\n6.账户删除申请\n用户有权在任何时候编辑用户在技术人的帐户信息和资讯，用户也可以填写相关申请表格，要求删除个人帐户，但是用户无条件同意在你的帐户删除后，该帐户内及与该帐户相关的信息和资讯仍然保留在本网站档案记录中，除上述第三条规定的情况外，技术人将为用户保密。\n          陕西省技术转移中心坚持以“技术转移引导创新，专业服 务创造价值”为宗旨，努力提高服务品质，积极探索服务模 式，着力打造技术转移创新服务平台，逐步形成了以科技型中小企业为主要服务对象，通过互联网有机融合涵盖企业、高校、 科研院所、管理机构以及服务机构等技术转移各参与方的创新型技术转移服务体系。\n关于“技术人”\n        “技术人”技术转移互动平台是陕西省技术转移中心倾力打造的，基于社会化网络的，致力于实现技术研发者之间、技术研发者和应用者之间交流 与沟通的专业性技术转移互联网应用服务平台。\n        “技术人”以企业技术需求为导向，以互联网技术手段为支撑，将技术转 移与SNS（社交网络）有效结合，高效整合分散于各机构及个体的技术信息和服务资源，集成技术转移中介服务资源，并以此为依托建立起全社会共享 的技术转移网络互动服务平台，最终在大学、科研院所、企业之间，通过市场要素的整合，形成以网络为平台，以企业为主体，以市场为导向，促进技术研发者和应用者网上网下互动的有效技术供需交互机制，帮助解决技术转移过程中技术人员交流渠道少、技术转移信息有效性差及技术转移对接难等问题。",
+                "updated": 1681386526827,
+                "created": 1681386526827
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "articlesAgreementType": {
+                    "bsonType": "int",
+                    "description": "协议类型：用户协议和隐私条款、商家入驻协议",
+                    "defaultValue": 1,
+                    "label": "协议类型",
+                    "title": "协议类型",
+                    "enum": [
+                        {
+                            "text": "用户协议和隐私条款",
+                            "value": 0
+                        },
+                        {
+                            "text": "商家入驻协议",
+                            "value": 1
+                        }
+                    ],
+                    "order": 1
+                },
+                "title": {
+                    "bsonType": "string",
+                    "title": "标题",
+                    "order": 2
+                },
+                "content": {
+                    "bsonType": "string",
+                    "title": "内容",
+                    "component": {
+                        "name": "textarea",
+                        "placeholder": "请输入协议内容",
+                        "auto-height": true,
+                        "maxLenght": "1000"
+                    },
+                    "order": 3
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 4
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 5
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 6
+                }
+            }
+        }
+    },
+    "basicInformation": {
+        "schema": {}
+    },
+    "brand": {
+        "data": [
+            {
+                "isEnable": true,
+                "sort": 1,
+                "brandName": "家用电器",
+                "image": {
+                    "extname": "jpg",
+                    "fileType": "image",
+                    "image": {
+                        "width": 1700,
+                        "height": 1360,
+                        "location": "blob:https://static-mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.next.bspapp.com/d60216ca-ec08-4958-b522-a235c07f14b1"
+                    },
+                    "name": "白色冰箱，洗衣机，炉子，微波炉，真空吸尘器，红色带隔离在白色背景3d.jpg",
+                    "path": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/6a134617-5a69-41f7-8513-165b7555b393.jpg",
+                    "size": 684510,
+                    "fileID": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/6a134617-5a69-41f7-8513-165b7555b393.jpg",
+                    "url": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/6a134617-5a69-41f7-8513-165b7555b393.jpg",
+                    "uuid": 1694841628226,
+                    "status": "success",
+                    "cloudPath": "1694841628225_0.jpg"
+                },
+                "imageList": [],
+                "remark": "",
+                "updated": 1683357866631,
+                "created": 1683357866631
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "sort",
+                "brandName",
+                "image"
+            ],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "sort": {
+                    "bsonType": "int",
+                    "description": "数值越大越排序越靠前",
+                    "label": "排序",
+                    "trim": "both",
+                    "title": "排序",
+                    "order": 1
+                },
+                "brandName": {
+                    "bsonType": "string",
+                    "description": "请输入",
+                    "label": "品牌名称",
+                    "trim": "both",
+                    "title": "品牌名称",
+                    "order": 2
+                },
+                "image": {
+                    "bsonType": "file",
+                    "title": "品牌封面图片",
+                    "description": "品牌封面图片",
+                    "fileMediaType": "image",
+                    "fileExtName": "jpg,png,gif,bmp,jpeg",
+                    "order": 3
+                },
+                "remark": {
+                    "bsonType": "string",
+                    "title": "备注",
+                    "component": {
+                        "name": "textarea"
+                    },
+                    "order": 4
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 5
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 6
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 7
+                }
+            }
+        }
+    },
+    "classType": {
+        "data": [
+            {
+                "isEnable": true,
+                "classTypeName": "家电维修",
+                "remark": "",
+                "updated": 1676010471217,
+                "created": 1676010471217,
+                "image": {
+                    "cloudPath": "1685004810922_0.jpg",
+                    "extname": "jpg",
+                    "fileID": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/d0ec58af-89f6-47e7-a857-07312cd7a319.jpg",
+                    "fileType": "image",
+                    "image": {
+                        "height": 200,
+                        "location": "blob:http://localhost:8080/b8f3b87f-4777-4bb1-8a83-bc9f34c281cf",
+                        "width": 200
+                    },
+                    "name": "分类-家电维修.jpg",
+                    "path": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/d0ec58af-89f6-47e7-a857-07312cd7a319.jpg",
+                    "size": 5665,
+                    "status": "success",
+                    "url": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/d0ec58af-89f6-47e7-a857-07312cd7a319.jpg",
+                    "uuid": 1685004810923
+                },
+                "sort": 1
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "sort",
+                "classTypeName",
+                "image"
+            ],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "sort": {
+                    "bsonType": "int",
+                    "description": "数值越大越排序越靠前",
+                    "label": "排序",
+                    "trim": "both",
+                    "title": "排序",
+                    "order": 1
+                },
+                "classTypeName": {
+                    "bsonType": "string",
+                    "description": "请输入",
+                    "label": "分类",
+                    "trim": "both",
+                    "title": "分类",
+                    "order": 2
+                },
+                "image": {
+                    "bsonType": "file",
+                    "title": "分类封面图片",
+                    "description": "分类封面图片",
+                    "fileMediaType": "image",
+                    "fileExtName": "jpg,png,gif,bmp,jpeg",
+                    "order": 3
+                },
+                "remark": {
+                    "bsonType": "string",
+                    "title": "备注",
+                    "component": {
+                        "name": "textarea"
+                    },
+                    "order": 4
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 5
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 6
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 7
+                }
+            }
+        }
+    },
+    "collect": {
+        "data": [
+            {
+                "isEnable": false,
+                "openID": "oTDxt5Rg2FLfsGHXY9BJ2lsBmog4",
+                "userID": "1680847197000-oTDxt5Rg2FLfsGHXY9BJ2lsBmog4",
+                "goodsID": "642405dbe766bb29756155c8",
+                "goodsName": "配件1",
+                "goodsImage": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/b679e577-c9fb-455f-9b02-380f1b11c496.jpg",
+                "created": 1682415094000,
+                "updated": 1684151464000
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "goodsID",
+                "openID",
+                "userID"
+            ],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "goodsID": {
+                    "bsonType": "string",
+                    "description": "请输入",
+                    "label": "收藏商品ID",
+                    "trim": "both",
+                    "title": "收藏商品ID",
+                    "order": 1
+                },
+                "userID": {
+                    "bsonType": "string",
+                    "description": "请输入",
+                    "label": "用户ID",
+                    "trim": "both",
+                    "title": "用户ID",
+                    "order": 2
+                },
+                "openID": {
+                    "bsonType": "string",
+                    "description": "请输入",
+                    "label": "微信用户ID",
+                    "trim": "both",
+                    "title": "微信用户ID",
+                    "order": 3
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 4
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 5
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 6
+                }
+            }
+        }
+    },
+    "commissionScheme": {
+        "data": [
+            {
+                "isEnable": true,
+                "commissionScheme": "50%佣金",
+                "sharerCommissionScheme": 0.5,
+                "purchaserCommissionScheme": 0.5,
+                "remark": "",
+                "updated": 1679931519396,
+                "created": 1679931519396,
+                "commissionSchemeName": "分享者和购买者都为0.5"
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "commissionSchemeName",
+                "sharerCommissionScheme",
+                "purchaserCommissionScheme",
+                "isEnable"
+            ],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "commissionSchemeName": {
+                    "bsonType": "string",
+                    "title": "佣金方案名称",
+                    "description": "请输入",
+                    "order": 1
+                },
+                "sharerCommissionScheme": {
+                    "bsonType": "double",
+                    "title": "分享者佣金",
+                    "description": "请输入",
+                    "order": 2
+                },
+                "purchaserCommissionScheme": {
+                    "bsonType": "double",
+                    "title": "分购买者佣金",
+                    "description": "请输入",
+                    "order": 3
+                },
+                "remark": {
+                    "bsonType": "string",
+                    "title": "备注",
+                    "component": {
+                        "name": "textarea"
+                    },
+                    "order": 4
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 5
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 6
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 7
+                }
+            }
+        }
+    },
+    "coupon": {
+        "data": [
+            {
+                "alidityBeginTime": 1678703995000,
+                "alidityEndTime": 1678790399000,
+                "isEnable": true,
+                "openID": "oTDxt5Rg2FLfsGHXY9BJ2lsBmog4",
+                "couponName": "满0元减300",
+                "fullAmount": 0,
+                "discountAmount": 300,
+                "remark": "",
+                "updated": 1678704000637,
+                "created": 1678704000637,
+                "userID": "1680847197000-oTDxt5Rg2FLfsGHXY9BJ2lsBmog4",
+                "isUsed": false
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "openID",
+                "couponName",
+                "fullAmount",
+                "discountAmount",
+                "alidityBeginTime",
+                "alidityEndtTime"
+            ],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "openID": {
+                    "bsonType": "string",
+                    "title": "用户微信openID",
+                    "description": "请输入",
+                    "foreignKey": "user.username",
+                    "enum": {
+                        "collection": "user",
+                        "field": "username as text,openID as value"
+                    },
+                    "order": 1
+                },
+                "couponName": {
+                    "bsonType": "string",
+                    "title": "优惠券名称",
+                    "description": "请输入",
+                    "order": 2
+                },
+                "fullAmount": {
+                    "bsonType": "double",
+                    "title": "满",
+                    "description": "请输入",
+                    "order": 3
+                },
+                "discountAmount": {
+                    "bsonType": "double",
+                    "title": "减",
+                    "description": "请输入",
+                    "order": 4
+                },
+                "alidityBeginTime": {
+                    "bsonType": "timestamp",
+                    "label": "使用有效期开始时间",
+                    "defaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 5
+                },
+                "alidityEndTime": {
+                    "bsonType": "timestamp",
+                    "label": "使用有效期结束时间",
+                    "defaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 6
+                },
+                "remark": {
+                    "bsonType": "string",
+                    "title": "备注",
+                    "component": {
+                        "name": "textarea"
+                    },
+                    "order": 7
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 8
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 9
+                },
+                "isUsed": {
+                    "bsonType": "bool",
+                    "defaultValue": false,
+                    "title": "已被使用",
+                    "order": 10
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 11
+                }
+            }
+        }
+    },
+    "customTemplateMessageID": {
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "teamplateName",
+                "teamplateID"
+            ],
+            "permission": {
+                "read": true,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "teamplateName": {
+                    "bsonType": "string",
+                    "description": "请输入",
+                    "label": "微信自定义模板名称",
+                    "trim": "both",
+                    "title": "微信自定义模板名称",
+                    "order": 1
+                },
+                "teamplateID": {
+                    "bsonType": "string",
+                    "description": "请输入",
+                    "label": "微信自定义模板ID",
+                    "trim": "both",
+                    "title": "微信自定义模板ID",
+                    "order": 2
+                },
+                "remark": {
+                    "bsonType": "string",
+                    "title": "备注",
+                    "component": {
+                        "name": "textarea"
+                    },
+                    "order": 3
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 4
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 5
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 6
+                }
+            }
+        }
+    },
+    "diamondRegion": {
+        "data": [
+            {
+                "isEnable": true,
+                "title": "维修",
+                "url": "/pages/weixiu/weixiu",
+                "diamondRegionImage": {
+                    "extname": "jpg",
+                    "fileType": "image",
+                    "image": {
+                        "width": 200,
+                        "height": 200,
+                        "location": "blob:http://localhost:8081/6b31c5f3-f9e4-46e5-ac0b-993ee6da0fe0"
+                    },
+                    "name": "金刚区-维修工具.jpg",
+                    "path": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/9f8994b7-0c69-4e34-976e-519c87e86988.jpg",
+                    "size": 10634,
+                    "fileID": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/9f8994b7-0c69-4e34-976e-519c87e86988.jpg",
+                    "url": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/9f8994b7-0c69-4e34-976e-519c87e86988.jpg"
+                },
+                "mark": "",
+                "updated": 1675850057226,
+                "created": 1675850057226
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "title",
+                "url",
+                "diamondRegionImage"
+            ],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "title": {
+                    "bsonType": "string",
+                    "title": "标题",
+                    "description": "请输入",
+                    "order": 1
+                },
+                "url": {
+                    "bsonType": "string",
+                    "title": "页面路径：",
+                    "description": "例如 /pages/weixiu/weixiu",
+                    "order": 2
+                },
+                "diamondRegionImage": {
+                    "bsonType": "file",
+                    "title": "金刚区图片",
+                    "description": "金刚区图片",
+                    "fileMediaType": "image",
+                    "fileExtName": "jpg,png,gif,bmp,jpeg",
+                    "order": 3
+                },
+                "mark": {
+                    "bsonType": "string",
+                    "title": "备注",
+                    "description": "请输入",
+                    "component": {
+                        "name": "textarea"
+                    },
+                    "order": 4
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 8
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 9
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 10
+                }
+            }
+        }
+    },
+    "entryInstructions": {
+        "data": [
+            {
+                "version": "20230307",
+                "isEnable": true,
+                "title": "【入驻说明】",
+                "content": "\n[商户入驻]\n企业、个体商户资质主要包含的资料，一般为：\n1）三证合一营业执照\n2）法人身份证正反面\n\n[个人入驻]\n服务技能资质\n资质主要包含技能证书等相关的资料。\n以水电维修人员为例：\n1）电工证\n2）其他技能证书\n[其他]\n1、身体及心理健康状态良好，能吃苦耐劳，具有坦诚的合作心态；\n2、具有合法资格的法人，其他经济组织，个体工商户或自然人；\n3、熟悉市场，具有深厚的行业经验；\n4、具有良好的社会关系及公共关系处置才能；\n5、认同品牌经营理念，热爱加盟事业，并作为自己长期事业发展；\n6、具有良好的社会及商业信誉；应遵守行业相关法律法规，不可从事违法或财坏社会道德风尚的活动；\n7、具有为顾客提供优质服务的意识，自觉维护品牌声誉；",
+                "updated": 1677986966021,
+                "created": 1677986966021
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "title",
+                "content"
+            ],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "title": {
+                    "bsonType": "string",
+                    "title": "标题",
+                    "description": "请输入",
+                    "order": 1
+                },
+                "content": {
+                    "bsonType": "string",
+                    "title": "内容",
+                    "description": "请输入",
+                    "component": {
+                        "name": "textarea"
+                    },
+                    "maxlength": 500,
+                    "order": 2
+                },
+                "version": {
+                    "bsonType": "string",
+                    "label": "版本号",
+                    "title": "版本号",
+                    "description": "建议按日期年月日时分秒，如：202303011000",
+                    "order": 3
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 4
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 5
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 6
+                }
+            }
+        }
+    },
+    "goods": {
+        "data": [
+            {
+                "dateTime": 1682428628000,
+                "isEnable": true,
+                "classTypeID": "644772b528064a7587ea0c7c",
+                "commissionScheme": "6421b87f09e2988160b996ba",
+                "title": "美大天牛T7蒸烤一体2RR-T7ZK",
+                "originalPrice": 20860,
+                "favourPrice": 14602,
+                "tip": "火热促销",
+                "desc": "有美大，家更美",
+                "image": {
+                    "extname": "png",
+                    "fileType": "image",
+                    "image": {
+                        "width": 400,
+                        "height": 400,
+                        "location": "blob:https://static-mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.next.bspapp.com/642fb4a1-571b-4242-b610-799f984ce12d"
+                    },
+                    "name": "mmexporte355232583de55a9657a5a972ba1ce9e_1682426168987.png",
+                    "path": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/5bc2306a-2ac5-4613-9d3e-ee7731a67845.png",
+                    "size": 119193,
+                    "fileID": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/5bc2306a-2ac5-4613-9d3e-ee7731a67845.png",
+                    "url": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/5bc2306a-2ac5-4613-9d3e-ee7731a67845.png",
+                    "uuid": 1682426368842,
+                    "status": "success",
+                    "cloudPath": "1682426368837_0.png"
+                },
+                "imageList": [
+                    {
+                        "extname": "jpg",
+                        "fileType": "image",
+                        "image": {
+                            "width": 1400,
+                            "height": 10109,
+                            "location": "blob:https://static-mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.next.bspapp.com/a45c9479-5857-470c-b7e4-754a7b2cef20"
+                        },
+                        "name": "mmexport1682426174544.jpg",
+                        "path": "blob:https://static-mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.next.bspapp.com/a45c9479-5857-470c-b7e4-754a7b2cef20",
+                        "size": 995407,
+                        "fileID": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/fa60a32c-7bf7-427e-8d03-0f678d7039d2.jpg",
+                        "url": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/fa60a32c-7bf7-427e-8d03-0f678d7039d2.jpg",
+                        "uuid": 1682426375557,
+                        "status": "success",
+                        "cloudPath": "1682426375555_0.jpg"
+                    }
+                ],
+                "updated": 1682426390236,
+                "created": 1682426390236,
+                "sort": 3,
+                "brandID": "645600aa28064a7587f560f5",
+                "expressCharge": 0,
+                "isNoInventory": false,
+                "monthlySales": 100
+            }
+        ],
+        "schema": {}
+    },
+    "homeReleaseImage": {
+        "data": [
+            {
+                "isEnable": true,
+                "sort": 1,
+                "image": {
+                    "extname": "png",
+                    "fileType": "image",
+                    "image": {
+                        "width": 678,
+                        "height": 414,
+                        "location": "blob:https://static-mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.next.bspapp.com/395b0ce4-636b-4d06-9784-e707bee0337d"
+                    },
+                    "name": "图片1.png",
+                    "path": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/9852756e-2d36-4831-a7bc-81997b29cc08.png",
+                    "size": 1125080,
+                    "fileID": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/9852756e-2d36-4831-a7bc-81997b29cc08.png",
+                    "url": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/9852756e-2d36-4831-a7bc-81997b29cc08.png",
+                    "uuid": 1694759818745,
+                    "status": "success",
+                    "cloudPath": "1694759818744_0.png"
+                },
+                "remark": "",
+                "updated": 1685004153268,
+                "created": 1685004153268
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "sort",
+                "image"
+            ],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "sort": {
+                    "bsonType": "int",
+                    "description": "数值越大越排序越靠前",
+                    "label": "排序",
+                    "trim": "both",
+                    "title": "排序",
+                    "order": 1
+                },
+                "image": {
+                    "bsonType": "file",
+                    "title": "图片",
+                    "description": "图片",
+                    "fileMediaType": "image",
+                    "fileExtName": "jpg,png,gif,bmp,jpeg",
+                    "order": 2
+                },
+                "remark": {
+                    "bsonType": "string",
+                    "title": "备注",
+                    "component": {
+                        "name": "textarea"
+                    },
+                    "order": 3
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 4
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 5
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 6
+                }
+            }
+        }
+    },
+    "homeSetInImage": {
+        "data": [
+            {
+                "isEnable": true,
+                "sort": 1,
+                "image": {
+                    "extname": "png",
+                    "fileType": "image",
+                    "image": {
+                        "width": 641,
+                        "height": 429,
+                        "location": "blob:https://static-mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.next.bspapp.com/1290784f-75a3-49e6-b6eb-bfd22a4ba0b9"
+                    },
+                    "name": "图片2.png",
+                    "path": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/f4cb5aaa-ee5f-4c2a-be5c-3692a147153b.png",
+                    "size": 1102247,
+                    "fileID": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/f4cb5aaa-ee5f-4c2a-be5c-3692a147153b.png",
+                    "url": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/f4cb5aaa-ee5f-4c2a-be5c-3692a147153b.png",
+                    "uuid": 1694760329748,
+                    "status": "success",
+                    "cloudPath": "1694760329747_0.png"
+                },
+                "remark": "",
+                "updated": 1686026518284,
+                "created": 1686026518284
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "sort",
+                "image"
+            ],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "sort": {
+                    "bsonType": "int",
+                    "description": "数值越大越排序越靠前",
+                    "label": "排序",
+                    "trim": "both",
+                    "title": "排序",
+                    "order": 1
+                },
+                "image": {
+                    "bsonType": "file",
+                    "title": "图片",
+                    "description": "图片",
+                    "fileMediaType": "image",
+                    "fileExtName": "jpg,png,gif,bmp,jpeg",
+                    "order": 2
+                },
+                "remark": {
+                    "bsonType": "string",
+                    "title": "备注",
+                    "component": {
+                        "name": "textarea"
+                    },
+                    "order": 3
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 4
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 5
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 6
+                }
+            }
+        }
+    },
+    "individualEntryApplicationForm": {
+        "data": [
+            {
+                "username": "王五",
+                "gender": 2,
+                "category": "分类A",
+                "phone": "13501212101",
+                "idcard": "350582198811251052",
+                "contactAddress": "阿斯达阿斯达",
+                "residentAddress": "123123123",
+                "latitude": "",
+                "longitude": "",
+                "level": 1,
+                "IDFront": [
+                    {
+                        "extname": "jpg",
+                        "fileID": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/8ca55cec-9a0b-4de9-9aab-c85fee64c987.jpg",
+                        "fileType": "image",
+                        "image": {
+                            "height": 150,
+                            "location": "",
+                            "width": 150
+                        },
+                        "name": "",
+                        "path": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/8ca55cec-9a0b-4de9-9aab-c85fee64c987.jpg",
+                        "size": 12299,
+                        "url": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/8ca55cec-9a0b-4de9-9aab-c85fee64c987.jpg"
+                    }
+                ],
+                "IDReverse": [
+                    {
+                        "extname": "jpg",
+                        "fileID": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/16dad7ce-e901-47df-b36b-b2016cd9d007.jpg",
+                        "fileType": "image",
+                        "image": {
+                            "height": 150,
+                            "location": "",
+                            "width": 150
+                        },
+                        "name": "",
+                        "path": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/16dad7ce-e901-47df-b36b-b2016cd9d007.jpg",
+                        "size": 12299,
+                        "url": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/16dad7ce-e901-47df-b36b-b2016cd9d007.jpg"
+                    }
+                ],
+                "skillCertificate": [
+                    {
+                        "extname": "jpg",
+                        "fileID": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/f3cab8a0-9aa5-4582-be0f-0539eb3814da.jpg",
+                        "fileType": "image",
+                        "image": {
+                            "height": 150,
+                            "location": "",
+                            "width": 150
+                        },
+                        "name": "",
+                        "path": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/f3cab8a0-9aa5-4582-be0f-0539eb3814da.jpg",
+                        "size": 12299,
+                        "url": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/f3cab8a0-9aa5-4582-be0f-0539eb3814da.jpg"
+                    },
+                    {
+                        "extname": "jpg",
+                        "fileID": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/2fc08116-9a47-49a7-b835-7a136b08fb54.jpg",
+                        "fileType": "image",
+                        "image": {
+                            "height": 150,
+                            "location": "",
+                            "width": 150
+                        },
+                        "name": "",
+                        "path": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/2fc08116-9a47-49a7-b835-7a136b08fb54.jpg",
+                        "size": 12299,
+                        "url": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/2fc08116-9a47-49a7-b835-7a136b08fb54.jpg"
+                    },
+                    {
+                        "extname": "jpg",
+                        "fileID": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/84cbe3a7-eda7-4977-8881-2f14dbcf7d41.png",
+                        "fileType": "image",
+                        "image": {
+                            "height": 150,
+                            "location": "",
+                            "width": 150
+                        },
+                        "name": "",
+                        "path": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/84cbe3a7-eda7-4977-8881-2f14dbcf7d41.png",
+                        "size": 12299,
+                        "url": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/84cbe3a7-eda7-4977-8881-2f14dbcf7d41.png"
+                    }
+                ],
+                "mark": "123123",
+                "isEnable": true
+            }
+        ],
+        "schema": {}
+    },
+    "merchant": {
+        "data": [
+            {
+                "workerNumber": 2,
+                "isEnable": true,
+                "merchantName": "商家A",
+                "classType": "63e5e3e7f5cf3a42a2324c64",
+                "navigationAddress": "福建省泉州市丰泽区田安路",
+                "latitude": 24.888989,
+                "longitude": 118.59821,
+                "city": "泉州",
+                "province": "福建",
+                "country": "",
+                "username": "张三",
+                "phone": "15900000001",
+                "level": 1,
+                "updated": 1676010586796,
+                "created": 1676010586796
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "merchantName",
+                "classType",
+                "navigationAddress",
+                "latitude",
+                "longitude",
+                "username",
+                "phone",
+                "level"
+            ],
+            "version": "1.0.0",
+            "fieldRules": [
+                {
+                    "rule": "updated == null || created != null && created<updated",
+                    "errorMessage": "更新时间需大于创建时间"
+                }
+            ],
+            "permission": {
+                "read": true,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "merchantName": {
+                    "bsonType": "string",
+                    "description": "商家名称",
+                    "label": "商家名称",
+                    "trim": "both",
+                    "title": "商家名称",
+                    "order": 1
+                },
+                "classType": {
+                    "bsonType": "string",
+                    "description": "请选择分类",
+                    "foreignKey": "classType.classTypeName",
+                    "enum": {
+                        "collection": "classType",
+                        "field": "classTypeName as text,_id as value"
+                    },
+                    "label": "所属分类",
+                    "trim": "both",
+                    "title": "所属分类",
+                    "order": 2
+                },
+                "navigationAddress": {
+                    "bsonType": "string",
+                    "description": "地图导航地址",
+                    "label": "地图导航地址",
+                    "trim": "both",
+                    "title": "地图导航地址",
+                    "order": 3
+                },
+                "latitude": {
+                    "bsonType": "double",
+                    "description": "纬度：24.885889",
+                    "label": "纬度",
+                    "trim": "both",
+                    "title": "纬度",
+                    "order": 4
+                },
+                "longitude": {
+                    "bsonType": "double",
+                    "description": "经度：118.598228",
+                    "label": "经度",
+                    "trim": "both",
+                    "title": "经度",
+                    "order": 5
+                },
+                "workerNumber": {
+                    "bsonType": "int",
+                    "description": "请输入",
+                    "label": "员工数量",
+                    "trim": "both",
+                    "title": "员工数量",
+                    "defaultValue": 0,
+                    "order": 6
+                },
+                "city": {
+                    "bsonType": "string",
+                    "description": "城市",
+                    "label": "城市",
+                    "trim": "both",
+                    "title": "城市",
+                    "order": 7
+                },
+                "province": {
+                    "bsonType": "string",
+                    "description": "省份",
+                    "label": "省份",
+                    "trim": "both",
+                    "title": "省份",
+                    "order": 8
+                },
+                "country": {
+                    "bsonType": "string",
+                    "description": "国家",
+                    "label": "国家",
+                    "trim": "both",
+                    "title": "国家",
+                    "order": 9
+                },
+                "username": {
+                    "bsonType": "string",
+                    "description": "请输入姓名",
+                    "label": "联系人",
+                    "trim": "both",
+                    "title": "联系人",
+                    "order": 10
+                },
+                "phone": {
+                    "bsonType": "string",
+                    "description": "请输入",
+                    "pattern": "^\\+?[0-9-]{3,20}$",
+                    "label": "手机号",
+                    "trim": "both",
+                    "title": "手机号",
+                    "order": 11
+                },
+                "level": {
+                    "bsonType": "int",
+                    "description": "请输入",
+                    "label": "会员等级",
+                    "trim": "both",
+                    "title": "会员等级",
+                    "order": 12
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 13
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 14
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 15
+                }
+            }
+        }
+    },
+    "merchantEntryApplicationForm": {
+        "data": [
+            {
+                "merchantName": "112313",
+                "username": "112313",
+                "phone": "1123123",
+                "idcard": "111123123",
+                "contactAddress": "1123123",
+                "residentAddress": "1123132",
+                "latitude": "",
+                "longitude": "",
+                "level": 1,
+                "IDFront": [],
+                "IDReverse": [],
+                "businessLicense": [],
+                "otherPhotos": [],
+                "workerNumber": 0,
+                "mark": "1123123",
+                "isEnable": true
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "merchantName",
+                "contactAddress",
+                "residentAddress",
+                "latitude",
+                "longitude",
+                "province",
+                "city",
+                "area",
+                "town",
+                "community",
+                "username",
+                "phone",
+                "level",
+                "IDFront",
+                "IDReverse",
+                "businessLicense",
+                "otherPhotos",
+                "phone",
+                "level"
+            ],
+            "version": "1.0.0",
+            "fieldRules": [
+                {
+                    "rule": "updated == null || created != null && created<updated",
+                    "errorMessage": "更新时间需大于创建时间"
+                }
+            ],
+            "permission": {
+                "read": true,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "merchantName": {
+                    "bsonType": "string",
+                    "description": "商家名称",
+                    "label": "商家名称",
+                    "trim": "both",
+                    "title": "商家名称",
+                    "order": 1
+                },
+                "contactAddress": {
+                    "bsonType": "string",
+                    "description": "联系地址",
+                    "label": "联系地址",
+                    "trim": "both",
+                    "title": "联系地址",
+                    "order": 2
+                },
+                "residentAddress": {
+                    "bsonType": "string",
+                    "description": "常驻地址",
+                    "label": "常驻地址",
+                    "trim": "both",
+                    "title": "常驻地址",
+                    "order": 3
+                },
+                "latitude": {
+                    "bsonType": "double",
+                    "description": "纬度：24.885889",
+                    "label": "纬度",
+                    "trim": "both",
+                    "title": "纬度",
+                    "order": 4
+                },
+                "longitude": {
+                    "bsonType": "double",
+                    "description": "经度：118.598228",
+                    "label": "经度",
+                    "trim": "both",
+                    "title": "经度",
+                    "order": 5
+                },
+                "province": {
+                    "bsonType": "string",
+                    "description": "省份",
+                    "label": "省份",
+                    "trim": "both",
+                    "title": "省份",
+                    "order": 6
+                },
+                "city": {
+                    "bsonType": "string",
+                    "description": "城市",
+                    "label": "城市",
+                    "trim": "both",
+                    "title": "城市",
+                    "order": 7
+                },
+                "area": {
+                    "bsonType": "string",
+                    "description": "区",
+                    "label": "区",
+                    "trim": "both",
+                    "title": "区",
+                    "order": 8
+                },
+                "town": {
+                    "bsonType": "string",
+                    "description": "镇、街道",
+                    "label": "镇、街道",
+                    "trim": "both",
+                    "title": "镇、街道",
+                    "order": 9
+                },
+                "community": {
+                    "bsonType": "string",
+                    "description": "社区、村",
+                    "label": "社区、村",
+                    "trim": "both",
+                    "title": "社区、村",
+                    "order": 10
+                },
+                "workerNumber": {
+                    "bsonType": "int",
+                    "description": "请输入",
+                    "label": "员工数量",
+                    "trim": "both",
+                    "title": "员工数量",
+                    "defaultValue": 0,
+                    "order": 11
+                },
+                "username": {
+                    "bsonType": "string",
+                    "description": "请输入姓名",
+                    "label": "联系人",
+                    "trim": "both",
+                    "title": "联系人",
+                    "order": 12
+                },
+                "phone": {
+                    "bsonType": "string",
+                    "description": "请输入",
+                    "pattern": "^\\+?[0-9-]{3,20}$",
+                    "label": "手机号",
+                    "trim": "both",
+                    "title": "手机号",
+                    "order": 13
+                },
+                "level": {
+                    "bsonType": "int",
+                    "description": "请输入",
+                    "label": "会员等级",
+                    "trim": "both",
+                    "title": "会员等级",
+                    "order": 14
+                },
+                "IDFront": {
+                    "bsonType": "file",
+                    "title": "身份证正面",
+                    "description": "身份证正面",
+                    "fileMediaType": "image",
+                    "fileExtName": "jpg,png,gif,bmp,jpeg",
+                    "order": 15
+                },
+                "IDReverse": {
+                    "bsonType": "file",
+                    "title": "身份证反面",
+                    "description": "身份证反面",
+                    "fileMediaType": "image",
+                    "fileExtName": "jpg,png,gif,bmp,jpeg",
+                    "order": 16
+                },
+                "businessLicense": {
+                    "bsonType": "array",
+                    "title": "营业执照",
+                    "description": "多张图片，最多10张",
+                    "arrayType": "file",
+                    "multiple": true,
+                    "fileMediaType": "image",
+                    "fileExtName": "jpg,png,gif,bmp,jpeg",
+                    "maxLength": 10,
+                    "order": 17
+                },
+                "otherPhotos": {
+                    "bsonType": "array",
+                    "title": "其他照片",
+                    "description": "例如：门店场所照片、服务人员着装照片",
+                    "arrayType": "file",
+                    "multiple": true,
+                    "fileMediaType": "image",
+                    "fileExtName": "jpg,png,gif,bmp,jpeg",
+                    "maxLength": 10,
+                    "order": 18
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 19
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 20
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 21
+                }
+            }
+        }
+    },
+    "myMembershipCard": {
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "useBeginTime",
+                "useEndTime",
+                "openID",
+                "discountStrength"
+            ],
+            "permission": {
+                "read": true,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "openID": {
+                    "bsonType": "string",
+                    "description": "请输入openID",
+                    "label": "微信openID",
+                    "trim": "both",
+                    "title": "微信openID",
+                    "order": 1
+                },
+                "discountStrength": {
+                    "bsonType": "double",
+                    "description": "优惠力度,例如：八折填写0.8",
+                    "label": "优惠力度",
+                    "trim": "both",
+                    "title": "优惠力度",
+                    "order": 2
+                },
+                "useBeginTime": {
+                    "bsonType": "timestamp",
+                    "title": "开始时间",
+                    "order": 3
+                },
+                "useEndTime": {
+                    "bsonType": "timestamp",
+                    "title": "结束时间",
+                    "order": 4
+                },
+                "remark": {
+                    "bsonType": "string",
+                    "title": "备注",
+                    "component": {
+                        "name": "textarea"
+                    },
+                    "order": 5
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 6
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 7
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 8
+                }
+            }
+        }
+    },
+    "notice": {
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "noticeNumber",
+                "noticeTitle",
+                "noticeContent",
+                "noticeImage"
+            ],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "noticeNumber": {
+                    "bsonType": "string",
+                    "description": "请输入公告编码",
+                    "label": "编码",
+                    "trim": "both",
+                    "title": "编码",
+                    "order": 1
+                },
+                "noticeTitle": {
+                    "bsonType": "string",
+                    "description": "请输入公告标题",
+                    "label": "标题",
+                    "trim": "both",
+                    "title": "标题",
+                    "order": 2
+                },
+                "noticeContent": {
+                    "bsonType": "string",
+                    "title": "内容",
+                    "component": {
+                        "name": "textarea"
+                    },
+                    "order": 3
+                },
+                "noticeSendTime": {
+                    "bsonType": "timestamp",
+                    "title": "发送时间",
+                    "order": 4
+                },
+                "noticeImage": {
+                    "bsonType": "array",
+                    "title": "图片",
+                    "description": "多张图片，最多1张",
+                    "arrayType": "file",
+                    "multiple": true,
+                    "fileMediaType": "image",
+                    "fileExtName": "jpg,png,gif,bmp,jpeg",
+                    "maxLength": 1,
+                    "order": 4
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 5
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 6
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 7
+                }
+            }
+        }
+    },
+    "noticeBar": {
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "title",
+                "sort"
+            ],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "title": {
+                    "bsonType": "string",
+                    "description": "请输入公告内容，将在微信小程序首页顶部显示",
+                    "label": "内容",
+                    "trim": "both",
+                    "title": "内容",
+                    "order": 1
+                },
+                "sort": {
+                    "bsonType": "int",
+                    "description": "数值越大排序越靠前",
+                    "label": "排序",
+                    "trim": "both",
+                    "title": "排序",
+                    "order": 2
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 3
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 4
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "是否启用",
+                    "order": 5
+                }
+            }
+        }
+    },
+    "opendb-admin-menus": {
+        "data": [
+            {
+                "create_date": 1602662469396,
+                "enable": true,
+                "icon": "uni-icons-home",
+                "menu_id": "index",
+                "name": "首页",
+                "parent_id": "",
+                "permission": [],
+                "sort": 100,
+                "url": "/"
+            }
+        ]
+    },
+    "opendb-app-list": {
+        "data": [
+            {
+                "appid": "__UNI__AA5760A",
+                "name": "tongcheng-worker-management-background",
+                "description": "admin 管理后台",
+                "create_date": 1675652508313
+            }
+        ]
+    },
+    "opendb-app-versions": {
+        "data": [
+            {
+                "appid": "__UNI__A01E211",
+                "platform": [],
+                "uni_platform": "mp-weixin",
+                "type": "native_app",
+                "version": "1.0.0",
+                "stable_publish": false,
+                "create_env": "uni-stat",
+                "create_date": 1675670410646
+            }
+        ]
+    },
+    "opendb-banner": {
+        "data": [
+            {
+                "bannerfile": {
+                    "extname": "png",
+                    "fileType": "image",
+                    "image": {
+                        "height": 375,
+                        "location": "blob:https://static-mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.next.bspapp.com/2e897a15-420c-425c-8957-5c3aed70d3c7",
+                        "width": 565
+                    },
+                    "name": "微信图片_20230916131434.png",
+                    "path": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/28d92efe-f705-4c43-a297-3f7221e7f769.png",
+                    "size": 173164,
+                    "url": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/28d92efe-f705-4c43-a297-3f7221e7f769.png",
+                    "fileID": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/28d92efe-f705-4c43-a297-3f7221e7f769.png",
+                    "cloudPath": "1694841309396_0.png",
+                    "status": "success",
+                    "uuid": 1694841309397
+                },
+                "category_id": "1",
+                "description": "",
+                "open_url": "/pages/weixiu/weixiu/",
+                "sort": 1,
+                "status": true,
+                "title": "维修专区",
+                "isToUrl": true,
+                "toGoodsID": "6454d1de09e298919848b09d",
+                "toUrl": "/pages/business/weixiu/weixiu"
+            }
+        ]
+    },
+    "opendb-department": [],
+    "opendb-device": {
+        "data": [
+            {
+                "device_id": "16853623720721400476",
+                "appid": "__UNI__6600B4E",
+                "vendor": "devtools",
+                "push_clientid": "",
+                "imei": "",
+                "oaid": "",
+                "idfa": "",
+                "imsi": "",
+                "model": "iPhone 6/7/8",
+                "uni_platform": "mp-weixin",
+                "os_name": "ios",
+                "os_version": "10.0.1",
+                "os_language": "zh_CN",
+                "os_theme": "",
+                "pixel_ratio": "2",
+                "network_model": "4g",
+                "window_width": "375",
+                "window_height": "555",
+                "screen_width": "375",
+                "screen_height": "667",
+                "rom_name": "",
+                "rom_version": "",
+                "location_ip": "119.123.63.14",
+                "location_latitude": 0,
+                "location_longitude": 0,
+                "location_country": "",
+                "location_province": "",
+                "location_city": "",
+                "create_date": 1685972479428,
+                "last_update_date": 1697498156773
+            }
+        ]
+    },
+    "opendb-feedback": [],
+    "opendb-mall-categories": [],
+    "opendb-mall-comments": [],
+    "opendb-mall-goods": [],
+    "opendb-mall-sku": [],
+    "opendb-news-articles": [],
+    "opendb-news-categories": {
+        "data": [
+            {
+                "name": "公告",
+                "description": "",
+                "icon": "",
+                "sort": null,
+                "article_count": null,
+                "create_date": 1676279670013
+            }
+        ]
+    },
+    "opendb-news-comments": [],
+    "opendb-news-favorite": [],
+    "opendb-open-data": {
+        "data": [
+            {
+                "value": "{\"session_key\":\"zI0oFN2gFUwZFQU+w7OnqA==\"}",
+                "expired": 1688800199976
+            }
+        ]
+    },
+    "opendb-search-hot": [],
+    "opendb-search-log": [],
+    "opendb-sign-in": [],
+    "opendb-sms-log": [],
+    "opendb-sms-task": [],
+    "opendb-sms-template": [],
+    "opendb-tempdata": [],
+    "opendb-verify-codes": {
+        "data": [
+            {
+                "device_uuid": "16756506272787113824",
+                "scene": "register",
+                "code": "pavx",
+                "state": 0,
+                "ip": "222.76.204.13",
+                "created_date": 1675650876833,
+                "expired_date": 1675651056833
+            }
+        ]
+    },
+    "order": {
+        "data": [
+            {
+                "orderGoodsID": "64744cc609e2989198eb5fa8",
+                "orderGoodsName": "测试商品",
+                "orderGoodsCount": 1,
+                "orderType": 1,
+                "orderStatus": 1,
+                "orderOriginalAmount": 1,
+                "orderCurrentAmount": 0.01,
+                "orderDiscountAmount": 0.99,
+                "amountPayable": 0.01,
+                "orderPayType": 1,
+                "discountMethod": 0,
+                "isAssociatedBookingSheet": false,
+                "openID": "oTDxt5Rg2FLfsGHXY9BJ2lsBmog4",
+                "userID": "1686208613000-",
+                "created": 1686213728600,
+                "isPaid": true,
+                "isEnable": true,
+                "orderNo": "1686213727446GHXY9BJ2lsBmog4",
+                "actualAmountPaid": 1
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "orderGoodsID",
+                "orderGoodsName",
+                "orderGoodsCount",
+                "orderType",
+                "orderStatus",
+                "orderOriginalAmount",
+                "orderCurrentAmount",
+                "orderDiscountAmount",
+                "amountPayable",
+                "actualAmountPaid",
+                "orderPayType",
+                "discountMethod",
+                "openID",
+                "userID",
+                "isAssociatedBookingSheet",
+                "orderServiceAddress"
+            ],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "orderNo": {
+                    "bsonType": "string",
+                    "title": "微信支付订单编号",
+                    "description": "请输入",
+                    "order": 1
+                },
+                "orderGoodsID": {
+                    "bsonType": "string",
+                    "title": "商品ID",
+                    "description": "请输入",
+                    "order": 1
+                },
+                "orderGoodsName": {
+                    "bsonType": "string",
+                    "title": "商品名称",
+                    "description": "请输入",
+                    "order": 2
+                },
+                "orderGoodsCount": {
+                    "bsonType": "int",
+                    "title": "购买数量",
+                    "description": "请输入",
+                    "order": 3
+                },
+                "orderType": {
+                    "bsonType": "int",
+                    "title": "订单类型",
+                    "description": "请输入",
+                    "order": 4
+                },
+                "orderStatus": {
+                    "bsonType": "int",
+                    "title": "订单状态",
+                    "description": "订单状态：0-未付款、1-已付款、2-退款中、3-已退款、4-已完成、5-待评价",
+                    "order": 5
+                },
+                "orderOriginalAmount": {
+                    "bsonType": "double",
+                    "title": "原价",
+                    "description": "请输入",
+                    "order": 6
+                },
+                "orderCurrentAmount": {
+                    "bsonType": "double",
+                    "title": "现价（优惠后的金额）",
+                    "description": "请输入",
+                    "order": 7
+                },
+                "orderDiscountAmount": {
+                    "bsonType": "double",
+                    "title": "优惠金额",
+                    "description": "自动计算：原价-现价=优惠金额",
+                    "order": 8
+                },
+                "amountPayable": {
+                    "bsonType": "double",
+                    "title": "应付金额",
+                    "description": "请输入",
+                    "order": 9
+                },
+                "actualAmountPaid": {
+                    "bsonType": "double",
+                    "title": "实际支付金额",
+                    "description": "请输入",
+                    "order": 10
+                },
+                "isPaid": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "是否已支付",
+                    "description": "默认否",
+                    "order": 11
+                },
+                "discountMethod": {
+                    "bsonType": "int",
+                    "title": "优惠方式",
+                    "description": "1-优惠券、2-积分、3-会员卡打折",
+                    "order": 12
+                },
+                "isAssociatedBookingSheet": {
+                    "bsonType": "bool",
+                    "defaultValue": false,
+                    "title": "是否关联预约单",
+                    "order": 13
+                },
+                "ReservationID": {
+                    "bsonType": "string",
+                    "title": "预约单ID",
+                    "description": "请输入",
+                    "order": 14
+                },
+                "useCouponID": {
+                    "bsonType": "string",
+                    "title": "优惠券ID",
+                    "description": "请输入",
+                    "defaultValue": "优惠券ID",
+                    "order": 15
+                },
+                "openID": {
+                    "bsonType": "string",
+                    "title": "微信openID",
+                    "description": "请输入",
+                    "order": 16
+                },
+                "userID": {
+                    "bsonType": "string",
+                    "title": "userID",
+                    "description": "请输入",
+                    "order": 17
+                },
+                "sharerOpenID": {
+                    "bsonType": "string",
+                    "title": "邀请人openID",
+                    "description": "请输入",
+                    "order": 17
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 18
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 19
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 20
+                }
+            }
+        }
+    },
+    "regionalManagement": {
+        "data": [
+            {
+                "isEnable": true,
+                "province": "福建省",
+                "city": "泉州市",
+                "area": "丰泽区",
+                "region": "A",
+                "updated": 1677508329296,
+                "created": 1677508329296
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "province",
+                "city",
+                "area",
+                "region"
+            ],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "province": {
+                    "bsonType": "string",
+                    "title": "省份",
+                    "description": "请输入",
+                    "order": 1
+                },
+                "city": {
+                    "bsonType": "string",
+                    "title": "城市",
+                    "description": "请输入",
+                    "order": 2
+                },
+                "area": {
+                    "bsonType": "string",
+                    "title": "区",
+                    "description": "请输入",
+                    "order": 3
+                },
+                "region": {
+                    "bsonType": "string",
+                    "title": "区域",
+                    "description": "请输入",
+                    "order": 4
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 7
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 8
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 9
+                }
+            }
+        }
+    },
+    "releaseInfo": {
+        "data": [
+            {
+                "isExpedited": true,
+                "isEnable": true,
+                "title": "家里冰箱坏了，想找个师傅修理下，在丰泽泉秀大厦这边",
+                "content": "型号：海信冰箱HS20201101 大概2020年买的，最近都不制冷，也没亮灯。",
+                "classType": "63e5e3e7f5cf3a42a2324c64",
+                "imageList": [
+                    "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/6aa6abf1-2a2e-4c64-b0d6-b16b861fb179.jpg"
+                ],
+                "phone": "15959950529",
+                "address": "",
+                "updated": 1685071498299,
+                "created": 1685071498299,
+                "reservationRecordID": "6491a7080c801c4baae992cb",
+                "imagesList": [
+                    "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/6aa6abf1-2a2e-4c64-b0d6-b16b861fb179.jpg"
+                ]
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "title",
+                "content",
+                "addressee",
+                "phone"
+            ],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "reservationRecordID": {
+                    "bsonType": "string",
+                    "title": "预约记录ID",
+                    "order": 1
+                },
+                "isExpedited": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "是否加急",
+                    "order": 2
+                },
+                "title": {
+                    "bsonType": "string",
+                    "title": "标题",
+                    "description": "请输入",
+                    "order": 3
+                },
+                "content": {
+                    "bsonType": "string",
+                    "title": "内容",
+                    "description": "请输入",
+                    "component": {
+                        "name": "textarea"
+                    },
+                    "order": 4
+                },
+                "classType": {
+                    "bsonType": "string",
+                    "description": "请选择分类",
+                    "foreignKey": "classType.classTypeName",
+                    "enum": {
+                        "collection": "classType",
+                        "field": "classTypeName as text,_id as value"
+                    },
+                    "label": "所属分类",
+                    "trim": "both",
+                    "title": "所属分类",
+                    "order": 5
+                },
+                "imageList": {
+                    "bsonType": "array",
+                    "title": "其他图片",
+                    "description": "多张图片，最多9张",
+                    "arrayType": "file",
+                    "multiple": true,
+                    "fileMediaType": "image",
+                    "fileExtName": "jpg,png,gif,bmp,jpeg",
+                    "maxLength": 9,
+                    "order": 6
+                },
+                "customerPhone": {
+                    "bsonType": "string",
+                    "description": "请输入",
+                    "pattern": "^\\+?[0-9-]{3,20}$",
+                    "label": "客户电话",
+                    "trim": "both",
+                    "title": "客户电话",
+                    "order": 7
+                },
+                "customerAddress": {
+                    "bsonType": "string",
+                    "description": "客户地址（地图导航地址）",
+                    "label": "客户地址",
+                    "trim": "both",
+                    "title": "客户地址",
+                    "order": 8
+                },
+                "lng": {
+                    "bsonType": "string",
+                    "description": "经度）",
+                    "label": "经度",
+                    "trim": "both",
+                    "title": "经度",
+                    "order": 9
+                },
+                "lat": {
+                    "bsonType": "string",
+                    "description": "纬度",
+                    "label": "纬度",
+                    "trim": "both",
+                    "title": "纬度",
+                    "order": 10
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 11
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 12
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 13
+                }
+            }
+        }
+    },
+    "reservationRecord": {
+        "data": [
+            {
+                "openID": "oTDxt5R_6XYyjkE7mQ3BRm2Ms0po",
+                "userID": "",
+                "expectedAppointmentDateTime": null,
+                "created": 1682426728000,
+                "isEnable": true,
+                "releaseInfoID": "6470268a28064a7587affe41",
+                "serviceLong": 1,
+                "serviceStartTime": "",
+                "status": null,
+                "workOrderLong": 1
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "releaseInfoID",
+                "openID",
+                "",
+                ""
+            ],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "releaseInfoID": {
+                    "bsonType": "string",
+                    "title": "预约信息ID",
+                    "description": "请输入",
+                    "order": 1
+                },
+                "openID": {
+                    "bsonType": "string",
+                    "title": "用户openID",
+                    "description": "请输入",
+                    "order": 2
+                },
+                "serviceLong": {
+                    "bsonType": "int",
+                    "title": "服务时长",
+                    "description": "请输入",
+                    "order": 3
+                },
+                "workOrderLong": {
+                    "bsonType": "int",
+                    "title": "出单时长",
+                    "description": "请输入",
+                    "order": 4
+                },
+                "serviceStartTime": {
+                    "bsonType": "string",
+                    "title": "服务开始时间",
+                    "description": "请输入",
+                    "order": 5
+                },
+                "serviceEndTime": {
+                    "bsonType": "string",
+                    "title": "服务结束时间",
+                    "description": "请输入",
+                    "order": 6
+                },
+                "departTime": {
+                    "bsonType": "string",
+                    "title": "出发时间",
+                    "description": "请输入",
+                    "order": 7
+                },
+                "arriveTime": {
+                    "bsonType": "string",
+                    "title": "到达时间",
+                    "description": "请输入",
+                    "order": 8
+                },
+                "actualServiceStartTime": {
+                    "bsonType": "string",
+                    "title": "实际开始服务时间",
+                    "description": "请输入",
+                    "order": 9
+                },
+                "actualServiceEndTime": {
+                    "bsonType": "string",
+                    "title": "实际服务结束时间",
+                    "description": "请输入",
+                    "order": 10
+                },
+                "status": {
+                    "bsonType": "int",
+                    "title": "服务工单状态",
+                    "description": "请输入",
+                    "order": 11
+                },
+                "city": {
+                    "bsonType": "string",
+                    "title": "城市",
+                    "description": "请输入",
+                    "order": 12
+                },
+                "cityCode": {
+                    "bsonType": "string",
+                    "title": "城市编码",
+                    "description": "请输入",
+                    "order": 13
+                },
+                "staffID": {
+                    "bsonType": "string",
+                    "title": "服务人员ID",
+                    "description": "请输入",
+                    "order": 14
+                },
+                "staffName": {
+                    "bsonType": "string",
+                    "title": "服务人员姓名",
+                    "description": "请输入",
+                    "order": 15
+                },
+                "dispatcher": {
+                    "bsonType": "string",
+                    "title": "调度人",
+                    "description": "请输入",
+                    "order": 16
+                },
+                "dispatchTime": {
+                    "bsonType": "string",
+                    "title": "调度时间",
+                    "description": "请输入",
+                    "order": 17
+                },
+                "remark": {
+                    "bsonType": "string",
+                    "title": "备注",
+                    "description": "请输入",
+                    "component": {
+                        "name": "textarea"
+                    },
+                    "order": 18
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 19
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 20
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 21
+                }
+            }
+        }
+    },
+    "searchHotKeyword": {
+        "data": [
+            {
+                "isEnable": true,
+                "name": "维修",
+                "updated": 1675929313481,
+                "created": 1675929313481,
+                "sort": 1
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "name"
+            ],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "name": {
+                    "bsonType": "string",
+                    "title": "搜索热门词",
+                    "description": "请输入",
+                    "order": 1
+                },
+                "sort": {
+                    "bsonType": "int",
+                    "description": "数字越小，排序越前",
+                    "title": "排序"
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 2
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 3
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 4
+                }
+            }
+        }
+    },
+    "serviceWorkOrder": {
+        "schema": {}
+    },
+    "subscriptionIDTemplateID": {
+        "data": [
+            {
+                "isEnable": true,
+                "teamplateName": "订单支付成功通知",
+                "teamplateID": "iOWPa9J4g-uRHrZUG62wxhWqsb0YU265UToPTV7eZGQ",
+                "remark": "https://mp.weixin.qq.com/wxamp/newtmpl/tmpldetail?type=2&pri_tmpl_id=iOWPa9J4g-uRHrZUG62wxhWqsb0YU265UToPTV7eZGQ&flag=undefined&token=133189",
+                "updated": 1686559200285,
+                "created": 1686559200285
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "teamplateName",
+                "teamplateID"
+            ],
+            "permission": {
+                "read": true,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "teamplateName": {
+                    "bsonType": "string",
+                    "description": "请输入",
+                    "label": "微信订阅消息-模板名称",
+                    "trim": "both",
+                    "title": "微信订阅消息-模板名称",
+                    "order": 1
+                },
+                "teamplateID": {
+                    "bsonType": "string",
+                    "description": "请输入",
+                    "label": "微信订阅消息-模板ID",
+                    "trim": "both",
+                    "title": "微信订阅消息-模板ID",
+                    "order": 2
+                },
+                "remark": {
+                    "bsonType": "string",
+                    "title": "备注",
+                    "component": {
+                        "name": "textarea"
+                    },
+                    "order": 3
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 4
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 5
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 6
+                }
+            }
+        }
+    },
+    "test": {
+        "data": [
+            {
+                "order_no": "1686210119082GHXY9BJ2lsBmog4",
+                "out_trade_no": "1686210119082GHXY9BJ2lsBmog4-8",
+                "total_fee": 1
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "order_no",
+                "out_trade_no",
+                "total_fee"
+            ],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "sort": {
+                    "bsonType": "int",
+                    "title": "商品排序",
+                    "description": "数值越大越排序越靠前",
+                    "order": 1
+                },
+                "order_no": {
+                    "bsonType": "string",
+                    "description": "order_no",
+                    "label": "order_no",
+                    "trim": "both",
+                    "title": "order_no",
+                    "order": 3
+                },
+                "out_trade_no": {
+                    "bsonType": "string",
+                    "title": "out_trade_no",
+                    "description": "请输入",
+                    "order": 4
+                },
+                "total_fee": {
+                    "bsonType": "double",
+                    "title": "total_fee",
+                    "description": "请输入",
+                    "order": 5
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 14
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 15
+                },
+                "isEnable": {
+                    "bsonType": "bool",
+                    "defaultValue": true,
+                    "title": "生效状态",
+                    "order": 16
+                }
+            }
+        }
+    },
+    "uni-id-device": [],
+    "uni-id-log": {
+        "data": [
+            {
+                "appid": "__UNI__AA5760A",
+                "device_id": "16756506272787113824",
+                "ip": "222.76.204.13",
+                "type": "register",
+                "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+                "create_date": 1675650915600,
+                "user_id": "63e06763e1a35cde4c0c9ce0",
+                "state": 1
+            }
+        ]
+    },
+    "uni-id-permissions": [],
+    "uni-id-roles": {
+        "data": [
+            {
+                "role_id": "admin",
+                "role_name": "超级管理员",
+                "permission": [],
+                "comment": "超级管理员拥有所有权限",
+                "create_date": 0
+            }
+        ]
+    },
+    "uni-id-scores": [],
+    "uni-id-tag": [],
+    "uni-id-users": {
+        "data": [
+            {
+                "avatar": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/460d46d0-4fcc-11eb-8ff1-d5dcf8779628.png",
+                "mobile": "18888888888",
+                "mobile_confirmed": 1,
+                "nickname": "测试用户昵称",
+                "username": "uni-starter预置用户名"
+            }
+        ]
+    },
+    "uni-pay-orders": {
+        "data": [
+            {
+                "provider": "wxpay",
+                "provider_pay_type": "mp",
+                "uni_platform": "mp-weixin",
+                "status": 1,
+                "type": "goods",
+                "order_no": "1685955538289GHXY9BJ2lsBmog4",
+                "out_trade_no": "1685955538289GHXY9BJ2lsBmog4-2",
+                "device_id": "16858939432976344010",
+                "client_ip": "222.76.204.14",
+                "openid": "oTDxt5Rg2FLfsGHXY9BJ2lsBmog4",
+                "description": "测试商品",
+                "total_fee": 1,
+                "refund_fee": 0,
+                "refund_count": 0,
+                "provider_appid": "wx9d6bd1da77d1287f",
+                "appid": "__UNI__3149185",
+                "custom": {
+                    "orderGoodsID": {
+                        "_id": "64744cc609e2989198eb5fa8",
+                        "isEnable": true,
+                        "sort": 5,
+                        "brandID": "646841f5f43e60d7b631ed2f",
+                        "classTypeID": "6447732a819ce8deee27d577",
+                        "commissionScheme": "6421b87f09e2988160b996ba",
+                        "title": "测试商品",
+                        "originalPrice": 1,
+                        "favourPrice": 0.01,
+                        "tip": "测试",
+                        "desc": "测试",
+                        "image": {
+                            "extname": "jpg",
+                            "fileType": "image",
+                            "image": {
+                                "width": 434,
+                                "height": 394,
+                                "location": "blob:http://localhost:8080/ece7057a-da2f-4a01-8726-0da3588d3316"
+                            },
+                            "name": "1586929948102.jpg",
+                            "path": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/4275dadc-c523-4138-8ddd-698227e62dd1.jpg",
+                            "size": 19739,
+                            "fileID": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/4275dadc-c523-4138-8ddd-698227e62dd1.jpg",
+                            "url": "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/4275dadc-c523-4138-8ddd-698227e62dd1.jpg",
+                            "uuid": 1685343428189,
+                            "status": "success",
+                            "cloudPath": "1685343428188_0.jpg"
+                        },
+                        "imageList": [],
+                        "updated": 1685343430459,
+                        "created": 1685343430459,
+                        "expressCharge": 0,
+                        "isNoInventory": false,
+                        "monthlySales": 100
+                    },
+                    "orderGoodsCount": 1,
+                    "originalPrice": 0,
+                    "favourPrice": 0,
+                    "amountPayable": 0
+                },
+                "create_date": 1685955539180,
+                "stat_data": {
+                    "platform": "mp-weixin",
+                    "app_version": "1.0.0",
+                    "app_version_code": "100",
+                    "os": "ios",
+                    "channel": "1001",
+                    "scene": 1001
+                },
+                "notify_date": 1685955571075,
+                "original_data": {
+                    "body": "<xml><appid><![CDATA[wx9d6bd1da77d1287f]]></appid>\n<bank_type><![CDATA[OTHERS]]></bank_type>\n<cash_fee><![CDATA[1]]></cash_fee>\n<fee_type><![CDATA[CNY]]></fee_type>\n<is_subscribe><![CDATA[N]]></is_subscribe>\n<mch_id><![CDATA[1559134041]]></mch_id>\n<nonce_str><![CDATA[1o839h0i5b8d0d7b]]></nonce_str>\n<openid><![CDATA[oTDxt5Rg2FLfsGHXY9BJ2lsBmog4]]></openid>\n<out_trade_no><![CDATA[1685955538289GHXY9BJ2lsBmog4-2]]></out_trade_no>\n<result_code><![CDATA[SUCCESS]]></result_code>\n<return_code><![CDATA[SUCCESS]]></return_code>\n<sign><![CDATA[1346DBBEA2885EA45902B5B5AE2E9A55]]></sign>\n<time_end><![CDATA[20230605165930]]></time_end>\n<total_fee>1</total_fee>\n<trade_type><![CDATA[JSAPI]]></trade_type>\n<transaction_id><![CDATA[4200001851202306057725979193]]></transaction_id>\n</xml>",
+                    "headers": {
+                        "accept": "*/*",
+                        "content-length": "778",
+                        "content-type": "text/xml",
+                        "host": "fc-mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.next.bspapp.com",
+                        "pragma": "no-cache",
+                        "user-agent": "Mozilla/4.0",
+                        "x-client-ip": "101.226.103.14",
+                        "x-forwarded-by": "172.28.195.5:80",
+                        "x-forwarded-for": "101.226.103.14, 39.96.130.1",
+                        "x-real-ip": "101.226.103.14",
+                        "x5-uuid": "57dccb8ef5b2606b35f71f6a14534e5a"
+                    },
+                    "httpMethod": "POST",
+                    "isBase64Encoded": false,
+                    "path": "/payNotify/wxpay-mp"
+                },
+                "pay_date": 1685955571075,
+                "transaction_id": "4200001851202306057725979193",
+                "user_order_success": true
+            }
+        ]
+    },
+    "uni-stat-active-devices": {
+        "data": [
+            {
+                "appid": "__UNI__A01E211",
+                "platform_id": "63e063e0f5cf3a4b663e6414",
+                "channel_id": "63e0b38a819ce84ffc0f1200",
+                "version_id": "63e0b38a28064aae2670d9f2",
+                "is_new": 0,
+                "device_id": "16756127830587615424",
+                "dimension": "month",
+                "create_time": 1675667274938
+            }
+        ]
+    },
+    "uni-stat-active-users": {
+        "data": [
+            {
+                "appid": "__UNI__EE982F7",
+                "platform_id": "63e063e0f5cf3a4b663e6414",
+                "channel_id": "647dea6609e298a239ac246b",
+                "version_id": "647dea66f5cf3a3d280c8aa1",
+                "uid": "64817cf3f43e60ba7f2ab171",
+                "dimension": "month",
+                "create_time": 1686207753341
+            }
+        ]
+    },
+    "uni-stat-app-channels": {
+        "data": [
+            {
+                "appid": "__UNI__A01E211",
+                "platform_id": "63e063e0f5cf3a4b663e6414",
+                "channel_code": "1001",
+                "channel_name": "发现栏小程序主入口，「最近使用」列表（基础库2.2.4版本起包含「我的小程序」列表）",
+                "create_time": 1675670409839,
+                "update_time": 1675670409839
+            }
+        ]
+    },
+    "uni-stat-app-crash-logs": [],
+    "uni-stat-app-platforms": {
+        "data": [
+            {
+                "name": "App-Android",
+                "code": "android",
+                "order": 1,
+                "enable": true,
+                "create_time": 163998979103
+            }
+        ]
+    },
+    "uni-stat-app-versions": [],
+    "uni-stat-error-logs": [],
+    "uni-stat-error-result": {
+        "data": [
+            {
+                "appid": "__UNI__EE982F7",
+                "platform_id": "63e063e0f5cf3a4b663e6414",
+                "channel_id": "647dea6609e298a239ac246b",
+                "version_id": "647dea66f5cf3a3d280c8aa1",
+                "type": "js",
+                "hash": "99a1b1d853a9b7074abde4a2f9d7463d",
+                "msg": "created@https://res.servicewechat.com/weapp/release/wx9d6bd1da77d1287f/5/pages/business/settleIn/settleIn.appservice.js:168:343\n$e@https://res.servicewechat.com/weapp/release/wx9d6bd1da77d1287f/5/appservice.app.js:77:11398\nQt@https://res.servicewechat.com/weapp/release/wx9d6bd1da77d1287f/5/appservice.app.js:77:26126\n@https://res.servicewechat.com/weapp/release/wx9d6bd1da77d1287f/5/appservice.app.js:77:33680\na@https://res.servicewechat.com/weapp/release/wx9d6bd1da77d1287f/5/appservice.app.js:77:31346\nattached@https://res.servicewechat.com/weapp/release/wx9d6bd1da77d1287f/5/appservice.app.js:69:97799\n@https://lib/WASubContext.js:1:189149\n@https://lib/WASubContext.js:1:188930\nt@https://lib/WASubContext.js:1:207334\nf@https://lib/WASubContext.js:1:207656\n@https://lib/WASubContext.js:1:219689\nls@https://lib/WASubContext.js:1:401403\n@https://lib/WASubContext.js:1:451564\n@https://lib/WASubContext.js:1:417402\n@https://lib/WASubContext.js:1:456134\n@https://lib/WASubContext.js:1:417402\n@https://lib/WASubContext.js:1:457971\n@https://lib/WASubContext.js:1:417402\nor@https://lib/WASubContext.js:1:458763\n@https://lib/WASubContext.js:1:416506\n@https://lib/WAServiceMainContext.js:1:409907\nemit@https://lib/WAServiceMainContext.js:1:415051\nemit@[native code]\n@https://lib/WAServiceMainContext.js:1:1424145\n@https://lib/WAServiceMainContext.js:1:1069945\n@https://lib/WAServiceMainContext.js:1:410006\nemit@https://lib/WAServiceMainContext.js:1:415051\n@https://lib/WAServiceMainContext.js:1:416098\n@https://lib/WAServiceMainContext.js:1:406378\nemit@https://lib/WAServiceMainContext.js:1:117064\nemit@[native code]\nemit@https://lib/WAServiceMainContext.js:1:116683\nsubscribeHandler@https://lib/WAServiceMainContext.js:1:119784",
+                "count": 1,
+                "last_time": 1686117177258,
+                "dimension": "day",
+                "stat_date": "20230607",
+                "start_time": 1686067200000,
+                "end_time": 1686153599999
+            }
+        ]
+    },
+    "uni-stat-event-logs": [],
+    "uni-stat-event-result": {
+        "data": [
+            {
+                "appid": "__UNI__A01E211",
+                "platform_id": "63e063e0f5cf3a4b663e6414",
+                "channel_id": "63e0b38a819ce84ffc0f1200",
+                "version_id": "63e0b38a28064aae2670d9f2",
+                "event_key": "login",
+                "event_count": 4,
+                "device_count": 4,
+                "user_count": 0,
+                "dimension": "day",
+                "stat_date": "20230206",
+                "start_time": 1675612800000,
+                "end_time": 1675699199999
+            }
+        ]
+    },
+    "uni-stat-events": {
+        "data": [
+            {
+                "appid": "__UNI__A01E211",
+                "event_key": "login",
+                "event_name": "登录",
+                "create_time": 1675667275015,
+                "update_time": 1675667275015
+            }
+        ]
+    },
+    "uni-stat-loyalty-result": {
+        "data": [
+            {
+                "appid": "__UNI__A01E211",
+                "platform_id": "63e063e0f5cf3a4b663e6414",
+                "channel_id": "63e0b38a819ce84ffc0f1200",
+                "version_id": "63e0b38a28064aae2670d9f2",
+                "visit_depth_data": {
+                    "visit_devices": {
+                        "p_1": 0,
+                        "p_2": 0,
+                        "p_3": 0,
+                        "p_4": 0,
+                        "p_5": 0,
+                        "p_10": 0
+                    },
+                    "visit_users": {
+                        "p_1": 0,
+                        "p_2": 0,
+                        "p_3": 0,
+                        "p_4": 0,
+                        "p_5": 0,
+                        "p_10": 0
+                    },
+                    "visit_times": {
+                        "p_1": 0,
+                        "p_2": 0,
+                        "p_3": 0,
+                        "p_4": 0,
+                        "p_5": 0,
+                        "p_10": 0
+                    }
+                },
+                "duration_data": {
+                    "visit_devices": {
+                        "s_0": 4,
+                        "s_3": 0,
+                        "s_6": 0,
+                        "s_11": 0,
+                        "s_21": 0,
+                        "s_31": 0,
+                        "s_51": 0,
+                        "s_100": 0
+                    },
+                    "visit_users": {
+                        "s_0": 0,
+                        "s_3": 0,
+                        "s_6": 0,
+                        "s_11": 0,
+                        "s_21": 0,
+                        "s_31": 0,
+                        "s_51": 0,
+                        "s_100": 0
+                    },
+                    "visit_times": {
+                        "s_0": 4,
+                        "s_3": 0,
+                        "s_6": 0,
+                        "s_11": 0,
+                        "s_21": 0,
+                        "s_31": 0,
+                        "s_51": 0,
+                        "s_100": 0
+                    }
+                },
+                "stat_date": "20230206",
+                "start_time": 1675612800000,
+                "end_time": 1675699199999
+            }
+        ]
+    },
+    "uni-stat-mp-scenes": {
+        "data": [
+            {
+                "platform": "android",
+                "scene_code": "",
+                "scene_name": "Android - 默认",
+                "create_time": 1650801393000
+            }
+        ]
+    },
+    "uni-stat-page-logs": {
+        "data": [
+            {
+                "appid": "__UNI__6600B4E",
+                "version": "1.0.0",
+                "platform": "mp-weixin",
+                "channel": "1001",
+                "device_id": "16916035037934558243",
+                "uid": "",
+                "session_id": "653fec3ea7c4329ea5c2eb01",
+                "page_id": "652dc42cfe975f09c7622cfd",
+                "query_string": "",
+                "previous_page_id": "652dc42cfe975f09c7622cfd",
+                "previous_page_duration": 3,
+                "previous_page_is_entry": 1,
+                "create_time": 1698688063031
+            }
+        ]
+    },
+    "uni-stat-page-result": {
+        "data": [
+            {
+                "appid": "__UNI__EE982F7",
+                "platform_id": "63e063e0f5cf3a4b663e6414",
+                "channel_id": "647dea6609e298a239ac246b",
+                "version_id": "647dea66f5cf3a3d280c8aa1",
+                "page_id": "647de63d0c801c6b97ffc246",
+                "visit_times": 2,
+                "visit_devices": 1,
+                "visit_users": 0,
+                "exit_times": 0,
+                "duration": 5,
+                "share_count": 0,
+                "entry_users": 0,
+                "entry_devices": 0,
+                "entry_count": 0,
+                "entry_duration": 0,
+                "bounce_rate": 0,
+                "dimension": "day",
+                "stat_date": "20230605",
+                "start_time": 1685894400000,
+                "end_time": 1685980799999
+            }
+        ]
+    },
+    "uni-stat-pages": {
+        "data": [
+            {
+                "appid": "__UNI__A01E211",
+                "path": "pages/login/login",
+                "title": "登录",
+                "page_params": [],
+                "create_time": 1675667274876,
+                "update_time": 1675667274876
+            }
+        ]
+    },
+    "uni-stat-pay-result": {
+        "data": [
+            {
+                "appid": "__UNI__3149185",
+                "platform_id": "63e063e0f5cf3a4b663e6414",
+                "channel_id": "646748a3f43e60d7b6e25c74",
+                "version_id": "646748a309e29891981df720",
+                "dimension": "day",
+                "create_date": 1684512009366,
+                "start_time": 1684425600000,
+                "end_time": 1684511999999,
+                "stat_date": {
+                    "date_str": "2023-05-19",
+                    "year": 2023,
+                    "month": 5,
+                    "day": 19,
+                    "hour": 0
+                },
+                "pay_total_amount": 3,
+                "pay_order_count": 3,
+                "pay_user_count": 0,
+                "pay_device_count": 1,
+                "create_total_amount": 6,
+                "create_order_count": 6,
+                "create_user_count": 0,
+                "create_device_count": 3,
+                "refund_total_amount": 0,
+                "refund_order_count": 0,
+                "refund_user_count": 0,
+                "refund_device_count": 0,
+                "activity_user_count": 0,
+                "activity_device_count": 0
+            }
+        ]
+    },
+    "uni-stat-result": {
+        "data": [
+            {
+                "appid": "__UNI__A01E211",
+                "platform_id": "63e063e0f5cf3a4b663e6414",
+                "channel_id": "63e0b38a819ce84ffc0f1200",
+                "version_id": "63e0b38a28064aae2670d9f2",
+                "total_devices": 0,
+                "new_device_count": 0,
+                "active_device_count": 4,
+                "total_users": 0,
+                "new_user_count": 0,
+                "active_user_count": 0,
+                "user_session_times": 0,
+                "app_launch_count": 4,
+                "page_visit_count": 0,
+                "error_count": 0,
+                "duration": 4,
+                "user_duration": 0,
+                "avg_device_session_time": 1,
+                "avg_user_session_time": 0,
+                "avg_device_time": 1,
+                "avg_user_time": 0,
+                "bounce_times": 0,
+                "bounce_rate": 0,
+                "retention": {
+                    "active_device": {
+                        "d_1": {
+                            "device_count": 0,
+                            "device_rate": 0
+                        },
+                        "d_2": {
+                            "device_count": 0,
+                            "device_rate": 0
+                        },
+                        "d_3": {
+                            "device_count": 0,
+                            "device_rate": 0
+                        },
+                        "d_4": {
+                            "device_count": 0,
+                            "device_rate": 0
+                        },
+                        "d_5": {
+                            "device_count": 0,
+                            "device_rate": 0
+                        },
+                        "d_6": {
+                            "device_count": 0,
+                            "device_rate": 0
+                        },
+                        "d_7": {
+                            "device_count": 0,
+                            "device_rate": 0
+                        },
+                        "d_14": {
+                            "device_count": 0,
+                            "device_rate": 0
+                        },
+                        "d_30": {
+                            "device_count": 0,
+                            "device_rate": 0
+                        }
+                    },
+                    "new_device": {
+                        "d_1": {
+                            "device_count": 0,
+                            "device_rate": 0
+                        },
+                        "d_2": {
+                            "device_count": 0,
+                            "device_rate": 0
+                        },
+                        "d_3": {
+                            "device_count": 0,
+                            "device_rate": 0
+                        },
+                        "d_4": {
+                            "device_count": 0,
+                            "device_rate": 0
+                        },
+                        "d_5": {
+                            "device_count": 0,
+                            "device_rate": 0
+                        },
+                        "d_6": {
+                            "device_count": 0,
+                            "device_rate": 0
+                        },
+                        "d_7": {
+                            "device_count": 0,
+                            "device_rate": 0
+                        },
+                        "d_14": {
+                            "device_count": 0,
+                            "device_rate": 0
+                        },
+                        "d_30": {
+                            "device_count": 0,
+                            "device_rate": 0
+                        }
+                    },
+                    "active_user": {
+                        "d_1": {
+                            "user_count": 0,
+                            "user_rate": 0
+                        },
+                        "d_2": {
+                            "user_count": 0,
+                            "user_rate": 0
+                        },
+                        "d_3": {
+                            "user_count": 0,
+                            "user_rate": 0
+                        },
+                        "d_4": {
+                            "user_count": 0,
+                            "user_rate": 0
+                        },
+                        "d_5": {
+                            "user_count": 0,
+                            "user_rate": 0
+                        },
+                        "d_6": {
+                            "user_count": 0,
+                            "user_rate": 0
+                        },
+                        "d_7": {
+                            "user_count": 0,
+                            "user_rate": 0
+                        },
+                        "d_14": {
+                            "user_count": 0,
+                            "user_rate": 0
+                        },
+                        "d_30": {
+                            "user_count": 0,
+                            "user_rate": 0
+                        }
+                    },
+                    "new_user": {
+                        "d_1": {
+                            "user_count": 0,
+                            "user_rate": 0
+                        },
+                        "d_2": {
+                            "user_count": 0,
+                            "user_rate": 0
+                        },
+                        "d_3": {
+                            "user_count": 0,
+                            "user_rate": 0
+                        },
+                        "d_4": {
+                            "user_count": 0,
+                            "user_rate": 0
+                        },
+                        "d_5": {
+                            "user_count": 0,
+                            "user_rate": 0
+                        },
+                        "d_6": {
+                            "user_count": 0,
+                            "user_rate": 0
+                        },
+                        "d_7": {
+                            "user_count": 0,
+                            "user_rate": 0
+                        },
+                        "d_14": {
+                            "user_count": 0,
+                            "user_rate": 0
+                        },
+                        "d_30": {
+                            "user_count": 0,
+                            "user_rate": 0
+                        }
+                    }
+                },
+                "dimension": "day",
+                "stat_date": "20230206",
+                "start_time": 1675612800000,
+                "end_time": 1675699199999
+            }
+        ]
+    },
+    "uni-stat-run-errors": {
+        "data": [
+            {
+                "mod": "stat",
+                "params": {
+                    "type": "clean",
+                    "dimension": "day",
+                    "config": {
+                        "type": "clean",
+                        "time": "* * 5 30"
+                    },
+                    "reset": true
+                },
+                "error": {},
+                "create_time": 1675717217467
+            }
+        ]
+    },
+    "uni-stat-session-logs": {
+        "data": [
+            {
+                "appid": "__UNI__EE982F7",
+                "version": "1.0.0",
+                "platform": "mp-weixin",
+                "channel": "1001",
+                "type": 1,
+                "device_id": "16863039539198191774",
+                "is_first_visit": 0,
+                "first_visit_time": 1686303953000,
+                "last_visit_time": 1696302302935,
+                "visit_count": 163,
+                "last_visit_user_id": "",
+                "entry_page_id": "647de5ffe1a35c1a7f6d72cc",
+                "exit_page_id": "647ea90cf43e60ba7f1f0a26",
+                "page_count": 4,
+                "event_count": 0,
+                "duration": 43,
+                "sdk_version": "3.1.2",
+                "platform_version": "8.0.41",
+                "device_os_name": "android",
+                "device_os_version": "11",
+                "device_vendor": "vivo",
+                "device_model": "V2111A",
+                "device_language": "zh_CN",
+                "device_pixel_ratio": "3",
+                "device_window_width": "360",
+                "device_window_height": "640",
+                "device_screen_width": "360",
+                "device_screen_height": "761",
+                "location_ip": "223.104.53.12",
+                "location_latitude": 0,
+                "location_longitude": 0,
+                "location_country": "",
+                "location_province": "",
+                "location_city": "",
+                "is_finish": 0,
+                "create_time": 1696302259769
+            }
+        ]
+    },
+    "uni-stat-share-logs": [],
+    "uni-stat-user-session-logs": [],
+    "user": {
+        "data": [
+            {
+                "userID": "1685893325000-oTDxt5Rg2FLfsGHXY9BJ2lsBmog4",
+                "openID": "oTDxt5Rg2FLfsGHXY9BJ2lsBmog4",
+                "nickName": "全命人",
+                "avatarUrl": "http://tmp/FrAvUzBEKeQXd536e5fd32f24304eddd99d9c19aac4e.jpeg",
+                "pushClientid": "",
+                "username": "银池",
+                "level": 1,
+                "is_block_user": 0,
+                "isEnable": 1,
+                "balance ": null,
+                "gender": "男",
+                "level ": null,
+                "balance": null
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [
+                "openID"
+            ],
+            "version": "1.0.0",
+            "fieldRules": [
+                {
+                    "rule": "updated == null || created != null && created<updated",
+                    "errorMessage": "更新时间需大于创建时间"
+                }
+            ],
+            "permission": {
+                "read": true,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "userID": {
+                    "bsonType": "string",
+                    "description": "用户ID",
+                    "label": "用户ID",
+                    "trim": "both",
+                    "title": "用户ID",
+                    "order": 1
+                },
+                "openID": {
+                    "bsonType": "string",
+                    "description": "微信openID",
+                    "label": "微信openID",
+                    "trim": "both",
+                    "title": "微信openID",
+                    "order": 1
+                },
+                "nickName": {
+                    "bsonType": "string",
+                    "description": "微信昵称",
+                    "label": "微信昵称",
+                    "trim": "both",
+                    "title": "微信昵称",
+                    "order": 2
+                },
+                "avatarUrl": {
+                    "bsonType": "file",
+                    "title": "图片",
+                    "description": "图片",
+                    "fileMediaType": "image",
+                    "fileExtName": "jpg,png",
+                    "order": 3
+                },
+                "gender": {
+                    "bsonType": "string",
+                    "description": "请选择",
+                    "defaultValue": "男",
+                    "label": "性别",
+                    "title": "性别",
+                    "order": 4,
+                    "enum": [
+                        {
+                            "text": "男",
+                            "value": "男"
+                        },
+                        {
+                            "text": "女",
+                            "value": "女"
+                        }
+                    ]
+                },
+                "city": {
+                    "bsonType": "string",
+                    "description": "城市",
+                    "label": "城市",
+                    "trim": "both",
+                    "title": "城市",
+                    "order": 5
+                },
+                "province": {
+                    "bsonType": "string",
+                    "description": "省份",
+                    "label": "省份",
+                    "trim": "both",
+                    "title": "省份",
+                    "order": 6
+                },
+                "country": {
+                    "bsonType": "string",
+                    "description": "国家",
+                    "label": "国家",
+                    "trim": "both",
+                    "title": "国家",
+                    "order": 7
+                },
+                "username": {
+                    "bsonType": "string",
+                    "description": "请输入姓名",
+                    "label": "姓名",
+                    "trim": "both",
+                    "title": "姓名",
+                    "order": 8
+                },
+                "phone": {
+                    "bsonType": "string",
+                    "description": "请输入",
+                    "pattern": "^\\+?[0-9-]{3,20}$",
+                    "label": "手机号",
+                    "trim": "both",
+                    "title": "手机号",
+                    "order": 9
+                },
+                "balance": {
+                    "bsonType": "int",
+                    "description": "请输入余额",
+                    "label": "余额",
+                    "trim": "both",
+                    "title": "余额",
+                    "order": 10
+                },
+                "level ": {
+                    "bsonType": "int",
+                    "description": "请输入",
+                    "label": "会员等级",
+                    "trim": "both",
+                    "title": "会员等级",
+                    "order": 11
+                },
+                "is_block_user": {
+                    "bsonType": "int",
+                    "description": "请选择",
+                    "defaultValue": 0,
+                    "label": "黑用户",
+                    "title": "黑用户",
+                    "order": 12,
+                    "enum": [
+                        {
+                            "text": "否",
+                            "value": 0
+                        },
+                        {
+                            "text": "是",
+                            "value": 1
+                        }
+                    ]
+                },
+                "updated": {
+                    "bsonType": "updated",
+                    "label": "更新时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 13
+                },
+                "created": {
+                    "bsonType": "created",
+                    "label": "创建时间",
+                    "forceDefaultValue": {
+                        "$env": "now"
+                    },
+                    "order": 14
+                },
+                "isEnable": {
+                    "bsonType": "int",
+                    "description": "默认为启用",
+                    "defaultValue": 1,
+                    "label": "是否启用",
+                    "title": "是否启用",
+                    "enum": [
+                        {
+                            "text": "否",
+                            "value": 0
+                        },
+                        {
+                            "text": "是",
+                            "value": 1
+                        }
+                    ],
+                    "order": 15
+                }
+            }
+        }
+    }
+}

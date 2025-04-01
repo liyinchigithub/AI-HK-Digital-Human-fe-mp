@@ -1,0 +1,37 @@
+
+.about-container.data-v-6ba850b5 {
+	padding: 20px;
+	background-color: #f9f9f9;
+}
+.header.data-v-6ba850b5 {
+	text-align: center;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+.logo.data-v-6ba850b5 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.logo-image.data-v-6ba850b5 {
+	width: 200px;
+	height: 200px;
+	display: block;
+	margin: 0 auto;
+}
+.menu.data-v-6ba850b5 {
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 10px;
+}
+.menu-item.data-v-6ba850b5 {
+	padding: 15px;
+	border-bottom: 1px solid #eee;
+}
+.menu-item.data-v-6ba850b5:last-child {
+	border-bottom: none;
+}
+.version.data-v-6ba850b5 {
+	float: right;
+	color: #888;
+}
+

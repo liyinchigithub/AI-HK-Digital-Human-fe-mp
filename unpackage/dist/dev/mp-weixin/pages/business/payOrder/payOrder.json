@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "支付页面",
+  "usingComponents": {
+    "u-overlay": "/uni_modules/uview-ui/components/u-overlay/u-overlay",
+    "uni-pay": "/uni_modules/uni-pay/components/uni-pay/uni-pay",
+    "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
+    "u-row": "/uni_modules/uview-ui/components/u-row/u-row",
+    "u-col": "/uni_modules/uview-ui/components/u-col/u-col",
+    "u--image": "/uni_modules/uview-ui/components/u--image/u--image",
+    "u-divider": "/uni_modules/uview-ui/components/u-divider/u-divider",
+    "u-button": "/uni_modules/uview-ui/components/u-button/u-button",
+    "u-back-top": "/uni_modules/uview-ui/components/u-back-top/u-back-top"
+  }
+}

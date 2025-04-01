@@ -1,0 +1,20 @@
+// 本文件中的json内容将在云函数【运行】时作为参数传给云函数。
+// 配置教程参考：https://uniapp.dcloud.net.cn/uniCloud/quickstart?id=runparam
+{
+	"openID": "oz-wG5pSzzWc3w8DC5TYW1jwAe10",
+	"pushClientid":"",
+	"nickName": "乐伊里",
+	"gender": 1,
+	"language": "zh_CN",
+	"city": "Quanzhou",
+	"province": "Fujian",
+	"country": "China",
+	"avatarUrl": "https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqUseKO3Aopp8gYvck35diaePOWjoCG3iceX5uAfJkCYMUK6USvicOB94Bj76xPicmjcibC6xTx9Be3T8g/132",
+	"username": "李银池",
+	"phone": "15959950529",
+	"balance": 100,
+	"level": 100,
+	"is_block_user": 0,
+	"isEnable": 1
+	
+}

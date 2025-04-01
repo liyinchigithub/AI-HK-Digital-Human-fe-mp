@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "我的消息",
+  "enablePullDownRefresh": true,
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "u-navbar": "/uni_modules/uview-ui/components/u-navbar/u-navbar",
+    "u-empty": "/uni_modules/uview-ui/components/u-empty/u-empty"
+  }
+}

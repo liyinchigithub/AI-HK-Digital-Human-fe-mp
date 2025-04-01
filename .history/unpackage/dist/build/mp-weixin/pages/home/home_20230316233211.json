@@ -1,0 +1,23 @@
+{
+  "navigationBarTitleText": "家政维修",
+  "usingComponents": {
+    "u-notice-bar": "/uni_modules/uview-ui/components/u-notice-bar/u-notice-bar",
+    "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
+    "u-search": "/uni_modules/uview-ui/components/u-search/u-search",
+    "u-swiper": "/uni_modules/uview-ui/components/u-swiper/u-swiper",
+    "zjc-scroll-nav": "/components/zjc-scroll-nav/zjc-scroll-nav",
+    "u-sticky": "/uni_modules/uview-ui/components/u-sticky/u-sticky",
+    "u-tabs": "/uni_modules/uview-ui/components/u-tabs/u-tabs",
+    "u-row": "/uni_modules/uview-ui/components/u-row/u-row",
+    "u-col": "/uni_modules/uview-ui/components/u-col/u-col",
+    "u--image": "/uni_modules/uview-ui/components/u--image/u--image",
+    "u--text": "/uni_modules/uview-ui/components/u--text/u--text",
+    "u-read-more": "/uni_modules/uview-ui/components/u-read-more/u-read-more",
+    "u-parse": "/uni_modules/uview-ui/components/u-parse/u-parse",
+    "u-button": "/uni_modules/uview-ui/components/u-button/u-button",
+    "u-back-top": "/uni_modules/uview-ui/components/u-back-top/u-back-top",
+    "u-popup": "/uni_modules/uview-ui/components/u-popup/u-popup",
+    "u-image": "/uni_modules/uview-ui/components/u-image/u-image",
+    "mo-fab-to-release": "/uni_modules/mo-fab/mo-fab/components/mo-fab/mo-fab-to-release"
+  }
+}

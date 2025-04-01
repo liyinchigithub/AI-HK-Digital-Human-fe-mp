@@ -1,0 +1,62 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["goodsID","openID","userID"],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"goodsID": {
+			"bsonType": "string",
+			"description": "请输入",
+			"label": "收藏商品ID",
+			"trim": "both",
+			"title": "收藏商品ID",
+			"order": 1
+		},
+		"userID": {
+			"bsonType": "string",
+			"description": "请输入",
+			"label": "用户ID",
+			"trim": "both",
+			"title": "用户ID",
+			"order": 2
+		},
+		"openID": {
+			"bsonType": "string",
+			"description": "请输入",
+			"label": "微信用户ID",
+			"trim": "both",
+			"title": "微信用户ID",
+			"order": 3
+		},
+		"updated": {
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 4
+		},
+		"created": {
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 5
+		},
+		"isEnable": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "生效状态",
+			"order": 6
+		}
+	}
+}

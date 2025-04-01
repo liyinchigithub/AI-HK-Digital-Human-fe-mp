@@ -1,0 +1,60 @@
+
+.login-button {
+	margin-top: 10%;
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 90%;
+}
+
+/* 新增输入框组样式 */
+.input-group {
+	width: 80%;
+	margin: 20rpx auto;
+}
+.input-label {
+	display: block;
+	font-size: 28rpx;
+	color: #666;
+	margin-bottom: 10rpx;
+}
+
+/* 新增验证码容器样式 */
+.captcha-wrapper {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+/* 调整输入框宽度 */
+.input-item {
+	width: auto !important;
+	flex: 1;
+}
+
+/* 新增父容器约束 */
+.content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.captcha-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10rpx; /* 添加间距 */
+}
+.logo {
+	margin-top: 30%;
+	margin-left: 0%;
+	margin-right: 5%;
+	margin-bottom: 2%;
+}
+.hint {
+	font-size: 20rpx;
+	color: #c8c9cc;
+	margin-top: 10%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 2%;
+}
+

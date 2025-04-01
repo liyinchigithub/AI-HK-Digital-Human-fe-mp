@@ -1,0 +1,73 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+// 我的会员卡
+{
+	"bsonType": "object",
+	"required": ["useBeginTime", "useEndTime", "openID", "discountStrength"],
+	"permission": {
+		"read": true,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"openID": {
+			"bsonType": "string",
+			"description": "请输入openID",
+			"label": "微信openID",
+			"trim": "both",
+			"title": "微信openID",
+			"order": 1
+		},
+		"discountStrength": {
+			"bsonType": "double",
+			"description": "优惠力度,例如：八折填写0.8",
+			"label": "优惠力度",
+			"trim": "both",
+			"title": "优惠力度",
+			"order": 2
+		},
+		"useBeginTime": {
+			"bsonType": "timestamp",
+			"title": "开始时间",
+			"order": 3
+		},
+		"useEndTime": {
+			"bsonType": "timestamp",
+			"title": "结束时间",
+			"order": 4
+		},
+		"remark": {
+			"bsonType": "string",
+			"title": "备注",
+			"component": {
+				"name": "textarea"
+			},
+			"order": 5
+		},
+		"updated": {
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 6
+		},
+		"created": {
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 7
+		},
+		"isEnable": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "生效状态",
+			"order": 8
+		}
+	}
+}

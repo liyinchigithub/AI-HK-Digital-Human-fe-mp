@@ -1,0 +1,6 @@
+// 本文件中的json内容将在云函数【运行】时作为参数传给云函数。
+// 配置教程参考：https://uniapp.dcloud.net.cn/uniCloud/quickstart?id=runparam
+{
+	"openID":"oTDxt5Rg2FLfsGHXY9BJ2lsBmog4",
+	"address":"厦门市集美区杏林村"
+}

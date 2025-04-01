@@ -1,0 +1,23 @@
+// 本文件中的json内容将在云函数【运行】时作为参数传给云函数。
+// 配置教程参考：https://uniapp.dcloud.net.cn/uniCloud/quickstart?id=runparam
+{
+	"openId": "oTDxt5Rg2FLfsGHXY9BJ2lsBmog4",
+	"data": {
+			"character_string1": {
+				"value": "12317239817239813"
+			},
+			"name4": {
+				"value": "商品名称"
+			},
+			"amount2": {
+				"value": "1"
+			},
+			"phrase8": {
+				"value": "已支付"
+			},
+			"date3": {
+				"value": "2023-06-12 10:00:00"
+			}
+	},
+	"teampleName":"订单支付成功通知"
+}

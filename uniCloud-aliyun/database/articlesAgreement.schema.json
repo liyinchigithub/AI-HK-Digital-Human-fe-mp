@@ -1,0 +1,69 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"articlesAgreementType": {
+			"bsonType": "int",
+			"description": "协议类型：用户协议和隐私条款、商家入驻协议",
+			"defaultValue": 1,
+			"label": "协议类型",
+			"title": "协议类型",
+			"enum": [{
+				"text": "用户协议和隐私条款",
+				"value": 0
+			}, {
+				"text": "商家入驻协议",
+				"value": 1
+			}],
+			"order": 1
+		},
+		"title": {
+			"bsonType": "string",
+			"title": "标题",
+			"order": 2
+		},
+		"content": {
+			"bsonType": "string",
+			"title": "内容",
+			"component": {
+				"name": "textarea",
+				"placeholder":"请输入协议内容",
+				"auto-height":true,
+				"maxLenght": "1000"
+			},
+			"order": 3
+		},
+		"updated": {
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 4
+		},
+		"created": {
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 5
+		},
+		"isEnable": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "生效状态",
+			"order": 6
+		}
+	}
+}

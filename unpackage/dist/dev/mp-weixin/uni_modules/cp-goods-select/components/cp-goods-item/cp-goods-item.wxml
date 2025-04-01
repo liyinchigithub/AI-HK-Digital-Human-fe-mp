@@ -1,0 +1,1 @@
+<view id="scroll-item"><view class="cp-goods-select-goods__classify"><block wx:if="{{$slots.category}}"><slot name="category"></slot></block><block wx:else><text class="cp-goods-select-goods__classify_text">{{category}}</text></block></view><view class="{{['cp-goods-select-goods__list',customClass]}}"><slot></slot></view></view>

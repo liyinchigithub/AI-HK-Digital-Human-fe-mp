@@ -1,0 +1,5 @@
+// 本文件中的json内容将在云函数【运行】时作为参数传给云函数。
+// 配置教程参考：https://uniapp.dcloud.net.cn/uniCloud/quickstart?id=runparam
+{
+	"orderNo": "1685955538289GHXY9BJ2lsBmog4" // 微信支付订单订单号
+}

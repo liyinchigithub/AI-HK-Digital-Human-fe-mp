@@ -1,0 +1,70 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["sort","brandName","image"],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"sort": {
+			"bsonType": "int",
+			"description": "数值越大越排序越靠前",
+			"label": "排序",
+			"trim": "both",
+			"title": "排序",
+			"order": 1
+		},
+		"brandName": {
+			"bsonType": "string",
+			"description": "请输入",
+			"label": "品牌名称",
+			"trim": "both",
+			"title": "品牌名称",
+			"order":2
+		},
+		"image": {
+			"bsonType": "file",
+			"title": "品牌封面图片",
+			"description": "品牌封面图片",
+			"fileMediaType": "image", // 可选值 all|image|video 默认值为all,表示所有文件，image表示图片类型文件，video表示视频类型文件
+			"fileExtName": "jpg,png,gif,bmp,jpeg", // 扩展名过滤，多个用 , 分割
+			"order": 3
+		},
+		"remark": {
+			"bsonType": "string",
+			"title": "备注",
+			"component": {
+				"name": "textarea"
+			},
+			"order": 4
+		},
+		"updated": {
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 5
+		},
+		"created": {
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 6
+		},
+		"isEnable": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "生效状态",
+			"order": 7
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "申请入驻",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "u-row": "/uni_modules/uview-ui/components/u-row/u-row",
+    "u-col": "/uni_modules/uview-ui/components/u-col/u-col",
+    "u-steps": "/uni_modules/uview-ui/components/u-steps/u-steps",
+    "u-steps-item": "/uni_modules/uview-ui/components/u-steps-item/u-steps-item",
+    "u-button": "/uni_modules/uview-ui/components/u-button/u-button",
+    "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
+    "u--text": "/uni_modules/uview-ui/components/u--text/u--text"
+  }
+}

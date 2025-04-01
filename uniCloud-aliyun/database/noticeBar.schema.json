@@ -1,0 +1,54 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["title", "sort"],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"title": {
+			"bsonType": "string",
+			"description": "请输入公告内容，将在微信小程序首页顶部显示",
+			"label": "内容",
+			"trim": "both",
+			"title": "内容",
+			"order": 1
+		},
+		"sort": {
+			"bsonType": "int",
+			"description": "数值越大排序越靠前",
+			"label": "排序",
+			"trim": "both",
+			"title": "排序",
+			"order": 2
+		},
+		"updated": {
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 3
+		},
+		"created": {
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 4
+		},
+		"isEnable": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "是否启用",
+			"order": 5
+		}
+	}
+}

@@ -1,0 +1,104 @@
+{
+	"bsonType": "object",
+	"required": [
+		"content"
+	],
+	"version": "1.0.0",
+	"fieldRules": [
+		{
+			"rule": "updated == null || created != null && created<updated",
+			"errorMessage": "更新时间需大于创建时间"
+		}
+	],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"openID": {
+			"bsonType": "string",
+			"description": "微信openID",
+			"label": "微信openID",
+			"trim": "both",
+			"title": "微信openID",
+			"order": 1
+		},
+		"phone": {
+			"bsonType": "string",
+			"description": "请输入",
+			"pattern": "^\\+?[0-9-]{3,20}$",
+			"label": "手机号",
+			"trim": "both",
+			"title": "手机号",
+			"order": 1
+		},
+		"content": {
+			"bsonType": "string",
+			"title": "反馈内容",
+			"description": "请输入",
+			"component": {
+				"name": "textarea"
+			},
+			"order": 2
+		},
+		"feedbackImage": {
+			"bsonType": "array",
+			"arrayType": "file",
+			"title": "反馈图片",
+			"description": "多张图片，最多3张",
+			"multiple": true,
+			"fileMediaType": "image",
+			"fileExtName": "jpg,png,jpeg",
+			"maxLength": 3,
+			"order": 3
+		},
+		"feedbackStatus": {
+			"bsonType": "int",
+			"defaultValue": 1,
+			"title": "处理状态",
+			"description": "意见反馈当前处理状态",
+			"enum": [
+				{
+					"text": "未处理",
+					"value": 1
+				},
+				{
+					"text": "处理中",
+					"value": 2
+				},
+				{
+					"text": "已完结",
+					"value": 3
+				}
+			],
+			"order": 4
+		},
+		"updated": {
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 5
+		},
+		"created": {
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 6
+		},
+		"isEnable": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "生效状态",
+			"order": 7
+		}
+	}
+}

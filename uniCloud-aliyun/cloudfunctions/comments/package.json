@@ -1,0 +1,7 @@
+{
+  "name": "getHomeBanner",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

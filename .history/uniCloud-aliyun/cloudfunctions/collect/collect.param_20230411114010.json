@@ -1,0 +1,12 @@
+// 本文件中的json内容将在云函数【运行】时作为参数传给云函数。
+// 配置教程参考：https://uniapp.dcloud.net.cn/uniCloud/quickstart?id=runparam
+
+{
+		"method":"addCollect",
+	    "isEnable": true,
+	    "goodsID": "642405dbe766bb29756155c8",
+	    "userID": "1680423900000oTDxt5Rg2FLfsGHXY9BJ2lsBmog4",
+	    "openID": "oTDxt5Rg2FLfsGHXY9BJ2lsBmog4",
+	    "updated": 1680430800111,
+	    "created": 1680430800111
+}

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "u-row": "/uni_modules/uview-ui/components/u-row/u-row",
+    "u-col": "/uni_modules/uview-ui/components/u-col/u-col",
+    "u-popup": "/uni_modules/uview-ui/components/u-popup/u-popup",
+    "u-button": "/uni_modules/uview-ui/components/u-button/u-button"
+  }
+}

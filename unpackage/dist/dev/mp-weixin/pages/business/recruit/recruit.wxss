@@ -1,0 +1,41 @@
+
+.recruit-page {
+	position: relative;
+	padding: 20px;
+}
+.banner {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.form-container {
+	width: 90%;
+	position: relative;
+	top: -40px;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin: 0 auto;
+}
+.form-item {
+	margin-bottom: 20px;
+}
+.agree-text {
+	font-size: 16px;
+	color: #333;
+	margin-left: 10px;
+	/* 增加与复选框的间距 */
+	display: flex;
+}
+.highlight {
+	color: blue;
+	margin-left: 10px;
+	/* 增加协议之间的间距 */
+}
+.submit-button {
+	width: 100%;
+	margin-top: 20px;
+	border-radius: 25px;
+}
+

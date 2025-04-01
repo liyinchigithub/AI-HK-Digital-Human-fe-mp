@@ -1,0 +1,7 @@
+{
+  "name": "getSubscriptionIDTemplateID",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "getNotice",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

@@ -1,0 +1,8 @@
+{"_id":{"$oid":"6775fd9ece5ec9e5aa5ca7c5"},"isEnable":true,"tagName":"准时到达","sort":1,"remark":"","updated":1735785886432,"created":1735785886432}
+{"_id":{"$oid":"677601d04b9247cc1226cfdf"},"isEnable":true,"tagName":"手法娴熟","sort":2,"remark":"","updated":1735786960486,"created":1735786960486}
+{"_id":{"$oid":"677601e4c3b5c934eb48be85"},"isEnable":true,"tagName":"细致周到","sort":3,"remark":"","updated":1735786980000,"created":1735786980000}
+{"_id":{"$oid":"677602ac6523418be8854c48"},"isEnable":true,"tagName":"着装规范","sort":4,"remark":"","updated":1735787180083,"created":1735787180083}
+{"_id":{"$oid":"677602ba2eea6559d20fae57"},"isEnable":true,"tagName":"相当专业","sort":5,"remark":"","updated":1735787194956,"created":1735787194956}
+{"_id":{"$oid":"677602c4c3b5c934eb48d8f0"},"isEnable":true,"tagName":"工具齐全","sort":6,"remark":"","updated":1735787204669,"created":1735787204669}
+{"_id":{"$oid":"677602d08b0da45f013e08b0"},"isEnable":true,"tagName":"价格合理","sort":7,"remark":"","updated":1735787216100,"created":1735787216100}
+{"_id":{"$oid":"677602dc816a3ff63b2ca6d6"},"isEnable":true,"tagName":"服装整洁","sort":8,"remark":"","updated":1735787228494,"created":1735787228494}

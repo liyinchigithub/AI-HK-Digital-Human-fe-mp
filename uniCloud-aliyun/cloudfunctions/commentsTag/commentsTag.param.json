@@ -1,0 +1,10 @@
+// 本文件中的json内容将在云函数【运行】时作为参数传给云函数。
+// 配置教程参考：https://uniapp.dcloud.net.cn/uniCloud/quickstart?id=runparam
+{
+	
+	"methods":"getCommentsTag", // getCommentsTag、getCommentsTagDetail、deleteCommentsTag
+	"_id": "640efd80e766bb2975496bc1",
+	"pageNum": 1,
+	"pageSize": 4,
+	"isEnable": true
+}

@@ -1,0 +1,309 @@
+{
+	"bsonType": "object",
+	"required": [
+		"username",
+		"phone",
+		"city"
+	],
+	"version": "1.0.0",
+	"fieldRules": [
+		{
+			"rule": "updated == null || created != null && created<updated",
+			"errorMessage": "更新时间需大于创建时间"
+		}
+	],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"isOnline": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "是否在线",
+			"order": 1
+		},
+		"cityID": {
+			"bsonType": "string",
+			"description": "请选择",
+			"foreignKey": "cities._id",
+			"enum": {
+				"collection": "cities",
+				"field": "cityName as text,_id as value"
+			},
+			"label": "城市",
+			"trim": "both",
+			"title": "城市",
+			"order": 1,
+			"defaultValue": "677365d3b9fb23aa9f1f2e2a" // 设置默认值
+		},
+		"avatarUrl": {
+			"bsonType": "array",
+			"title": "头像",
+			"description": "多张图片，最多1张",
+			"arrayType": "file",
+			"multiple": true,
+			"fileMediaType": "image",
+			"fileExtName": "jpg,png,gif,bmp,jpeg",
+			"maxLength": 1,
+			"order": 1
+		},
+		"registrationPhoto": {
+			"bsonType": "array",
+			"arrayType": "file",
+			"title": "报名时所用照片",
+			"description": "多张图片，最多1张",
+			"multiple": true,
+			"fileMediaType": "image",
+			"fileExtName": "jpg,png,jpeg",
+			"maxLength": 1,
+			"order": 1
+		},
+		"username": {
+			"bsonType": "string",
+			"description": "请填写",
+			"label": "姓名",
+			"trim": "both",
+			"title": "姓名",
+			"order": 2
+		},
+		"phone": {
+			"bsonType": "string",
+			"description": "请输入",
+			"pattern": "^\\+?[0-9-]{3,20}$",
+			"label": "手机号",
+			"trim": "both",
+			"title": "手机号",
+			"order": 3
+		},
+		"age": {
+			"bsonType": "string",
+			"description": "请输入年龄",
+			"label": "年龄",
+			"trim": "both",
+			"title": "年龄",
+			"order": 4
+		},
+		"gender": {
+			"bsonType": "int",
+			"defaultValue": 1,
+			"title": "性别",
+			"description": "性别",
+			"enum": [
+				{
+					"text": "男",
+					"value": 1
+				},
+				{
+					"text": "女",
+					"value": 2
+				}
+			],
+			"order": 4
+		},
+		"merchantID": {
+			"bsonType": "string",
+			"description": "请选择",
+			"foreignKey": "merchant._id",
+			"enum": {
+				"collection": "merchant",
+				"field": "merchantName as text,_id as value"
+			},
+			"label": "所属商家",
+			"trim": "both",
+			"title": "所属商家",
+			"order": 5,
+			"defaultValue": "67723526fe975f6f96069a43" // 设置默认值
+		},
+		"balance": {
+			"bsonType": "int",
+			"description": "请输入余额",
+			"label": "余额",
+			"trim": "both",
+			"title": "余额",
+			"order": 6
+		},
+		"auditStatus": {
+			"bsonType": "int",
+			"defaultValue": 1,
+			"title": "审核状态",
+			"description": "审核状态",
+			"enum": [
+				{
+					"text": "审核中",
+					"value": 1
+				},
+				{
+					"text": "通过",
+					"value": 2
+				},
+				{
+					"text": "不通过",
+					"value": 3
+				}
+			],
+			"order": 7
+		},
+		"contactAddress": {
+			"bsonType": "string",
+			"description": "联系地址",
+			"label": "联系地址",
+			"trim": "both",
+			"title": "联系地址",
+			"order": 8
+		},
+		"residentAddress": {
+			"bsonType": "string",
+			"description": "常驻地址",
+			"label": "",
+			"trim": "both",
+			"title": "常驻地址",
+			"order": 9
+		},
+		"latitude": {
+			"bsonType": "double",
+			"description": "纬度：24.885889",
+			"label": "常驻地址纬度",
+			"trim": "both",
+			"title": "常驻地址纬度",
+			"order": 10
+		},
+		"longitude": {
+			"bsonType": "double",
+			"description": "经度：118.598228",
+			"label": "常驻地址经度",
+			"trim": "both",
+			"title": "常驻地址经度",
+			"order": 11
+		},
+		"workerEvaluationNumber": {
+			"bsonType": "int",
+			"description": "请输入",
+			"label": "评价数",
+			"trim": "both",
+			"title": "评价数",
+			"order": 12
+			},
+		"serviceOrderNumber":{
+			"bsonType": "int",
+			"description": "请输入",
+			"label": "服务订单数",
+			"trim": "both",
+			"title": "服务订单数",
+			"order": 13
+		},
+		"workerFavorited": {
+			"bsonType": "int",
+			"description": "请输入",
+			"label": "被收藏数",
+			"trim": "both",
+			"title": "被收藏数",
+			"order": 14
+		},
+		"level": {
+			"bsonType": "int",
+			"description": "请输入",
+			"label": "等级",
+			"trim": "both",
+			"title": "等级",
+			"order": 15
+		},
+		"workPhoto": {
+			"bsonType": "array",
+			"title": "工作照",
+			"description": "多张图片，最多1张",
+			"arrayType": "file",
+			"multiple": true,
+			"fileMediaType": "image",
+			"fileExtName": "jpg,png,gif,bmp,jpeg",
+			"maxLength": 1,
+			"order": 16
+		},
+		"lifePhoto": {
+			"bsonType": "array",
+			"title": "生活照",
+			"description": "多张图片，最多3张",
+			"arrayType": "file",
+			"multiple": true,
+			"fileMediaType": "image",
+			"fileExtName": "jpg,png,gif,bmp,jpeg",
+			"maxLength": 3,
+			"order": 17
+		},
+		"IDFront": {
+			"bsonType": "file",
+			"title": "身份证正面",
+			"description": "身份证正面",
+			"fileMediaType": "image", // 可选值 all|image|video 默认值为all,表示所有文件，image表示图片类型文件，video表示视频类型文件
+			"fileExtName": "jpg,png,gif,bmp,jpeg", // 扩展名过滤，多个用 , 分割
+			"order": 18
+		},
+		"IDReverse": {
+			"bsonType": "file",
+			"title": "身份证反面",
+			"description": "身份证反面",
+			"fileMediaType": "image", // 可选值 all|image|video 默认值为all,表示所有文件，image表示图片类型文件，video表示视频类型文件
+			"fileExtName": "jpg,png,gif,bmp,jpeg", // 扩展名过滤，多个用 , 分割
+			"order": 19
+		},
+		"skillCertificate": {
+			"bsonType": "array",
+			"title": "技能证书",
+			"description": "上传技能 证书",
+			"arrayType": "file",
+			"multiple": true, // 允许选择多张图片
+			"fileMediaType": "image", // 可选值 all|image|video 默认值为all,表示所有文件，image表示图片类型文件，video表示视频类型文件
+			"fileExtName": "jpg,png,gif,bmp,jpeg", // 扩展名过滤，多个用 , 分割
+			"maxLength": 10, // 限制最大数量
+			"order": 20
+		},
+		"selfInfo":{
+			"bsonType": "string",
+			"description": "请输入年龄",
+			"label": "自我介绍",
+			"trim": "both",
+			"title": "自我介绍",
+			"order": 20
+		},
+		"classType": {
+			"bsonType": "string",
+			"description": "请选择",
+			"foreignKey": "classType._id",
+			"enum": {
+				"collection": "classType",
+				"field": "classTypeName as text, _id as value"
+			},
+			"label": "服务类型",
+			"trim": "both",
+			"title": "服务类型",
+			"order": 21
+		},
+		"updated": {
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 22
+		},
+		"created": {
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"order": 23
+		},
+		"isEnable": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "生效状态",
+			"order": 25
+		}
+	}
+}

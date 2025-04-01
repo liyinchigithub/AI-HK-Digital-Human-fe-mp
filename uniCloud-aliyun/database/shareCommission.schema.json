@@ -1,0 +1,73 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["inviterId", "inviteeId", "orderStatus", "isSettled", "orderId"],
+	"permission": {
+		"read": true,
+		"create": true,
+		"update": true,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"inviterId": {
+			"label": "邀请者openID",
+			"title":"邀请者openID",
+			"bsonType": "string",
+			"description": "邀请者用户ID（shareOpenID）"
+		},
+		"inviteeId": {
+			"label":"被邀请者openID",
+			"title":"被邀请者openID",
+			"bsonType": "string",
+			"description": "被邀请者用户ID"
+		},
+		"orderStatus": {
+			"title":"订单状态",
+			"label":"订单状态",
+			"bsonType": "string",
+			"enum": ["已下单", "未下单"],
+			"description": "订单状态，已下单或未下单"
+		},
+		"isSettled": {
+			"label":"结算状态",
+			"title":"结算状态",
+			"bsonType": "bool",
+			"defaultValue": false,
+			"description": "是否可以结算"
+		},
+		"settlementTime": {
+			"label":"结算时间",
+			"title":"结算时间",
+			"bsonType": "date",
+			"description": "结算时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			}
+		},
+		"orderId": {
+			"label":"关联订单",
+			"title":"关联订单",
+			"bsonType": "string",
+			"description": "关联订单ID"
+		},
+		"created": {
+			"title":"创建时间",
+			"bsonType": "created",
+			"label": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			}
+		},
+		"updated": {
+			"title":"更新时间",
+			"bsonType": "updated",
+			"label": "更新时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			}
+		}
+	}
+}

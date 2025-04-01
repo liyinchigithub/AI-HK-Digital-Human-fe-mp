@@ -1,0 +1,12 @@
+// 本文件中的json内容将在云函数【运行】时作为参数传给云函数。
+// 配置教程参考：https://uniapp.dcloud.net.cn/uniCloud/rundebug.html#runparam
+{
+	"methods":"addMerchant", // getMerchantDetail、getMerchantSearch、merchantIDSearch、getMerchants、addMerchant
+	"pageNum": 1,
+	"sortType":0,// 排序方式：sort 综合排序 0、orderNumber 订单量 1、favorited 被收藏  2、accumulatedIncome 累计收入 3
+	"pageSize": 4,
+	"isEnable":true,
+	"merchantName": "商家C",
+	"phone":"15900000003",
+	"city":"泉州"
+}

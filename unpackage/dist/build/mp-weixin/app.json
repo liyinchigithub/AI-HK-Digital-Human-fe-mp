@@ -1,0 +1,108 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/my/my",
+    "pages/order/order",
+    "pages/list/list",
+    "pages/list/search/search",
+    "pages/list/detail",
+    "pages/common/webview/webview",
+    "uni_modules/uni-feedback/pages/opendb-feedback/opendb-feedback",
+    "uni_modules/uni-pay/pages/success/success",
+    "uni_modules/uni-pay/pages/ad-interactive-webview/ad-interactive-webview",
+    "pages/goods/goods",
+    "pages/classification/classification",
+    "pages/worker/worker",
+    "uni_modules/uni-pay/pages/pay-desk/pay-desk"
+  ],
+  "subPackages": [
+    {
+      "root": "pages/business/",
+      "pages": [
+        "orderDetail/orderDetail",
+        "payOrder/payOrder",
+        "payOrderResult/payOrderResult",
+        "address/address",
+        "webView/webView",
+        "articlesAgreement/articlesAgreement",
+        "settleInAgreement/settleInAgreement",
+        "login/login",
+        "notice/notice",
+        "myCollect/myCollect",
+        "notice/noticeDetail",
+        "test/test",
+        "coupon/coupon",
+        "pay/pay",
+        "goodsDetail/goodsDetail",
+        "workerDetail/workerDetail",
+        "search/search",
+        "releaseInfo/releaseInfo",
+        "cityJoin/cityJoin",
+        "recruit/recruit",
+        "brand/brand",
+        "IndividualCenter/IndividualCenter",
+        "comments/comments",
+        "shareCommission/shareCommission",
+        "about/about",
+        "feedback/feedback",
+        "feedback/feedbackRecord",
+        "serviceAgreement/serviceAgreement",
+        "privacyPolicy/privacyPolicy",
+        "disclaimer/disclaimer"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "上上吉",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#F8F8F8",
+    "enablePullDownRefresh": false,
+    "rpxCalcMaxDeviceWidth": 375,
+    "rpxCalcBaseDeviceWidth": 375
+  },
+  "tabBar": {
+    "color": "#dbdbdb",
+    "selectedColor": "#71d5a1",
+    "borderStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "static/image/home.png",
+        "selectedIconPath": "static/image/homeSelected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/worker/worker",
+        "iconPath": "static/image/worker.png",
+        "selectedIconPath": "static/image/workerSelected.png",
+        "text": "理疗师"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "iconPath": "static/image/order.png",
+        "selectedIconPath": "static/image/orderSelected.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "static/image/my.png",
+        "selectedIconPath": "static/image/mySelected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "requiredPrivateInfos": [
+    "choosePoi",
+    "chooseAddress",
+    "getLocation"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取用户当前位置，以提供更好的服务"
+    }
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {}
+}

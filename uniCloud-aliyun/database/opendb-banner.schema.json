@@ -1,0 +1,80 @@
+{
+	"bsonType": "object",
+	"required": ["bannerfile", "toGoodsID", "title"],
+	"permission": {
+		"read": true
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"bannerfile": {
+			"bsonType": "file",
+			"fileMediaType": "image",
+			"title": "图片文件",
+			"description": "图片文件信息，包括文件名、url等",
+			"order": 1
+		},
+		"title": {
+			"bsonType": "string",
+			"description": "注意标题文字颜色和背景图靠色导致看不清的问题",
+			"maxLength": 20,
+			"title": "标题",
+			"trim": "both",
+			"order": 2
+		},
+		"sort": {
+			"bsonType": "int",
+			"description": "数字越小，排序越前",
+			"title": "排序",
+			"order": 3
+		},
+		"toGoodsID": {
+			"bsonType": "string",
+			"description": "请选择跳转商品",
+			"foreignKey": "goods.title",
+			"enum": {
+				"collection": "goods",
+				"field": "title as text,_id as value"
+			},
+			"label": "跳转商品",
+			"trim": "both",
+			"title": "跳转商品",
+			"order": 4
+		},
+		"toUrl": {
+			"bsonType": "string",
+			"description": "自定义跳转链接地址",
+			"maxLength": 500,
+			"title": "自定义跳转链接地址",
+			"trim": "both",
+			"order": 5
+		},
+		"isToUrl": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "是否跳转自定义链接地址（开启后不跳转商品）",
+			"order": 6
+		},
+		// "category_id": {
+		// 	"bsonType": "string",
+		// 	"description": "多个栏目的banner都存在一个表里时可用这个字段区分",
+		// 	"title": "分类id",
+		// 	"order": 7
+		// },
+		"status": {
+			"bsonType": "bool",
+			"defaultValue": true,
+			"title": "生效状态",
+			"order": 8
+		},
+		"description": {
+			"bsonType": "string",
+			"description": "维护者自用描述",
+			"title": "备注",
+			"trim": "both",
+			"order": 9
+		}
+	},
+	"version": "0.0.1"
+}

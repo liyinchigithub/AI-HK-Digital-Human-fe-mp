@@ -1,0 +1,11 @@
+// 本文件中的json内容将在云函数【运行】时作为参数传给云函数。
+// 配置教程参考：https://uniapp.dcloud.net.cn/uniCloud/rundebug.html#runparam
+{
+	"openid": "oTDxt5Rg2FLfsGHXY9BJ2lsBmog4", //这个是客户端上传的用户的openid
+	"subject": "订单测试", // 订单名称微信支付时不可填写此项
+	"body": "测试商品",
+	"outTradeNo": "1231434234234234123", //给他个随机号让他可以第二次发起支付
+	"totalFee":1, // 金额，单位元,在上传过来的时候就已经*100了
+	"notifyUrl": "https://xxxx.net/PayResult", // 支付结果通知地址
+	"attach": "123123123" //备注,订单号或 长者id 在下一步通知中判断长度来确定
+}
