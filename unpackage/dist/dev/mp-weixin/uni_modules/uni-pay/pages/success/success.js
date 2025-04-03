@@ -105,7 +105,7 @@ var components
 try {
   components = {
     adInteractive: function () {
-      return __webpack_require__.e(/*! import() | node-modules/@dcloudio/uni-cli-shared/components/ad-interactive */ "node-modules/@dcloudio/uni-cli-shared/components/ad-interactive").then(__webpack_require__.bind(null, /*! @dcloudio/uni-cli-shared/components/ad-interactive.vue */ 708))
+      return __webpack_require__.e(/*! import() | node-modules/@dcloudio/uni-cli-shared/components/ad-interactive */ "node-modules/@dcloudio/uni-cli-shared/components/ad-interactive").then(__webpack_require__.bind(null, /*! @dcloudio/uni-cli-shared/components/ad-interactive.vue */ 722))
     },
   }
 } catch (e) {

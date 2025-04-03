@@ -50,13 +50,19 @@ export default {
 
       try {
         this.loading = true;
+        // 修改环境判断逻辑
+        const isH5Dev = process.env.NODE_ENV === 'development' && uni.getSystemInfoSync().platform === 'h5';
+
         const [err, res] = await uni.request({
-          url: 'http://homechat-effassits-popgjiyphu.cn-hangzhou.fcapp.run/v1/chat/completions',
+          url: isH5Dev
+            ? '/api/v1/chat/completions'  // 仅H5开发环境使用代理
+            : 'https://homechat-effassits-popgjiyphu.cn-hangzhou.fcapp.run/v1/chat/completions',
           method: 'POST',
           header: {
             'Content-Type': 'application/json',
             'Cookie': 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDM5MTAyMjcsInVpZCI6MX0.T_R6-qar4YY7GsZh0iIE9psjw0XmeGB29CqIAI9KnOU'
           },
+          withCredentials: true, // 跨域凭证
           timeout: 15000,
           data: {
             messages: [{ role: 'user', content: question }],
@@ -64,10 +70,8 @@ export default {
           }
         });
         // 添加网络诊断日志
-        console.log('[网络诊断] 请求耗时:', res?.header?.['X-Response-Time']);
-        console.log('[网络诊断] 服务端地址:', res?.header?.['X-Served-From']);
+        console.log('当前环境:', process.env.NODE_ENV)
 
-        // 处理网络错误
         if (err) {
           throw { errMsg: `请求失败: ${err.errMsg}` };
         }

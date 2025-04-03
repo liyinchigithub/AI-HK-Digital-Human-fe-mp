@@ -192,7 +192,7 @@ var _default = {
     sendMessage: function sendMessage() {
       var _this = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-        var userMessage, question, _res$header, _res$header2, _data$choices, _data$choices$, _data$choices$$messag, _yield$uni$request, _yield$uni$request2, err, res, data, responseContent, _this$parseResponse, _this$parseResponse2, thinkPart, answerPart, _error$data, errorMessage;
+        var userMessage, question, _data$choices, _data$choices$, _data$choices$$messag, isH5Dev, _yield$uni$request, _yield$uni$request2, err, res, data, responseContent, _this$parseResponse, _this$parseResponse2, thinkPart, answerPart, _error$data, errorMessage;
         return _regenerator.default.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -214,14 +214,19 @@ var _default = {
                 _this.scrollToBottom();
                 _context.prev = 7;
                 _this.loading = true;
-                _context.next = 11;
+                // 修改环境判断逻辑
+                isH5Dev =  true && uni.getSystemInfoSync().platform === 'h5';
+                _context.next = 12;
                 return uni.request({
-                  url: 'http://homechat-effassits-popgjiyphu.cn-hangzhou.fcapp.run/v1/chat/completions',
+                  url: isH5Dev ? '/api/v1/chat/completions' // 仅H5开发环境使用代理
+                  : 'https://homechat-effassits-popgjiyphu.cn-hangzhou.fcapp.run/v1/chat/completions',
                   method: 'POST',
                   header: {
                     'Content-Type': 'application/json',
                     'Cookie': 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDM5MTAyMjcsInVpZCI6MX0.T_R6-qar4YY7GsZh0iIE9psjw0XmeGB29CqIAI9KnOU'
                   },
+                  withCredentials: true,
+                  // 跨域凭证
                   timeout: 15000,
                   data: {
                     messages: [{
@@ -231,16 +236,13 @@ var _default = {
                     stream: false
                   }
                 });
-              case 11:
+              case 12:
                 _yield$uni$request = _context.sent;
                 _yield$uni$request2 = (0, _slicedToArray2.default)(_yield$uni$request, 2);
                 err = _yield$uni$request2[0];
                 res = _yield$uni$request2[1];
                 // 添加网络诊断日志
-                console.log('[网络诊断] 请求耗时:', res === null || res === void 0 ? void 0 : (_res$header = res.header) === null || _res$header === void 0 ? void 0 : _res$header['X-Response-Time']);
-                console.log('[网络诊断] 服务端地址:', res === null || res === void 0 ? void 0 : (_res$header2 = res.header) === null || _res$header2 === void 0 ? void 0 : _res$header2['X-Served-From']);
-
-                // 处理网络错误
+                console.log('当前环境:', "development");
                 if (!err) {
                   _context.next = 19;
                   break;

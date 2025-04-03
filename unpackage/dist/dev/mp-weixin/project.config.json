@@ -18,40 +18,10 @@
     }
   },
   "compileType": "miniprogram",
-  "libVersion": "",
+  "libVersion": "2.25.4",
   "appid": "wx9d6bd1da77d1287f",
   "projectname": "AI-HK-Digital-Human-fe-mp",
-  "condition": {
-    "search": {
-      "current": -1,
-      "list": []
-    },
-    "conversation": {
-      "current": -1,
-      "list": []
-    },
-    "game": {
-      "current": -1,
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "id": 0,
-          "pathName": "pages/list/detail"
-        },
-        {
-          "id": 1,
-          "pathName": "pages/list/list"
-        },
-        {
-          "id": 2,
-          "pathName": "pages/ucenter/settings/settings"
-        }
-      ],
-      "current": 1
-    }
-  },
+  "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2

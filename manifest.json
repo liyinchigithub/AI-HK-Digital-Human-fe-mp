@@ -110,8 +110,32 @@
 	},
 	"vueVersion": "2",
 	"h5": {
+		"template": "template.h5.html",
+		"router": {
+			"mode": "history",
+			"base": ""
+		},
+		"devServer": {
+			"proxy": {
+				"/api": { 
+					"target": "https://homechat-effassits-popgjiyphu.cn-hangzhou.fcapp.run",
+					"changeOrigin": true,
+					"secure": false,
+					"pathRewrite": {
+						"^/api/v1/chat/completions": "/v1/chat/completions"
+					}
+				}
+			}
+		},
+		"sdkConfigs": {
+			"maps": {
+				"qqmap": {
+					"key": ""
+				}
+			}
+		},
 		"uniStatistics": {
-			"enable": false
+			"enable": true
 		},
 		"sdkConfigs": {
 			"maps": {}

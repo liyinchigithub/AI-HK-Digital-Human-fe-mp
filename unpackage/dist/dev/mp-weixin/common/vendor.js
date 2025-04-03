@@ -20022,7 +20022,7 @@ var _default = {
     "path": "pages/home/home",
     "style": {
       "navigationBarTitleText": "上上吉",
-      "enablePullDownRefresh": true
+      "enablePullDownRefresh": false
     }
   }, {
     "path": "pages/home/home2",
@@ -20381,7 +20381,7 @@ var _default = {
   "pages": {
     "pages/home/home": {
       "navigationBarTitleText": "上上吉",
-      "enablePullDownRefresh": true
+      "enablePullDownRefresh": false
     },
     "pages/home/home2": {
       "navigationBarTitleText": "ali",
@@ -63568,7 +63568,21 @@ module.exports = index_cjs;
 /* 540 */,
 /* 541 */,
 /* 542 */,
-/* 543 */
+/* 543 */,
+/* 544 */,
+/* 545 */,
+/* 546 */,
+/* 547 */,
+/* 548 */,
+/* 549 */,
+/* 550 */,
+/* 551 */,
+/* 552 */,
+/* 553 */,
+/* 554 */,
+/* 555 */,
+/* 556 */,
+/* 557 */
 /*!********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-row/props.js ***!
   \********************************************************************************************************************/
@@ -63605,14 +63619,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 544 */,
-/* 545 */,
-/* 546 */,
-/* 547 */,
-/* 548 */,
-/* 549 */,
-/* 550 */,
-/* 551 */
+/* 558 */,
+/* 559 */,
+/* 560 */,
+/* 561 */,
+/* 562 */,
+/* 563 */,
+/* 564 */,
+/* 565 */
 /*!********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-col/props.js ***!
   \********************************************************************************************************************/
@@ -63659,14 +63673,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 552 */,
-/* 553 */,
-/* 554 */,
-/* 555 */,
-/* 556 */,
-/* 557 */,
-/* 558 */,
-/* 559 */
+/* 566 */,
+/* 567 */,
+/* 568 */,
+/* 569 */,
+/* 570 */,
+/* 571 */,
+/* 572 */,
+/* 573 */
 /*!**********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-popup/props.js ***!
   \**********************************************************************************************************************/
@@ -63763,14 +63777,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 560 */,
-/* 561 */,
-/* 562 */,
-/* 563 */,
-/* 564 */,
-/* 565 */,
-/* 566 */,
-/* 567 */
+/* 574 */,
+/* 575 */,
+/* 576 */,
+/* 577 */,
+/* 578 */,
+/* 579 */,
+/* 580 */,
+/* 581 */
 /*!***************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/libs/mixin/button.js ***!
   \***************************************************************************************************************/
@@ -63800,7 +63814,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 568 */
+/* 582 */
 /*!*****************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/libs/mixin/openType.js ***!
   \*****************************************************************************************************************/
@@ -63842,7 +63856,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 569 */
+/* 583 */
 /*!***********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-button/props.js ***!
   \***********************************************************************************************************************/
@@ -64021,14 +64035,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 570 */,
-/* 571 */,
-/* 572 */,
-/* 573 */,
-/* 574 */,
-/* 575 */,
-/* 576 */,
-/* 577 */
+/* 584 */,
+/* 585 */,
+/* 586 */,
+/* 587 */,
+/* 588 */,
+/* 589 */,
+/* 590 */,
+/* 591 */
 /*!************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-overlay/props.js ***!
   \************************************************************************************************************************/
@@ -64070,14 +64084,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 578 */,
-/* 579 */,
-/* 580 */,
-/* 581 */,
-/* 582 */,
-/* 583 */,
-/* 584 */,
-/* 585 */
+/* 592 */,
+/* 593 */,
+/* 594 */,
+/* 595 */,
+/* 596 */,
+/* 597 */,
+/* 598 */,
+/* 599 */
 /*!*****************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-loading-icon/props.js ***!
   \*****************************************************************************************************************************/
@@ -64154,14 +64168,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 586 */,
-/* 587 */,
-/* 588 */,
-/* 589 */,
-/* 590 */,
-/* 591 */,
-/* 592 */,
-/* 593 */
+/* 600 */,
+/* 601 */,
+/* 602 */,
+/* 603 */,
+/* 604 */,
+/* 605 */,
+/* 606 */,
+/* 607 */
 /*!*****************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-loading-page/props.js ***!
   \*****************************************************************************************************************************/
@@ -64228,14 +64242,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 594 */,
-/* 595 */,
-/* 596 */,
-/* 597 */,
-/* 598 */,
-/* 599 */,
-/* 600 */,
-/* 601 */
+/* 608 */,
+/* 609 */,
+/* 610 */,
+/* 611 */,
+/* 612 */,
+/* 613 */,
+/* 614 */,
+/* 615 */
 /*!***************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-subsection/props.js ***!
   \***************************************************************************************************************************/
@@ -64302,14 +64316,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 602 */,
-/* 603 */,
-/* 604 */,
-/* 605 */,
-/* 606 */,
-/* 607 */,
-/* 608 */,
-/* 609 */
+/* 616 */,
+/* 617 */,
+/* 618 */,
+/* 619 */,
+/* 620 */,
+/* 621 */,
+/* 622 */,
+/* 623 */
 /*!**********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-empty/props.js ***!
   \**********************************************************************************************************************/
@@ -64386,21 +64400,21 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 610 */,
-/* 611 */,
-/* 612 */,
-/* 613 */,
-/* 614 */,
-/* 615 */,
-/* 616 */,
-/* 617 */,
-/* 618 */,
-/* 619 */,
-/* 620 */,
-/* 621 */,
-/* 622 */,
-/* 623 */,
-/* 624 */
+/* 624 */,
+/* 625 */,
+/* 626 */,
+/* 627 */,
+/* 628 */,
+/* 629 */,
+/* 630 */,
+/* 631 */,
+/* 632 */,
+/* 633 */,
+/* 634 */,
+/* 635 */,
+/* 636 */,
+/* 637 */,
+/* 638 */
 /*!*********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-line/props.js ***!
   \*********************************************************************************************************************/
@@ -64451,14 +64465,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 625 */,
-/* 626 */,
-/* 627 */,
-/* 628 */,
-/* 629 */,
-/* 630 */,
-/* 631 */,
-/* 632 */
+/* 639 */,
+/* 640 */,
+/* 641 */,
+/* 642 */,
+/* 643 */,
+/* 644 */,
+/* 645 */,
+/* 646 */
 /*!****************************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uni-search-bar/components/uni-search-bar/i18n/index.js ***!
   \****************************************************************************************************************************************/
@@ -64473,9 +64487,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 633));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 634));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 635));
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 647));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 648));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 649));
 var _default = {
   en: _en.default,
   'zh-Hans': _zhHans.default,
@@ -64484,7 +64498,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 633 */
+/* 647 */
 /*!***************************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uni-search-bar/components/uni-search-bar/i18n/en.json ***!
   \***************************************************************************************************************************************/
@@ -64494,7 +64508,7 @@ exports.default = _default;
 module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-bar.placeholder\":\"Search enter content\"}");
 
 /***/ }),
-/* 634 */
+/* 648 */
 /*!********************************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hans.json ***!
   \********************************************************************************************************************************************/
@@ -64504,7 +64518,7 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
 module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-bar.placeholder\":\"请输入搜索内容\"}");
 
 /***/ }),
-/* 635 */
+/* 649 */
 /*!********************************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hant.json ***!
   \********************************************************************************************************************************************/
@@ -64514,14 +64528,14 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
 module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-bar.placeholder\":\"請輸入搜索內容\"}");
 
 /***/ }),
-/* 636 */,
-/* 637 */,
-/* 638 */,
-/* 639 */,
-/* 640 */,
-/* 641 */,
-/* 642 */,
-/* 643 */
+/* 650 */,
+/* 651 */,
+/* 652 */,
+/* 653 */,
+/* 654 */,
+/* 655 */,
+/* 656 */,
+/* 657 */
 /*!************************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/index.js ***!
   \************************************************************************/
@@ -64530,16 +64544,16 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _en_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./en.json */ 644);
-var _en_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./en.json */ 644, 1);
-/* harmony import */ var _es_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./es.json */ 645);
-var _es_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./es.json */ 645, 1);
-/* harmony import */ var _fr_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fr.json */ 646);
-var _fr_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./fr.json */ 646, 1);
-/* harmony import */ var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./zh-Hans.json */ 647);
-var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hans.json */ 647, 1);
-/* harmony import */ var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./zh-Hant.json */ 648);
-var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hant.json */ 648, 1);
+/* harmony import */ var _en_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./en.json */ 658);
+var _en_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./en.json */ 658, 1);
+/* harmony import */ var _es_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./es.json */ 659);
+var _es_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./es.json */ 659, 1);
+/* harmony import */ var _fr_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fr.json */ 660);
+var _fr_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./fr.json */ 660, 1);
+/* harmony import */ var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./zh-Hans.json */ 661);
+var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hans.json */ 661, 1);
+/* harmony import */ var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./zh-Hant.json */ 662);
+var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hant.json */ 662, 1);
 
 
 
@@ -64555,7 +64569,7 @@ var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpac
 
 
 /***/ }),
-/* 644 */
+/* 658 */
 /*!***********************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/en.json ***!
   \***********************************************************************/
@@ -64565,7 +64579,7 @@ var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpac
 module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"Success\",\"uniCloud.component.update.success\":\"Success\",\"uniCloud.component.update.showModal.title\":\"Tips\",\"uniCloud.component.update.showModal.content\":\"是否更新该数据\",\"uniCloud.component.remove.showModal.title\":\"Tips\",\"uniCloud.component.remove.showModal.content\":\"是否删除该数据\"}");
 
 /***/ }),
-/* 645 */
+/* 659 */
 /*!***********************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/es.json ***!
   \***********************************************************************/
@@ -64575,7 +64589,7 @@ module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"Success\",\"u
 module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\",\"uniCloud.component.update.success\":\"修改成功\",\"uniCloud.component.update.showModal.title\":\"提示\",\"uniCloud.component.update.showModal.content\":\"是否更新该数据\",\"uniCloud.component.remove.showModal.title\":\"提示\",\"uniCloud.component.remove.showModal.content\":\"是否删除该数据\"}");
 
 /***/ }),
-/* 646 */
+/* 660 */
 /*!***********************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/fr.json ***!
   \***********************************************************************/
@@ -64585,7 +64599,7 @@ module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\
 module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\",\"uniCloud.component.update.success\":\"修改成功\",\"uniCloud.component.update.showModal.title\":\"提示\",\"uniCloud.component.update.showModal.content\":\"是否更新该数据\",\"uniCloud.component.remove.showModal.title\":\"提示\",\"uniCloud.component.remove.showModal.content\":\"是否删除该数据\"}");
 
 /***/ }),
-/* 647 */
+/* 661 */
 /*!****************************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/zh-Hans.json ***!
   \****************************************************************************/
@@ -64595,7 +64609,7 @@ module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\
 module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\",\"uniCloud.component.update.success\":\"修改成功\",\"uniCloud.component.update.showModal.title\":\"提示\",\"uniCloud.component.update.showModal.content\":\"是否更新该数据\",\"uniCloud.component.remove.showModal.title\":\"提示\",\"uniCloud.component.remove.showModal.content\":\"是否删除该数据\"}");
 
 /***/ }),
-/* 648 */
+/* 662 */
 /*!****************************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/zh-Hant.json ***!
   \****************************************************************************/
@@ -64605,26 +64619,26 @@ module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\
 module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\",\"uniCloud.component.update.success\":\"修改成功\",\"uniCloud.component.update.showModal.title\":\"提示\",\"uniCloud.component.update.showModal.content\":\"是否更新该数据\",\"uniCloud.component.remove.showModal.title\":\"提示\",\"uniCloud.component.remove.showModal.content\":\"是否刪除數據\"}");
 
 /***/ }),
-/* 649 */,
-/* 650 */,
-/* 651 */,
-/* 652 */,
-/* 653 */,
-/* 654 */,
-/* 655 */,
-/* 656 */,
-/* 657 */,
-/* 658 */,
-/* 659 */,
-/* 660 */,
-/* 661 */,
-/* 662 */,
 /* 663 */,
 /* 664 */,
 /* 665 */,
 /* 666 */,
 /* 667 */,
-/* 668 */
+/* 668 */,
+/* 669 */,
+/* 670 */,
+/* 671 */,
+/* 672 */,
+/* 673 */,
+/* 674 */,
+/* 675 */,
+/* 676 */,
+/* 677 */,
+/* 678 */,
+/* 679 */,
+/* 680 */,
+/* 681 */,
+/* 682 */
 /*!*****************************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uni-dateformat/components/uni-dateformat/date-format.js ***!
   \*****************************************************************************************************************************************/
@@ -64841,19 +64855,19 @@ function friendlyDate(time, _ref) {
 }
 
 /***/ }),
-/* 669 */,
-/* 670 */,
-/* 671 */,
-/* 672 */,
-/* 673 */,
-/* 674 */,
-/* 675 */,
-/* 676 */,
-/* 677 */,
-/* 678 */,
-/* 679 */,
-/* 680 */,
-/* 681 */
+/* 683 */,
+/* 684 */,
+/* 685 */,
+/* 686 */,
+/* 687 */,
+/* 688 */,
+/* 689 */,
+/* 690 */,
+/* 691 */,
+/* 692 */,
+/* 693 */,
+/* 694 */,
+/* 695 */
 /*!****************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uni-forms/components/uni-forms/validate.js ***!
   \****************************************************************************************************************************/
@@ -65544,7 +65558,7 @@ var _default = SchemaValidator;
 exports.default = _default;
 
 /***/ }),
-/* 682 */
+/* 696 */
 /*!*************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uni-forms/components/uni-forms/utils.js ***!
   \*************************************************************************************************************************/
@@ -65879,21 +65893,21 @@ var isEqual = function isEqual(a, b) {
 exports.isEqual = isEqual;
 
 /***/ }),
-/* 683 */,
-/* 684 */,
-/* 685 */,
-/* 686 */,
-/* 687 */,
-/* 688 */,
-/* 689 */,
-/* 690 */,
-/* 691 */,
-/* 692 */,
-/* 693 */,
-/* 694 */,
-/* 695 */,
-/* 696 */,
-/* 697 */
+/* 697 */,
+/* 698 */,
+/* 699 */,
+/* 700 */,
+/* 701 */,
+/* 702 */,
+/* 703 */,
+/* 704 */,
+/* 705 */,
+/* 706 */,
+/* 707 */,
+/* 708 */,
+/* 709 */,
+/* 710 */,
+/* 711 */
 /*!******************************************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uni-file-picker/components/uni-file-picker/choose-and-upload-file.js ***!
   \******************************************************************************************************************************************************/
@@ -66116,7 +66130,7 @@ function chooseAndUploadFile() {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 28)["uniCloud"]))
 
 /***/ }),
-/* 698 */
+/* 712 */
 /*!*************************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uni-file-picker/components/uni-file-picker/utils.js ***!
   \*************************************************************************************************************************************/
@@ -66280,20 +66294,6 @@ exports.get_file_data = get_file_data;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 699 */,
-/* 700 */,
-/* 701 */,
-/* 702 */,
-/* 703 */,
-/* 704 */,
-/* 705 */,
-/* 706 */,
-/* 707 */,
-/* 708 */,
-/* 709 */,
-/* 710 */,
-/* 711 */,
-/* 712 */,
 /* 713 */,
 /* 714 */,
 /* 715 */,
@@ -66301,7 +66301,21 @@ exports.get_file_data = get_file_data;
 /* 717 */,
 /* 718 */,
 /* 719 */,
-/* 720 */
+/* 720 */,
+/* 721 */,
+/* 722 */,
+/* 723 */,
+/* 724 */,
+/* 725 */,
+/* 726 */,
+/* 727 */,
+/* 728 */,
+/* 729 */,
+/* 730 */,
+/* 731 */,
+/* 732 */,
+/* 733 */,
+/* 734 */
 /*!***********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-search/props.js ***!
   \***********************************************************************************************************************/
@@ -66437,14 +66451,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 721 */,
-/* 722 */,
-/* 723 */,
-/* 724 */,
-/* 725 */,
-/* 726 */,
-/* 727 */,
-/* 728 */
+/* 735 */,
+/* 736 */,
+/* 737 */,
+/* 738 */,
+/* 739 */,
+/* 740 */,
+/* 741 */,
+/* 742 */
 /*!*************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-back-top/props.js ***!
   \*************************************************************************************************************************/
@@ -66516,14 +66530,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 729 */,
-/* 730 */,
-/* 731 */,
-/* 732 */,
-/* 733 */,
-/* 734 */,
-/* 735 */,
-/* 736 */
+/* 743 */,
+/* 744 */,
+/* 745 */,
+/* 746 */,
+/* 747 */,
+/* 748 */,
+/* 749 */,
+/* 750 */
 /*!****************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/cp-goods-select/components/scroll-mixin.js ***!
   \****************************************************************************************************************************/
@@ -66622,21 +66636,21 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 737 */,
-/* 738 */,
-/* 739 */,
-/* 740 */,
-/* 741 */,
-/* 742 */,
-/* 743 */,
-/* 744 */,
-/* 745 */,
-/* 746 */,
-/* 747 */,
-/* 748 */,
-/* 749 */,
-/* 750 */,
-/* 751 */
+/* 751 */,
+/* 752 */,
+/* 753 */,
+/* 754 */,
+/* 755 */,
+/* 756 */,
+/* 757 */,
+/* 758 */,
+/* 759 */,
+/* 760 */,
+/* 761 */,
+/* 762 */,
+/* 763 */,
+/* 764 */,
+/* 765 */
 /*!**********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-image/props.js ***!
   \**********************************************************************************************************************/
@@ -66738,12 +66752,12 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 752 */,
-/* 753 */,
-/* 754 */,
-/* 755 */,
-/* 756 */,
-/* 757 */
+/* 766 */,
+/* 767 */,
+/* 768 */,
+/* 769 */,
+/* 770 */,
+/* 771 */
 /*!*********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-text/props.js ***!
   \*********************************************************************************************************************/
@@ -66871,12 +66885,12 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 758 */,
-/* 759 */,
-/* 760 */,
-/* 761 */,
-/* 762 */,
-/* 763 */
+/* 772 */,
+/* 773 */,
+/* 774 */,
+/* 775 */,
+/* 776 */,
+/* 777 */
 /*!*********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-icon/icons.js ***!
   \*********************************************************************************************************************/
@@ -67107,7 +67121,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 764 */
+/* 778 */
 /*!*********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-icon/props.js ***!
   \*********************************************************************************************************************/
@@ -67214,14 +67228,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 765 */,
-/* 766 */,
-/* 767 */,
-/* 768 */,
-/* 769 */,
-/* 770 */,
-/* 771 */,
-/* 772 */
+/* 779 */,
+/* 780 */,
+/* 781 */,
+/* 782 */,
+/* 783 */,
+/* 784 */,
+/* 785 */,
+/* 786 */
 /*!*****************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-action-sheet/props.js ***!
   \*****************************************************************************************************************************/
@@ -67293,14 +67307,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 773 */,
-/* 774 */,
-/* 775 */,
-/* 776 */,
-/* 777 */,
-/* 778 */,
-/* 779 */,
-/* 780 */
+/* 787 */,
+/* 788 */,
+/* 789 */,
+/* 790 */,
+/* 791 */,
+/* 792 */,
+/* 793 */,
+/* 794 */
 /*!********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-tag/props.js ***!
   \********************************************************************************************************************/
@@ -67402,14 +67416,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 781 */,
-/* 782 */,
-/* 783 */,
-/* 784 */,
-/* 785 */,
-/* 786 */,
-/* 787 */,
-/* 788 */
+/* 795 */,
+/* 796 */,
+/* 797 */,
+/* 798 */,
+/* 799 */,
+/* 800 */,
+/* 801 */,
+/* 802 */
 /*!***************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-number-box/props.js ***!
   \***************************************************************************************************************************/
@@ -67536,21 +67550,21 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 789 */,
-/* 790 */,
-/* 791 */,
-/* 792 */,
-/* 793 */,
-/* 794 */,
-/* 795 */,
-/* 796 */,
-/* 797 */,
-/* 798 */,
-/* 799 */,
-/* 800 */,
-/* 801 */,
-/* 802 */,
-/* 803 */
+/* 803 */,
+/* 804 */,
+/* 805 */,
+/* 806 */,
+/* 807 */,
+/* 808 */,
+/* 809 */,
+/* 810 */,
+/* 811 */,
+/* 812 */,
+/* 813 */,
+/* 814 */,
+/* 815 */,
+/* 816 */,
+/* 817 */
 /*!**********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-modal/props.js ***!
   \**********************************************************************************************************************/
@@ -67652,14 +67666,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 804 */,
-/* 805 */,
-/* 806 */,
-/* 807 */,
-/* 808 */,
-/* 809 */,
-/* 810 */,
-/* 811 */
+/* 818 */,
+/* 819 */,
+/* 820 */,
+/* 821 */,
+/* 822 */,
+/* 823 */,
+/* 824 */,
+/* 825 */
 /*!************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-divider/props.js ***!
   \************************************************************************************************************************/
@@ -67721,14 +67735,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 812 */,
-/* 813 */,
-/* 814 */,
-/* 815 */,
-/* 816 */,
-/* 817 */,
-/* 818 */,
-/* 819 */
+/* 826 */,
+/* 827 */,
+/* 828 */,
+/* 829 */,
+/* 830 */,
+/* 831 */,
+/* 832 */,
+/* 833 */
 /*!***************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-cell-group/props.js ***!
   \***************************************************************************************************************************/
@@ -67760,14 +67774,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 820 */,
-/* 821 */,
-/* 822 */,
-/* 823 */,
-/* 824 */,
-/* 825 */,
-/* 826 */,
-/* 827 */
+/* 834 */,
+/* 835 */,
+/* 836 */,
+/* 837 */,
+/* 838 */,
+/* 839 */,
+/* 840 */,
+/* 841 */
 /*!*********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-cell/props.js ***!
   \*********************************************************************************************************************/
@@ -67895,14 +67909,14 @@ exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 828 */,
-/* 829 */,
-/* 830 */,
-/* 831 */,
-/* 832 */,
-/* 833 */,
-/* 834 */,
-/* 835 */
+/* 842 */,
+/* 843 */,
+/* 844 */,
+/* 845 */,
+/* 846 */,
+/* 847 */,
+/* 848 */,
+/* 849 */
 /*!*****************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-swipe-action/props.js ***!
   \*****************************************************************************************************************************/
@@ -67929,12 +67943,12 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 836 */,
-/* 837 */,
-/* 838 */,
-/* 839 */,
-/* 840 */,
-/* 841 */
+/* 850 */,
+/* 851 */,
+/* 852 */,
+/* 853 */,
+/* 854 */,
+/* 855 */
 /*!**************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/libs/mixin/touch.js ***!
   \**************************************************************************************************************/
@@ -68010,7 +68024,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 842 */
+/* 856 */
 /*!**********************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-swipe-action-item/props.js ***!
   \**********************************************************************************************************************************/
@@ -68069,7 +68083,7 @@ exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 843 */
+/* 857 */
 /*!********************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-swipe-action-item/wxs.js ***!
   \********************************************************************************************************************************/
@@ -68101,16 +68115,16 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 844 */,
-/* 845 */,
-/* 846 */,
-/* 847 */,
-/* 848 */,
-/* 849 */,
-/* 850 */,
-/* 851 */,
-/* 852 */,
-/* 853 */
+/* 858 */,
+/* 859 */,
+/* 860 */,
+/* 861 */,
+/* 862 */,
+/* 863 */,
+/* 864 */,
+/* 865 */,
+/* 866 */,
+/* 867 */
 /*!**********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-input/props.js ***!
   \**********************************************************************************************************************/
@@ -68315,26 +68329,24 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 854 */,
-/* 855 */,
-/* 856 */,
-/* 857 */,
-/* 858 */,
-/* 859 */,
-/* 860 */,
-/* 861 */,
-/* 862 */,
-/* 863 */,
-/* 864 */,
-/* 865 */,
-/* 866 */,
-/* 867 */,
 /* 868 */,
 /* 869 */,
 /* 870 */,
 /* 871 */,
 /* 872 */,
-/* 873 */
+/* 873 */,
+/* 874 */,
+/* 875 */,
+/* 876 */,
+/* 877 */,
+/* 878 */,
+/* 879 */,
+/* 880 */,
+/* 881 */,
+/* 882 */,
+/* 883 */,
+/* 884 */,
+/* 885 */
 /*!*********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-rate/props.js ***!
   \*********************************************************************************************************************/
@@ -68421,14 +68433,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 874 */,
-/* 875 */,
-/* 876 */,
-/* 877 */,
-/* 878 */,
-/* 879 */,
-/* 880 */,
-/* 881 */
+/* 886 */,
+/* 887 */,
+/* 888 */,
+/* 889 */,
+/* 890 */,
+/* 891 */,
+/* 892 */,
+/* 893 */
 /*!*********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-grid/props.js ***!
   \*********************************************************************************************************************/
@@ -68465,14 +68477,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 882 */,
-/* 883 */,
-/* 884 */,
-/* 885 */,
-/* 886 */,
-/* 887 */,
-/* 888 */,
-/* 889 */
+/* 894 */,
+/* 895 */,
+/* 896 */,
+/* 897 */,
+/* 898 */,
+/* 899 */,
+/* 900 */,
+/* 901 */
 /*!**************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-grid-item/props.js ***!
   \**************************************************************************************************************************/
@@ -68504,14 +68516,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 890 */,
-/* 891 */,
-/* 892 */,
-/* 893 */,
-/* 894 */,
-/* 895 */,
-/* 896 */,
-/* 897 */
+/* 902 */,
+/* 903 */,
+/* 904 */,
+/* 905 */,
+/* 906 */,
+/* 907 */,
+/* 908 */,
+/* 909 */
 /*!*********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-text/value.js ***!
   \*********************************************************************************************************************/
@@ -68619,14 +68631,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 898 */,
-/* 899 */,
-/* 900 */,
-/* 901 */,
-/* 902 */,
-/* 903 */,
-/* 904 */,
-/* 905 */
+/* 910 */,
+/* 911 */,
+/* 912 */,
+/* 913 */,
+/* 914 */,
+/* 915 */,
+/* 916 */,
+/* 917 */
 /*!*********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-form/props.js ***!
   \*********************************************************************************************************************/
@@ -68689,12 +68701,12 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 906 */,
-/* 907 */,
-/* 908 */,
-/* 909 */,
-/* 910 */,
-/* 911 */
+/* 918 */,
+/* 919 */,
+/* 920 */,
+/* 921 */,
+/* 922 */,
+/* 923 */
 /*!**************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-form-item/props.js ***!
   \**************************************************************************************************************************/
@@ -68760,19 +68772,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 912 */,
-/* 913 */,
-/* 914 */,
-/* 915 */,
-/* 916 */,
-/* 917 */,
-/* 918 */,
-/* 919 */,
-/* 920 */,
-/* 921 */,
-/* 922 */,
-/* 923 */,
-/* 924 */
+/* 924 */,
+/* 925 */,
+/* 926 */,
+/* 927 */,
+/* 928 */,
+/* 929 */,
+/* 930 */,
+/* 931 */
 /*!*************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-textarea/props.js ***!
   \*************************************************************************************************************************/
@@ -68909,19 +68916,19 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 925 */,
-/* 926 */,
-/* 927 */,
-/* 928 */,
-/* 929 */,
-/* 930 */,
-/* 931 */,
 /* 932 */,
 /* 933 */,
 /* 934 */,
 /* 935 */,
 /* 936 */,
-/* 937 */
+/* 937 */,
+/* 938 */,
+/* 939 */,
+/* 940 */,
+/* 941 */,
+/* 942 */,
+/* 943 */,
+/* 944 */
 /*!**************************************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/index.js ***!
   \**************************************************************************************************************************************************/
@@ -68936,9 +68943,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 938));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 939));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 940));
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 945));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 946));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 947));
 var _default = {
   en: _en.default,
   'zh-Hans': _zhHans.default,
@@ -68947,7 +68954,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 938 */
+/* 945 */
 /*!*************************************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/en.json ***!
   \*************************************************************************************************************************************************/
@@ -68957,7 +68964,7 @@ exports.default = _default;
 module.exports = JSON.parse("{\"uni-datetime-picker.selectDate\":\"select date\",\"uni-datetime-picker.selectTime\":\"select time\",\"uni-datetime-picker.selectDateTime\":\"select date and time\",\"uni-datetime-picker.startDate\":\"start date\",\"uni-datetime-picker.endDate\":\"end date\",\"uni-datetime-picker.startTime\":\"start time\",\"uni-datetime-picker.endTime\":\"end time\",\"uni-datetime-picker.ok\":\"ok\",\"uni-datetime-picker.clear\":\"clear\",\"uni-datetime-picker.cancel\":\"cancel\",\"uni-datetime-picker.year\":\"-\",\"uni-datetime-picker.month\":\"\",\"uni-calender.MON\":\"MON\",\"uni-calender.TUE\":\"TUE\",\"uni-calender.WED\":\"WED\",\"uni-calender.THU\":\"THU\",\"uni-calender.FRI\":\"FRI\",\"uni-calender.SAT\":\"SAT\",\"uni-calender.SUN\":\"SUN\",\"uni-calender.confirm\":\"confirm\"}");
 
 /***/ }),
-/* 939 */
+/* 946 */
 /*!******************************************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/zh-Hans.json ***!
   \******************************************************************************************************************************************************/
@@ -68967,7 +68974,7 @@ module.exports = JSON.parse("{\"uni-datetime-picker.selectDate\":\"select date\"
 module.exports = JSON.parse("{\"uni-datetime-picker.selectDate\":\"选择日期\",\"uni-datetime-picker.selectTime\":\"选择时间\",\"uni-datetime-picker.selectDateTime\":\"选择日期时间\",\"uni-datetime-picker.startDate\":\"开始日期\",\"uni-datetime-picker.endDate\":\"结束日期\",\"uni-datetime-picker.startTime\":\"开始时间\",\"uni-datetime-picker.endTime\":\"结束时间\",\"uni-datetime-picker.ok\":\"确定\",\"uni-datetime-picker.clear\":\"清除\",\"uni-datetime-picker.cancel\":\"取消\",\"uni-datetime-picker.year\":\"年\",\"uni-datetime-picker.month\":\"月\",\"uni-calender.SUN\":\"日\",\"uni-calender.MON\":\"一\",\"uni-calender.TUE\":\"二\",\"uni-calender.WED\":\"三\",\"uni-calender.THU\":\"四\",\"uni-calender.FRI\":\"五\",\"uni-calender.SAT\":\"六\",\"uni-calender.confirm\":\"确认\"}");
 
 /***/ }),
-/* 940 */
+/* 947 */
 /*!******************************************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/zh-Hant.json ***!
   \******************************************************************************************************************************************************/
@@ -68977,7 +68984,7 @@ module.exports = JSON.parse("{\"uni-datetime-picker.selectDate\":\"选择日期\
 module.exports = JSON.parse("{\"uni-datetime-picker.selectDate\":\"選擇日期\",\"uni-datetime-picker.selectTime\":\"選擇時間\",\"uni-datetime-picker.selectDateTime\":\"選擇日期時間\",\"uni-datetime-picker.startDate\":\"開始日期\",\"uni-datetime-picker.endDate\":\"結束日期\",\"uni-datetime-picker.startTime\":\"開始时间\",\"uni-datetime-picker.endTime\":\"結束时间\",\"uni-datetime-picker.ok\":\"確定\",\"uni-datetime-picker.clear\":\"清除\",\"uni-datetime-picker.cancel\":\"取消\",\"uni-datetime-picker.year\":\"年\",\"uni-datetime-picker.month\":\"月\",\"uni-calender.SUN\":\"日\",\"uni-calender.MON\":\"一\",\"uni-calender.TUE\":\"二\",\"uni-calender.WED\":\"三\",\"uni-calender.THU\":\"四\",\"uni-calender.FRI\":\"五\",\"uni-calender.SAT\":\"六\",\"uni-calender.confirm\":\"確認\"}");
 
 /***/ }),
-/* 941 */
+/* 948 */
 /*!********************************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uni-datetime-picker/components/uni-datetime-picker/util.js ***!
   \********************************************************************************************************************************************/
@@ -69427,14 +69434,14 @@ function fixIosDateFormat(value) {
 }
 
 /***/ }),
-/* 942 */,
-/* 943 */,
-/* 944 */,
-/* 945 */,
-/* 946 */,
-/* 947 */,
-/* 948 */,
-/* 949 */
+/* 949 */,
+/* 950 */,
+/* 951 */,
+/* 952 */,
+/* 953 */,
+/* 954 */,
+/* 955 */,
+/* 956 */
 /*!********************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-datetime-picker/props.js ***!
   \********************************************************************************************************************************/
@@ -69568,7 +69575,7 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 950 */
+/* 957 */
 /*!*************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/libs/util/dayjs.js ***!
   \*************************************************************************************************************/
@@ -69880,14 +69887,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;var _typeof = 
 });
 
 /***/ }),
-/* 951 */,
-/* 952 */,
-/* 953 */,
-/* 954 */,
-/* 955 */,
-/* 956 */,
-/* 957 */,
-/* 958 */
+/* 958 */,
+/* 959 */,
+/* 960 */,
+/* 961 */,
+/* 962 */,
+/* 963 */,
+/* 964 */,
+/* 965 */
 /*!*******************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-checkbox-group/props.js ***!
   \*******************************************************************************************************************************/
@@ -69984,14 +69991,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 959 */,
-/* 960 */,
-/* 961 */,
-/* 962 */,
-/* 963 */,
-/* 964 */,
-/* 965 */,
-/* 966 */
+/* 966 */,
+/* 967 */,
+/* 968 */,
+/* 969 */,
+/* 970 */,
+/* 971 */,
+/* 972 */,
+/* 973 */
 /*!*************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-checkbox/props.js ***!
   \*************************************************************************************************************************/
@@ -70078,14 +70085,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 967 */,
-/* 968 */,
-/* 969 */,
-/* 970 */,
-/* 971 */,
-/* 972 */,
-/* 973 */,
-/* 974 */
+/* 974 */,
+/* 975 */,
+/* 976 */,
+/* 977 */,
+/* 978 */,
+/* 979 */,
+/* 980 */,
+/* 981 */
 /*!***********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-picker/props.js ***!
   \***********************************************************************************************************************/
@@ -70182,14 +70189,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 975 */,
-/* 976 */,
-/* 977 */,
-/* 978 */,
-/* 979 */,
-/* 980 */,
-/* 981 */,
-/* 982 */
+/* 982 */,
+/* 983 */,
+/* 984 */,
+/* 985 */,
+/* 986 */,
+/* 987 */,
+/* 988 */,
+/* 989 */
 /*!***************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-transition/props.js ***!
   \***************************************************************************************************************************/
@@ -70231,7 +70238,7 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 983 */
+/* 990 */
 /*!********************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-transition/transition.js ***!
   \********************************************************************************************************************************/
@@ -70248,7 +70255,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 29));
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 32));
-var _nvueAniMap = _interopRequireDefault(__webpack_require__(/*! ./nvue.ani-map.js */ 984));
+var _nvueAniMap = _interopRequireDefault(__webpack_require__(/*! ./nvue.ani-map.js */ 991));
 // 定义一个一定时间后自动成功的promise，让调用nextTick方法处，进入下一个then方法
 var nextTick = function nextTick() {
   return new Promise(function (resolve) {
@@ -70340,7 +70347,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 984 */
+/* 991 */
 /*!**********************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-transition/nvue.ani-map.js ***!
   \**********************************************************************************************************************************/
@@ -70533,14 +70540,14 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 985 */,
-/* 986 */,
-/* 987 */,
-/* 988 */,
-/* 989 */,
-/* 990 */,
-/* 991 */,
-/* 992 */
+/* 992 */,
+/* 993 */,
+/* 994 */,
+/* 995 */,
+/* 996 */,
+/* 997 */,
+/* 998 */,
+/* 999 */
 /*!***************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-status-bar/props.js ***!
   \***************************************************************************************************************************/
@@ -70566,14 +70573,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 993 */,
-/* 994 */,
-/* 995 */,
-/* 996 */,
-/* 997 */,
-/* 998 */,
-/* 999 */,
-/* 1000 */
+/* 1000 */,
+/* 1001 */,
+/* 1002 */,
+/* 1003 */,
+/* 1004 */,
+/* 1005 */,
+/* 1006 */,
+/* 1007 */
 /*!****************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-safe-bottom/props.js ***!
   \****************************************************************************************************************************/
@@ -70593,13 +70600,6 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 1001 */,
-/* 1002 */,
-/* 1003 */,
-/* 1004 */,
-/* 1005 */,
-/* 1006 */,
-/* 1007 */,
 /* 1008 */,
 /* 1009 */,
 /* 1010 */,
@@ -70635,7 +70635,14 @@ exports.default = _default;
 /* 1040 */,
 /* 1041 */,
 /* 1042 */,
-/* 1043 */
+/* 1043 */,
+/* 1044 */,
+/* 1045 */,
+/* 1046 */,
+/* 1047 */,
+/* 1048 */,
+/* 1049 */,
+/* 1050 */
 /*!********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-gap/props.js ***!
   \********************************************************************************************************************/
@@ -70677,13 +70684,6 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 1044 */,
-/* 1045 */,
-/* 1046 */,
-/* 1047 */,
-/* 1048 */,
-/* 1049 */,
-/* 1050 */,
 /* 1051 */,
 /* 1052 */,
 /* 1053 */,
@@ -70691,7 +70691,21 @@ exports.default = _default;
 /* 1055 */,
 /* 1056 */,
 /* 1057 */,
-/* 1058 */
+/* 1058 */,
+/* 1059 */,
+/* 1060 */,
+/* 1061 */,
+/* 1062 */,
+/* 1063 */,
+/* 1064 */,
+/* 1065 */,
+/* 1066 */,
+/* 1067 */,
+/* 1068 */,
+/* 1069 */,
+/* 1070 */,
+/* 1071 */,
+/* 1072 */
 /*!*********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-link/props.js ***!
   \*********************************************************************************************************************/
@@ -70748,14 +70762,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 1059 */,
-/* 1060 */,
-/* 1061 */,
-/* 1062 */,
-/* 1063 */,
-/* 1064 */,
-/* 1065 */,
-/* 1066 */
+/* 1073 */,
+/* 1074 */,
+/* 1075 */,
+/* 1076 */,
+/* 1077 */,
+/* 1078 */,
+/* 1079 */,
+/* 1080 */
 /*!***********************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/libs/util/async-validator.js ***!
   \***********************************************************************************************************************/
@@ -71936,10 +71950,10 @@ Schema.warning = warning;
 Schema.messages = messages;
 var _default = Schema; // # sourceMappingURL=index.js.map
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 1067)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 1081)))
 
 /***/ }),
-/* 1067 */
+/* 1081 */
 /*!********************************************************!*\
   !*** ./node_modules/node-libs-browser/mock/process.js ***!
   \********************************************************/
@@ -71970,7 +71984,7 @@ exports.binding = function (name) {
     var path;
     exports.cwd = function () { return cwd };
     exports.chdir = function (dir) {
-        if (!path) path = __webpack_require__(/*! path */ 1068);
+        if (!path) path = __webpack_require__(/*! path */ 1082);
         cwd = path.resolve(dir, cwd);
     };
 })();
@@ -71983,7 +71997,7 @@ exports.features = {};
 
 
 /***/ }),
-/* 1068 */
+/* 1082 */
 /*!***********************************************!*\
   !*** ./node_modules/path-browserify/index.js ***!
   \***********************************************/
@@ -72293,23 +72307,9 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 1067)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 1081)))
 
 /***/ }),
-/* 1069 */,
-/* 1070 */,
-/* 1071 */,
-/* 1072 */,
-/* 1073 */,
-/* 1074 */,
-/* 1075 */,
-/* 1076 */,
-/* 1077 */,
-/* 1078 */,
-/* 1079 */,
-/* 1080 */,
-/* 1081 */,
-/* 1082 */,
 /* 1083 */,
 /* 1084 */,
 /* 1085 */,
@@ -72322,7 +72322,21 @@ var substr = 'ab'.substr(-1) === 'b'
 /* 1092 */,
 /* 1093 */,
 /* 1094 */,
-/* 1095 */
+/* 1095 */,
+/* 1096 */,
+/* 1097 */,
+/* 1098 */,
+/* 1099 */,
+/* 1100 */,
+/* 1101 */,
+/* 1102 */,
+/* 1103 */,
+/* 1104 */,
+/* 1105 */,
+/* 1106 */,
+/* 1107 */,
+/* 1108 */,
+/* 1109 */
 /*!************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uview-ui/components/u-toolbar/props.js ***!
   \************************************************************************************************************************/
@@ -72374,19 +72388,19 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 1096 */,
-/* 1097 */,
-/* 1098 */,
-/* 1099 */,
-/* 1100 */,
-/* 1101 */,
-/* 1102 */,
-/* 1103 */,
-/* 1104 */,
-/* 1105 */,
-/* 1106 */,
-/* 1107 */,
-/* 1108 */
+/* 1110 */,
+/* 1111 */,
+/* 1112 */,
+/* 1113 */,
+/* 1114 */,
+/* 1115 */,
+/* 1116 */,
+/* 1117 */,
+/* 1118 */,
+/* 1119 */,
+/* 1120 */,
+/* 1121 */,
+/* 1122 */
 /*!*********************************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uni-transition/components/uni-transition/createAnimation.js ***!
   \*********************************************************************************************************************************************/

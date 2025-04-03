@@ -148,55 +148,20 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 29));
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 32));
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+var moFab = function moFab() {
+  __webpack_require__.e(/*! require.ensure | components/mo-fab/mo-fab */ "components/mo-fab/mo-fab").then((function () {
+    return resolve(__webpack_require__(/*! @/components/mo-fab/mo-fab.vue */ 538));
+  }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+};
+var moFabTab = function moFabTab() {
+  __webpack_require__.e(/*! require.ensure | components/mo-fab/mo-fab-tabbar */ "components/mo-fab/mo-fab-tabbar").then((function () {
+    return resolve(__webpack_require__(/*! @/components/mo-fab/mo-fab-tabbar.vue */ 545));
+  }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+};
 var _default = {
   data: function data() {
     return {
+      showAIPanel: false,
       messages: [],
       // 消息列表
       inputText: '',
@@ -206,10 +171,40 @@ var _default = {
       scrollTop: 0,
       // 滚动位置
       isRecording: false,
-      tempFilePath: ''
+      tempFilePath: '',
+      dir: 1,
+      tabBarList: [{
+        "pagePath": "pages/tabBar/home/index",
+        "text": "首页"
+      }, {
+        "pagePath": "pages/tabBar/order/index",
+        "text": "订单"
+      }, {
+        "pagePath": "pages/tabBar/customer/index",
+        "text": "客户"
+      }]
     };
   },
+  computed: {
+    // 计算属性，返回当前方向的文本
+    dirText: function dirText() {
+      return this.dir == 1 ? '左' : '右';
+    }
+  },
+  components: {
+    moFab: moFab,
+    moFabTab: moFabTab
+  },
   methods: {
+    // 发送消息
+    handleFabClick: function handleFabClick() {
+      console.log('Fab clicked, current showAIPanel:', this.showAIPanel);
+    },
+    // 发送消息
+    handlePanelToggle: function handlePanelToggle(state) {
+      console.log('Panel state:', state);
+      this.showAIPanel = state;
+    },
     // 发送消息
     sendMessage: function sendMessage() {
       var _this = this;
@@ -227,7 +222,7 @@ var _default = {
                 return _context.abrupt("return");
               case 2:
                 // 获取或创建会话
-                session = uni.getStorageSync('qianfan_session'); // 如果没有会话，创建一个新的会话
+                session = uni.getStorageSync('qianfan_session');
                 if (!(!((_session = session) !== null && _session !== void 0 && _session.conversation_id) || !((_session2 = session) !== null && _session2 !== void 0 && _session2.request_id))) {
                   _context.next = 16;
                   break;
@@ -258,7 +253,6 @@ var _default = {
                 console.error('会话创建失败:', _context.t0);
                 return _context.abrupt("return");
               case 16:
-                // 发送消息逻辑
                 userMessage = {
                   role: 'user',
                   content: _this.inputText,
@@ -276,10 +270,8 @@ var _default = {
                   data: {
                     query: question,
                     conversation_id: session.conversation_id
-                    // request_id: session.request_id
                   },
-
-                  timeout: 60000 // 增加前端调用超时时间（单位：毫秒）
+                  timeout: 60000
                 });
               case 25:
                 _yield$uniCloud$callF2 = _context.sent;
@@ -291,8 +283,6 @@ var _default = {
                     content: aiResponse,
                     time: _this.getCurrentTime()
                   });
-
-                  // 更新会话信息
                   if ((_result$data = _result.data) !== null && _result$data !== void 0 && _result$data.conversation_id) {
                     session.conversation_id = _result.data.conversation_id;
                     uni.setStorageSync('qianfan_session', session);
@@ -328,6 +318,10 @@ var _default = {
       uni.startRecord({
         success: function success(res) {
           _this2.tempFilePath = res.tempFilePath;
+        },
+        fail: function fail(err) {
+          console.error('录音失败:', err);
+          _this2.isRecording = false;
         }
       });
     },
@@ -341,38 +335,59 @@ var _default = {
               case 0:
                 _this3.isRecording = false;
                 uni.stopRecord();
-
-                // 上传语音文件
-                _context2.next = 4;
+                _context2.prev = 2;
+                _context2.next = 5;
                 return uniCloud.uploadFile({
                   filePath: _this3.tempFilePath,
                   cloudPath: "voice/".concat(Date.now(), ".wav")
                 });
-              case 4:
+              case 5:
                 res = _context2.sent;
-                _context2.next = 7;
+                _context2.next = 8;
                 return uniCloud.callFunction({
                   name: 'speech-to-text',
                   data: {
                     fileID: res.fileID
                   }
                 });
-              case 7:
+              case 8:
                 _yield$uniCloud$callF3 = _context2.sent;
                 result = _yield$uniCloud$callF3.result;
                 if (!(result.code === 0)) {
-                  _context2.next = 13;
+                  _context2.next = 16;
                   break;
                 }
+                // 将识别结果添加到消息列表
+                _this3.messages.push({
+                  role: 'user',
+                  content: result.text,
+                  time: _this3.getCurrentTime()
+                });
+
+                // 自动发送识别结果
                 _this3.inputText = result.text;
-                _context2.next = 13;
+                _context2.next = 15;
                 return _this3.sendMessage();
-              case 13:
+              case 15:
+                // 滚动到底部显示最新消息
+                _this3.scrollToBottom();
+              case 16:
+                _context2.next = 22;
+                break;
+              case 18:
+                _context2.prev = 18;
+                _context2.t0 = _context2["catch"](2);
+                console.error('语音识别失败:', _context2.t0);
+                uni.showToast({
+                  title: '语音识别失败',
+                  icon: 'none'
+                });
+              case 22:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2);
+        }, _callee2, null, [[2, 18]]);
       }))();
     },
     // 获取当前时间（HH:MM）

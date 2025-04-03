@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "mo-fab": "/components/mo-fab/mo-fab"
+  }
+}

@@ -105,7 +105,7 @@ var components
 try {
   components = {
     uniPay: function () {
-      return Promise.all(/*! import() | uni_modules/uni-pay/components/uni-pay/uni-pay */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-pay/components/uni-pay/uni-pay")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-pay/components/uni-pay/uni-pay.vue */ 791))
+      return Promise.all(/*! import() | uni_modules/uni-pay/components/uni-pay/uni-pay */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-pay/components/uni-pay/uni-pay")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-pay/components/uni-pay/uni-pay.vue */ 805))
     },
   }
 } catch (e) {

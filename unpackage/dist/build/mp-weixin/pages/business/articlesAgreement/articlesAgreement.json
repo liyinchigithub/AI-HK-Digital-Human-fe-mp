@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "平台入驻服务协议",
-  "enablePullDownRefresh": false,
-  "usingComponents": {
-    "u-overlay": "/uni_modules/uview-ui/components/u-overlay/u-overlay"
-  }
-}

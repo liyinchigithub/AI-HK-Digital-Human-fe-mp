@@ -103,10 +103,10 @@ var components
 try {
   components = {
     uniPay: function () {
-      return Promise.all(/*! import() | uni_modules/uni-pay/components/uni-pay/uni-pay */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-pay/components/uni-pay/uni-pay")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-pay/components/uni-pay/uni-pay.vue */ 791))
+      return Promise.all(/*! import() | uni_modules/uni-pay/components/uni-pay/uni-pay */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-pay/components/uni-pay/uni-pay")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-pay/components/uni-pay/uni-pay.vue */ 805))
     },
     updateFile: function () {
-      return __webpack_require__.e(/*! import() | components/updateFile/updateFile */ "components/updateFile/updateFile").then(__webpack_require__.bind(null, /*! @/components/updateFile/updateFile.vue */ 856))
+      return __webpack_require__.e(/*! import() | components/updateFile/updateFile */ "components/updateFile/updateFile").then(__webpack_require__.bind(null, /*! @/components/updateFile/updateFile.vue */ 868))
     },
   }
 } catch (e) {
@@ -174,7 +174,7 @@ var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 32));
 var updateFile = function updateFile() {
   __webpack_require__.e(/*! require.ensure | components/updateFile/updateFile */ "components/updateFile/updateFile").then((function () {
-    return resolve(__webpack_require__(/*! ../../../components/updateFile/updateFile.vue */ 856));
+    return resolve(__webpack_require__(/*! ../../../components/updateFile/updateFile.vue */ 868));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {

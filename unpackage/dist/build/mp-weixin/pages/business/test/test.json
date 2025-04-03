@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "测试",
-  "enablePullDownRefresh": false,
-  "usingComponents": {
-    "uni-pay": "/uni_modules/uni-pay/components/uni-pay/uni-pay",
-    "update-file": "/components/updateFile/updateFile"
-  }
-}

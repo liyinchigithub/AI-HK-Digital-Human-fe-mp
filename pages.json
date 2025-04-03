@@ -12,7 +12,7 @@
 			"path": "pages/home/home",
 			"style": {
 				"navigationBarTitleText": "上上吉",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": false
 			}
 		},
 		{

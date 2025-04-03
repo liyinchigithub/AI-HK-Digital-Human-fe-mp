@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "入驻协议条款",
-  "enablePullDownRefresh": false,
-  "usingComponents": {
-    "u-overlay": "/uni_modules/uview-ui/components/u-overlay/u-overlay",
-    "u-divider": "/uni_modules/uview-ui/components/u-divider/u-divider"
-  }
-}
