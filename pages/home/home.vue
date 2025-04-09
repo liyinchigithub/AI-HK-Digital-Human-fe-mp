@@ -13,7 +13,6 @@
 			</view>
 			<view v-if="loading" class="loading-text">AI正在思考中...</view>
 		</scroll-view>
-
 		<!-- 输入区域 -->
 		<view class="input-area">
 			<input class="input" v-model="inputText" placeholder="请输入问题" @confirm="sendMessage" :disabled="loading" />
@@ -27,18 +26,25 @@
 				<image src="/static/ai语音管家.png" style="width: 60rpx; height: 60rpx;"></image>
 			</template>
 			<template #ai-content>
-				<scroll-view class="ai-message-list" scroll-y>
-					<view v-for="(item, index) in messages" :key="index" class="message-item"
-						:class="[item.role === 'user' ? 'user-message' : 'ai-message']">
-						<view class="message-content">
-							{{ item.content }}
+				<view class="ai-panel-content">
+					<scroll-view class="ai-message-list" scroll-y :style="{ maxHeight: isExpanded ? 'none' : '70vh' }">
+						<view v-for="(item, index) in aiPanelMessages" :key="index" class="message-item">
+							<view class="message-content"
+								:class="{ collapsed: !isExpanded && index < aiPanelMessages.length - 1 }">
+								{{ item.content }}
+							</view>
 						</view>
+					</scroll-view>
+
+					<!-- 添加展开/收起控制 -->
+					<view v-if="aiPanelMessages.length > 1" class="expand-control" @click="isExpanded = !isExpanded">
+						{{ isExpanded ? '收起' : '展开历史记录' }}
 					</view>
-				</scroll-view>
-				<button class="voice-btn" @touchstart="startVoiceInput" @touchend="endVoiceInput"
-					:class="{ recording: isRecording }">
-					<!-- <image src="/static/mic-icon.png" style="width: 40rpx; height: 40rpx;"></image> -->
-				</button>
+
+					<!-- 修改语音按钮定位 -->
+					<button class="voice-btn" @touchstart="startVoiceInput" @touchend="endVoiceInput"
+						:class="{ recording: isRecording }"></button>
+				</view>
 			</template>
 		</moFab>
 
@@ -52,27 +58,16 @@ export default {
 	data() {
 		return {
 			showAIPanel: false,
-			messages: [], // 消息列表
+			messages: [], // 主界面消息列表
+			aiPanelMessages: [], // 改为只存储最新AI回复
 			inputText: '', // 输入内容
 			loading: false, // 加载状态
 			scrollTop: 0, // 滚动位置
 			isRecording: false,
 			tempFilePath: '',
 			dir: 1,
-			tabBarList: [
-				{
-					"pagePath": "pages/tabBar/home/index",
-					"text": "首页"
-				},
-				{
-					"pagePath": "pages/tabBar/order/index",
-					"text": "订单"
-				},
-				{
-					"pagePath": "pages/tabBar/customer/index",
-					"text": "客户"
-				}
-			]
+			isExpanded: false, // 展开状态控制
+
 		};
 	},
 	computed: {
@@ -83,7 +78,7 @@ export default {
 	},
 	components: {
 		moFab,
-		moFabTab
+		moFabTab,
 	},
 	methods: {
 		// 发送消息
@@ -105,7 +100,10 @@ export default {
 				try {
 					const { result } = await uniCloud.callFunction({
 						name: 'qianfan-chat',
-						data: { action: 'create_session' }
+						data: {
+							action: 'create_session',
+							baseUrl: uni.getStorageSync('baseUrl') || 'https://qianfan.baidubce.com' // 添加baseUrl参数
+						}
 					});
 
 					if (result.code === 0) {
@@ -138,17 +136,26 @@ export default {
 					data: {
 						query: question,
 						conversation_id: session.conversation_id,
+						baseUrl: uni.getStorageSync('baseUrl') || 'https://qianfan.baidubce.com' // 添加baseUrl参数
 					},
 					timeout: 60000
 				});
 
 				if (result.code === 0) {
 					const aiResponse = result.data.response || '未收到有效回复';
+					// 主界面保留完整对话
 					this.messages.push({
 						role: 'ai',
 						content: aiResponse,
 						time: this.getCurrentTime()
 					});
+
+					// 弹窗只保留最新AI回复
+					this.aiPanelMessages = [{
+						role: 'ai',
+						content: aiResponse,
+						time: this.getCurrentTime()
+					}];
 
 					if (result.data?.conversation_id) {
 						session.conversation_id = result.data.conversation_id;
@@ -166,13 +173,42 @@ export default {
 				this.scrollToBottom();
 			}
 		},
+		// 新增检查音频文件的方法
+		async checkAudioFile(filePath) {
+			try {
+				console.log('正在检查文件:', filePath);
+				const fileInfo = await uni.getFileInfo({
+					filePath: filePath
+				});
+				console.log('音频文件信息:', fileInfo);
 
+				if (fileInfo.errMsg === 'getFileInfo:ok') {
+					const audio = uni.createInnerAudioContext();
+					audio.src = filePath;
+					audio.onError((e) => {
+						console.error('音频播放失败:', e);
+					});
+					audio.play();
+					console.log('尝试播放音频...');
+				} else {
+					console.error('文件检查失败:', fileInfo.errMsg);
+				}
+			} catch (e) {
+				console.error('文件检查异常:', e);
+			}
+		},
 		// 语音处理方法
 		startVoiceInput() {
 			this.isRecording = true;
 			uni.startRecord({
+				format: 'silk', // 改为silk格式以匹配实际生成的文件
+				sampleRate: 16000, // 设置采样率
+				numberOfChannels: 1, // 单声道
 				success: res => {
+					console.log('录音成功，临时文件路径:', res.tempFilePath);
 					this.tempFilePath = res.tempFilePath;
+					// 立即检查文件是否存在
+					this.checkAudioFile(res.tempFilePath);
 				},
 				fail: (err) => {
 					console.error('录音失败:', err);
@@ -183,13 +219,21 @@ export default {
 
 		async endVoiceInput() {
 			this.isRecording = false;
-			uni.stopRecord();
+			uni.stopRecord({
+				success: () => {
+					console.log('录音已停止，文件路径:', this.tempFilePath); // 添加日志
+					// 可以在这里添加文件检查逻辑
+					this.checkAudioFile(this.tempFilePath);
+				}
+			});
 
 			try {
+				console.log('开始上传文件...');
 				const res = await uniCloud.uploadFile({
 					filePath: this.tempFilePath,
 					cloudPath: `voice/${Date.now()}.wav`
 				});
+				console.log('文件上传结果:', res); // 检查文件是否上传成功
 
 				const { result } = await uniCloud.callFunction({
 					name: 'speech-to-text',
@@ -203,7 +247,7 @@ export default {
 						content: result.text,
 						time: this.getCurrentTime()
 					});
-
+					this.aiPanelMessages.push(msg); // 新增
 					// 自动发送识别结果
 					this.inputText = result.text;
 					await this.sendMessage();
@@ -264,6 +308,7 @@ export default {
 }
 
 .message-content {
+	padding-top: 10rpx; /* 增加内容顶部间距 */
 	padding: 20rpx;
 	border-radius: 10rpx;
 	font-size: 28rpx;
@@ -371,35 +416,58 @@ export default {
 }
 
 .ai-panel-content {
-	flex: 1;
-	padding: 20rpx;
-	display: flex;
-	flex-direction: column;
+  position: static;  /* 修改定位方式 */
+  height: 80vh;
+  padding: 0 20rpx 150rpx; 
+  display: flex;
+  flex-direction: column;
 }
 
 .ai-message-list {
-	flex: 1;
-	margin-bottom: 20rpx;
+  flex: 1;
+  padding-top: 0; /* 移除顶部间距 */
+}
+
+.message-item {
+	margin: 0 0 20rpx; /* 调整外边距 */
+  	width: 100%;
+}
+
+/* 消息内容折叠效果 */
+.message-content.collapsed {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 80rpx;
+  transition: all 0.3s;
+}
+
+/* 展开控制按钮 */
+.expand-control {
+  text-align: center;
+  color: #007AFF;
+  padding: 10rpx;
+  font-size: 24rpx;
 }
 
 .voice-btn {
-	align-self: center;
-	margin-top: 70%;
-	width: 150rpx;
-	height: 150rpx;
-	border-radius: 50%;
-	/* 修改为与mo-fab相同的渐变效果 */
-	background: linear-gradient(90deg, #CD56FF, #833AD6);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border: 4rpx solid rgba(250, 121, 255, 0.8);
-	box-shadow: 0px 7rpx 18rpx 0px rgba(107, 14, 195, 0.38);
-	/* 保留语音图标样式 */
-	background-image: url('/static/语音.png');
-	background-size: 80rpx 80rpx;
-	background-position: center;
-	background-repeat: no-repeat;
+  position: fixed;
+  bottom: 120rpx;  /* 增加底部间距 */
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #CD56FF, #833AD6);
+  border: 4rpx solid rgba(250, 121, 255, 0.8);
+  box-shadow: 0px 7rpx 18rpx 0px rgba(107, 14, 195, 0.38);
+  background-image: url('/static/语音.png');
+  background-size: 80rpx 80rpx;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 9999;  /* 提升层级 */
 }
 
 .voice-btn.recording {
@@ -413,16 +481,14 @@ export default {
 }
 
 @keyframes pulse {
-	0% {
-		transform: scale(1);
-	}
-
-	50% {
-		transform: scale(1.1);
-	}
-
-	100% {
-		transform: scale(1);
-	}
-}
+  0% {
+    transform: translateX(-50%) scale(1); /* 保持定位转换 */
+  }
+  50% {
+    transform: translateX(-50%) scale(1.1); /* 合并转换属性 */
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+  }
 </style>

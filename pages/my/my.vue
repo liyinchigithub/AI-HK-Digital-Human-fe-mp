@@ -84,6 +84,13 @@
 				<view class="text">关于我们</view>
 				<image class="to" :src="baseUrl + 'arrow.png'"></image>
 			</view>
+			<view class="li" @tap="aiDigitalHuman">
+				<view class="icon">
+					<image :src="baseUrl + 'about.png'"></image>
+				</view>
+				<view class="text">ai数字人</view>
+				<image class="to" :src="baseUrl + 'arrow.png'"></image>
+			</view>
 			<view class="li" @tap="logout">
 				<view class="icon">
 					<image :src="baseUrl + 'logout.png'"></image>

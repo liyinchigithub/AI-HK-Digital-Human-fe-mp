@@ -12,14 +12,21 @@
 			"path": "pages/home/home",
 			"style": {
 				"navigationBarTitleText": "上上吉",
-				"enablePullDownRefresh": false
+				"enablePullDownRefresh": true
 			}
 		},
 		{
 			"path": "pages/home/home2",
 			"style": {
-				"navigationBarTitleText": "ali",
+				"navigationBarTitleText": "",
 				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/aiDeigtalHuman/aiDeigtalHuman",
+			"style": {
+				"navigationBarTitleText": "AI数字人",
+				"enablePullDownRefresh": false
 			}
 		},
 		{
@@ -29,45 +36,6 @@
 				"enablePullDownRefresh": true
 			}
 
-		},
-		{
-			"path": "pages/order/order",
-			"style": {
-				"navigationBarTitleText": "订单",
-				"enablePullDownRefresh": true
-			}
-		},
-		{
-			"path": "pages/list/list",
-			"style": {
-				// #ifndef APP-PLUS
-				"enablePullDownRefresh": true,
-				// #endif
-				"navigationStyle": "custom"
-			}
-		}, {
-			"path": "pages/list/search/search",
-			"style": {
-				"navigationBarTitleText": "搜索"
-			}
-		}, {
-			"path": "pages/list/detail",
-			"style": {
-				"app-plus": {
-					"titleNView": {
-						"buttons": [{
-							"type": "share"
-						}],
-						"type": "transparent"
-					}
-				},
-				"h5": {
-					"titleNView": {
-						"type": "transparent"
-					}
-				},
-				"navigationBarTitleText": "文章详情"
-			}
 		},
 		{
 			"path": "pages/common/webview/webview",
@@ -173,25 +141,6 @@
 			}
 		},
 		{
-			"path": "pages/goods/goods",
-			"style": {
-				"navigationBarTitleText": "商品",
-				"enablePullDownRefresh": false
-			}
-
-		}, {
-			"path": "pages/classification/classification",
-			"style": {
-				"navigationBarTitleText": "全部服务",
-				"enablePullDownRefresh": false
-			}
-		},
-		{
-			"path": "pages/worker/worker",
-			"style": {
-				"navigationBarTitleText": "理疗师"
-			}
-		}, {
 			"path": "uni_modules/uni-pay/pages/pay-desk/pay-desk",
 			"style": {
 				"backgroundColor": "#F8F8F8",
@@ -220,14 +169,7 @@
 	}],
 	"subPackages": [{
 		"root": "pages/business/",
-		"pages": [{
-				"path": "orderDetail/orderDetail",
-				"style": {
-					"navigationBarTitleText": "订单详情",
-					"enablePullDownRefresh": false
-				}
-
-			},
+		"pages": [
 			{
 				"path": "payOrder/payOrder",
 				"style": {
@@ -239,14 +181,6 @@
 				"style": {
 					"navigationBarTitleText": "支付结果"
 				}
-			}, {
-				"path": "address/address",
-				"style": {
-					"navigationBarTitleText": "我的地址",
-					"enablePullDownRefresh": true
-
-				}
-
 			}, {
 				"path": "webView/webView",
 				"style": {
@@ -263,56 +197,18 @@
 
 			},
 			{
-				"path": "settleInAgreement/settleInAgreement",
-				"style": {
-					"navigationBarTitleText": "入驻协议条款",
-					"enablePullDownRefresh": false
-				}
-
-			},
-			{
 				"path": "login/login",
 				"style": {
 					"navigationBarTitleText": "登录",
 					"enablePullDownRefresh": false
 				}
 			},
-			{
-				"path": "notice/notice",
-				"style": {
-					"navigationBarTitleText": "我的消息",
-					"enablePullDownRefresh": true
-					// "navigationStyle": "custom", // 隐藏系统导航栏
-					// "navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
-				}
-			},
-			{
-				"path": "myCollect/myCollect",
-				"style": {
-					"navigationBarTitleText": "我的收藏",
-					"enablePullDownRefresh": true
-					// "navigationStyle": "custom", // 隐藏系统导航栏
-					// "navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
-				}
-			}, {
-				"path": "notice/noticeDetail",
-				"style": {
-					"navigationBarTitleText": "消息详情",
-					"enablePullDownRefresh": true
-				}
-			}, {
+			 {
 				"path": "test/test",
 				"style": {
 					"navigationBarTitleText": "测试",
 					"enablePullDownRefresh": false
 				}
-			}, {
-				"path": "coupon/coupon",
-				"style": {
-					"navigationBarTitleText": "我的优惠券",
-					"enablePullDownRefresh": false
-				}
-
 			}, {
 				"path": "pay/pay",
 				"style": {
@@ -320,75 +216,6 @@
 					"enablePullDownRefresh": false
 				}
 
-			},
-			{
-				"path": "goodsDetail/goodsDetail",
-				"style": {
-					"navigationBarTitleText": "商品详情",
-					"enablePullDownRefresh": false
-				}
-
-			},
-			{
-				"path": "workerDetail/workerDetail",
-				"style": {
-					"navigationBarTitleText": "理疗师介绍",
-					"enablePullDownRefresh": false
-				}
-
-			},
-			{
-				"path": "search/search",
-				"style": {
-					"navigationBarTitleText": "搜索",
-					"enablePullDownRefresh": false
-				}
-
-			}, {
-				"path": "releaseInfo/releaseInfo",
-				"style": {
-					"navigationBarTitleText": "发布",
-					"enablePullDownRefresh": false
-				}
-
-			}, {
-				"path": "cityJoin/cityJoin",
-				"style": {
-					"navigationBarTitleText": "城市加盟",
-					"enablePullDownRefresh": false
-				}
-
-			}, {
-				"path": "recruit/recruit",
-				"style": {
-					"navigationBarTitleText": "理疗师招募",
-					"enablePullDownRefresh": false
-				}
-
-			}, {
-				"path": "brand/brand",
-				"style": {
-					"navigationBarTitleText": "品牌",
-					"enablePullDownRefresh": true
-				}
-
-			}, {
-				"path": "IndividualCenter/IndividualCenter",
-				"style": {
-					"navigationBarTitleText": "个人中心",
-					"enablePullDownRefresh": false
-				}
-
-			}, {
-				"path": "comments/comments",
-				"style": {
-					"navigationBarTitleText": "评价"
-				}
-			}, {
-				"path": "shareCommission/shareCommission",
-				"style": {
-					"navigationBarTitleText": "分享赚佣金"
-				}
 			},
 			{
 				"path": "about/about",
@@ -413,13 +240,6 @@
 			"style" : 
 			{
 				"navigationBarTitleText" : "服务协议"
-			}
-		},
-		{
-			"path" : "privacyPolicy/privacyPolicy",
-			"style" : 
-			{
-				"navigationBarTitleText" : "隐私政策"
 			}
 		},
 		{
@@ -476,20 +296,14 @@
 				"pagePath": "pages/home/home2",
 				"iconPath": "static/image/ai.png",
 				"selectedIconPath": "static/image/aiSelected.png",
-				"text": "ali"
+				"text": ""
 			}, 
-			// {
-			// 	"pagePath": "pages/order/order",
-			// 	"iconPath": "static/image/order.png",
-			// 	"selectedIconPath": "static/image/orderSelected.png",
-			// 	"text": "订单"
-			// },
-			// {
-			// 	"pagePath": "pages/classification/classification",
-			// 	"iconPath": "static/image/classification.png",
-			// 	"selectedIconPath": "static/image/classificationSelected.png",
-			// 	"text": "分类"
-			// }, 
+			{
+				"pagePath": "pages/aiDeigtalHuman/aiDeigtalHuman",
+				"iconPath": "static/image/order.png",
+				"selectedIconPath": "static/image/orderSelected.png",
+				"text": "数字人"
+			},
 			{
 				"pagePath": "pages/my/my",
 				"iconPath": "static/image/my.png",

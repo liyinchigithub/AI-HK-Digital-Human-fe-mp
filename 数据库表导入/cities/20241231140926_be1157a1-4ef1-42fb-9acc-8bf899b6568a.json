@@ -1,6 +1,0 @@
-{"_id":{"$oid":"677365c199c624a18a88fe18"},"isEnable":true,"cityName":"厦门市","desc":"","sort":3,"updated":1735615937507,"created":1735615937507}
-{"_id":{"$oid":"677365cd4b92470799c30143"},"isEnable":true,"cityName":"福州市","desc":"","sort":2,"updated":1735615949258,"created":1735615949258}
-{"_id":{"$oid":"677365d3b9fb23aa9f1f2e2a"},"isEnable":true,"cityName":"泉州市","desc":"","sort":6,"updated":1735615955619,"created":1735615955619}
-{"_id":{"$oid":"677365e37ae7087edd16fe40"},"isEnable":true,"cityName":"漳州市","desc":"","sort":4,"updated":1735615971104,"created":1735615971104}
-{"_id":{"$oid":"677365ea55b337bf52074ded"},"isEnable":true,"cityName":"三明市","desc":"","sort":5,"updated":1735615978195,"created":1735615978195}
-{"_id":{"$oid":"6773846ea7c43229e57c9cc6"},"isEnable":true,"cityName":"宁德市","desc":"","sort":1,"updated":1735623790906,"created":1735623790906}

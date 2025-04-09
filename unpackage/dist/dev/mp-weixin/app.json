@@ -2,53 +2,29 @@
   "pages": [
     "pages/home/home",
     "pages/home/home2",
+    "pages/aiDeigtalHuman/aiDeigtalHuman",
     "pages/my/my",
-    "pages/order/order",
-    "pages/list/list",
-    "pages/list/search/search",
-    "pages/list/detail",
     "pages/common/webview/webview",
     "uni_modules/uni-feedback/pages/opendb-feedback/opendb-feedback",
     "uni_modules/uni-pay/pages/success/success",
     "uni_modules/uni-pay/pages/ad-interactive-webview/ad-interactive-webview",
-    "pages/goods/goods",
-    "pages/classification/classification",
-    "pages/worker/worker",
     "uni_modules/uni-pay/pages/pay-desk/pay-desk"
   ],
   "subPackages": [
     {
       "root": "pages/business/",
       "pages": [
-        "orderDetail/orderDetail",
         "payOrder/payOrder",
         "payOrderResult/payOrderResult",
-        "address/address",
         "webView/webView",
         "articlesAgreement/articlesAgreement",
-        "settleInAgreement/settleInAgreement",
         "login/login",
-        "notice/notice",
-        "myCollect/myCollect",
-        "notice/noticeDetail",
         "test/test",
-        "coupon/coupon",
         "pay/pay",
-        "goodsDetail/goodsDetail",
-        "workerDetail/workerDetail",
-        "search/search",
-        "releaseInfo/releaseInfo",
-        "cityJoin/cityJoin",
-        "recruit/recruit",
-        "brand/brand",
-        "IndividualCenter/IndividualCenter",
-        "comments/comments",
-        "shareCommission/shareCommission",
         "about/about",
         "feedback/feedback",
         "feedback/feedbackRecord",
         "serviceAgreement/serviceAgreement",
-        "privacyPolicy/privacyPolicy",
         "disclaimer/disclaimer"
       ]
     }
@@ -78,7 +54,13 @@
         "pagePath": "pages/home/home2",
         "iconPath": "static/image/ai.png",
         "selectedIconPath": "static/image/aiSelected.png",
-        "text": "ali"
+        "text": ""
+      },
+      {
+        "pagePath": "pages/aiDeigtalHuman/aiDeigtalHuman",
+        "iconPath": "static/image/order.png",
+        "selectedIconPath": "static/image/orderSelected.png",
+        "text": "数字人"
       },
       {
         "pagePath": "pages/my/my",

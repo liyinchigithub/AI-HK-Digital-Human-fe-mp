@@ -60,10 +60,10 @@ export default {
           method: 'POST',
           header: {
             'Content-Type': 'application/json',
-            'Cookie': 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDM5MTAyMjcsInVpZCI6MX0.T_R6-qar4YY7GsZh0iIE9psjw0XmeGB29CqIAI9KnOU'
+            'token': `${uni.getStorageSync('token')}`
           },
-          withCredentials: true, // 跨域凭证
-          timeout: 15000,
+          withCredentials: isH5Dev, // 跨域凭证
+          timeout: 60000,
           data: {
             messages: [{ role: 'user', content: question }],
             stream: false

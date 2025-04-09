@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "上上吉",
-  "enablePullDownRefresh": false,
+  "enablePullDownRefresh": true,
   "usingComponents": {
     "mo-fab": "/components/mo-fab/mo-fab",
     "mo-fab-tab": "/components/mo-fab/mo-fab-tabbar"

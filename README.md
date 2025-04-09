@@ -21,6 +21,7 @@
 
 ## 百度千帆appBuilder
 
+[百度千帆-数字人网站嵌入](https://cloud.baidu.com/doc/AppBuilder/s/hm202zkxz)
 ### 使用前需要：
 1. 在uniCloud 云函数speech-to-text和qianfan-chat配置好百度智能云的语音识别和对话接口
 2. 在百度智能云控制台开通「短语音识别」服务

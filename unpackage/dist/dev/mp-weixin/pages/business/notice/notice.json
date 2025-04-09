@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "我的消息",
-  "enablePullDownRefresh": true,
-  "usingComponents": {
-    "u-empty": "/uni_modules/uview-ui/components/u-empty/u-empty",
-    "u-row": "/uni_modules/uview-ui/components/u-row/u-row",
-    "u-col": "/uni_modules/uview-ui/components/u-col/u-col"
-  }
-}

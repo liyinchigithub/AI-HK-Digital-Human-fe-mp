@@ -106,6 +106,29 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var l0 = _vm.__map(_vm.aiPanelMessages, function (item, index) {
+    var $orig = _vm.__get_orig(item)
+    var g0 = !_vm.isExpanded && index < _vm.aiPanelMessages.length - 1
+    return {
+      $orig: $orig,
+      g0: g0,
+    }
+  })
+  var g1 = _vm.aiPanelMessages.length
+  if (!_vm._isMounted) {
+    _vm.e0 = function ($event) {
+      _vm.isExpanded = !_vm.isExpanded
+    }
+  }
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        l0: l0,
+        g1: g1,
+      },
+    }
+  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -150,12 +173,12 @@ var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 32));
 var moFab = function moFab() {
   __webpack_require__.e(/*! require.ensure | components/mo-fab/mo-fab */ "components/mo-fab/mo-fab").then((function () {
-    return resolve(__webpack_require__(/*! @/components/mo-fab/mo-fab.vue */ 538));
+    return resolve(__webpack_require__(/*! @/components/mo-fab/mo-fab.vue */ 341));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var moFabTab = function moFabTab() {
   __webpack_require__.e(/*! require.ensure | components/mo-fab/mo-fab-tabbar */ "components/mo-fab/mo-fab-tabbar").then((function () {
-    return resolve(__webpack_require__(/*! @/components/mo-fab/mo-fab-tabbar.vue */ 545));
+    return resolve(__webpack_require__(/*! @/components/mo-fab/mo-fab-tabbar.vue */ 348));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {
@@ -163,7 +186,9 @@ var _default = {
     return {
       showAIPanel: false,
       messages: [],
-      // 消息列表
+      // 主界面消息列表
+      aiPanelMessages: [],
+      // 改为只存储最新AI回复
       inputText: '',
       // 输入内容
       loading: false,
@@ -173,18 +198,10 @@ var _default = {
       isRecording: false,
       tempFilePath: '',
       dir: 1,
-      tabBarList: [{
-        "pagePath": "pages/tabBar/home/index",
-        "text": "首页"
-      }, {
-        "pagePath": "pages/tabBar/order/index",
-        "text": "订单"
-      }, {
-        "pagePath": "pages/tabBar/customer/index",
-        "text": "客户"
-      }]
+      isExpanded: false // 展开状态控制
     };
   },
+
   computed: {
     // 计算属性，返回当前方向的文本
     dirText: function dirText() {
@@ -232,7 +249,8 @@ var _default = {
                 return uniCloud.callFunction({
                   name: 'qianfan-chat',
                   data: {
-                    action: 'create_session'
+                    action: 'create_session',
+                    baseUrl: uni.getStorageSync('baseUrl') || 'https://qianfan.baidubce.com' // 添加baseUrl参数
                   }
                 });
               case 7:
@@ -269,20 +287,29 @@ var _default = {
                   name: 'qianfan-chat',
                   data: {
                     query: question,
-                    conversation_id: session.conversation_id
+                    conversation_id: session.conversation_id,
+                    baseUrl: uni.getStorageSync('baseUrl') || 'https://qianfan.baidubce.com' // 添加baseUrl参数
                   },
+
                   timeout: 60000
                 });
               case 25:
                 _yield$uniCloud$callF2 = _context.sent;
                 _result = _yield$uniCloud$callF2.result;
                 if (_result.code === 0) {
-                  aiResponse = _result.data.response || '未收到有效回复';
+                  aiResponse = _result.data.response || '未收到有效回复'; // 主界面保留完整对话
                   _this.messages.push({
                     role: 'ai',
                     content: aiResponse,
                     time: _this.getCurrentTime()
                   });
+
+                  // 弹窗只保留最新AI回复
+                  _this.aiPanelMessages = [{
+                    role: 'ai',
+                    content: aiResponse,
+                    time: _this.getCurrentTime()
+                  }];
                   if ((_result$data = _result.data) !== null && _result$data !== void 0 && _result$data.conversation_id) {
                     session.conversation_id = _result.data.conversation_id;
                     uni.setStorageSync('qianfan_session', session);
@@ -311,13 +338,64 @@ var _default = {
         }, _callee, null, [[4, 12], [21, 30, 33, 37]]);
       }))();
     },
+    // 新增检查音频文件的方法
+    checkAudioFile: function checkAudioFile(filePath) {
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
+        var fileInfo, audio;
+        return _regenerator.default.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.prev = 0;
+                console.log('正在检查文件:', filePath);
+                _context2.next = 4;
+                return uni.getFileInfo({
+                  filePath: filePath
+                });
+              case 4:
+                fileInfo = _context2.sent;
+                console.log('音频文件信息:', fileInfo);
+                if (fileInfo.errMsg === 'getFileInfo:ok') {
+                  audio = uni.createInnerAudioContext();
+                  audio.src = filePath;
+                  audio.onError(function (e) {
+                    console.error('音频播放失败:', e);
+                  });
+                  audio.play();
+                  console.log('尝试播放音频...');
+                } else {
+                  console.error('文件检查失败:', fileInfo.errMsg);
+                }
+                _context2.next = 12;
+                break;
+              case 9:
+                _context2.prev = 9;
+                _context2.t0 = _context2["catch"](0);
+                console.error('文件检查异常:', _context2.t0);
+              case 12:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2, null, [[0, 9]]);
+      }))();
+    },
     // 语音处理方法
     startVoiceInput: function startVoiceInput() {
       var _this2 = this;
       this.isRecording = true;
       uni.startRecord({
+        format: 'silk',
+        // 改为silk格式以匹配实际生成的文件
+        sampleRate: 16000,
+        // 设置采样率
+        numberOfChannels: 1,
+        // 单声道
         success: function success(res) {
+          console.log('录音成功，临时文件路径:', res.tempFilePath);
           _this2.tempFilePath = res.tempFilePath;
+          // 立即检查文件是否存在
+          _this2.checkAudioFile(res.tempFilePath);
         },
         fail: function fail(err) {
           console.error('录音失败:', err);
@@ -327,34 +405,42 @@ var _default = {
     },
     endVoiceInput: function endVoiceInput() {
       var _this3 = this;
-      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3() {
         var res, _yield$uniCloud$callF3, result;
-        return _regenerator.default.wrap(function _callee2$(_context2) {
+        return _regenerator.default.wrap(function _callee3$(_context3) {
           while (1) {
-            switch (_context2.prev = _context2.next) {
+            switch (_context3.prev = _context3.next) {
               case 0:
                 _this3.isRecording = false;
-                uni.stopRecord();
-                _context2.prev = 2;
-                _context2.next = 5;
+                uni.stopRecord({
+                  success: function success() {
+                    console.log('录音已停止，文件路径:', _this3.tempFilePath); // 添加日志
+                    // 可以在这里添加文件检查逻辑
+                    _this3.checkAudioFile(_this3.tempFilePath);
+                  }
+                });
+                _context3.prev = 2;
+                console.log('开始上传文件...');
+                _context3.next = 6;
                 return uniCloud.uploadFile({
                   filePath: _this3.tempFilePath,
                   cloudPath: "voice/".concat(Date.now(), ".wav")
                 });
-              case 5:
-                res = _context2.sent;
-                _context2.next = 8;
+              case 6:
+                res = _context3.sent;
+                console.log('文件上传结果:', res); // 检查文件是否上传成功
+                _context3.next = 10;
                 return uniCloud.callFunction({
                   name: 'speech-to-text',
                   data: {
                     fileID: res.fileID
                   }
                 });
-              case 8:
-                _yield$uniCloud$callF3 = _context2.sent;
+              case 10:
+                _yield$uniCloud$callF3 = _context3.sent;
                 result = _yield$uniCloud$callF3.result;
                 if (!(result.code === 0)) {
-                  _context2.next = 16;
+                  _context3.next = 19;
                   break;
                 }
                 // 将识别结果添加到消息列表
@@ -363,31 +449,31 @@ var _default = {
                   content: result.text,
                   time: _this3.getCurrentTime()
                 });
-
+                _this3.aiPanelMessages.push(msg); // 新增
                 // 自动发送识别结果
                 _this3.inputText = result.text;
-                _context2.next = 15;
+                _context3.next = 18;
                 return _this3.sendMessage();
-              case 15:
+              case 18:
                 // 滚动到底部显示最新消息
                 _this3.scrollToBottom();
-              case 16:
-                _context2.next = 22;
+              case 19:
+                _context3.next = 25;
                 break;
-              case 18:
-                _context2.prev = 18;
-                _context2.t0 = _context2["catch"](2);
-                console.error('语音识别失败:', _context2.t0);
+              case 21:
+                _context3.prev = 21;
+                _context3.t0 = _context3["catch"](2);
+                console.error('语音识别失败:', _context3.t0);
                 uni.showToast({
                   title: '语音识别失败',
                   icon: 'none'
                 });
-              case 22:
+              case 25:
               case "end":
-                return _context2.stop();
+                return _context3.stop();
             }
           }
-        }, _callee2, null, [[2, 18]]);
+        }, _callee3, null, [[2, 21]]);
       }))();
     },
     // 获取当前时间（HH:MM）

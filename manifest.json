@@ -117,17 +117,33 @@
 		},
 		"devServer": {
 			"proxy": {
-				"/api": { 
+				"/api": {
 					"target": "https://homechat-effassits-popgjiyphu.cn-hangzhou.fcapp.run",
 					"changeOrigin": true,
 					"secure": false,
 					"pathRewrite": {
-						"^/api/v1/chat/completions": "/v1/chat/completions"
+						"^/api": ""
+					}
+				},
+				"/ai_apaas/": {
+					"target": "https://agi-dev-platform-web.bj.bcebos.com",
+					"changeOrigin": true,
+					"secure": false,
+					"pathRewrite": {
+						"^/ai_apaas": ""
 					}
 				}
 			}
 		},
 		"sdkConfigs": {
+			"security": {
+				"contentSecurityPolicy": {
+					"default-src": "'self' https://agi-dev-platform-web.bj.bcebos.com http://10.224.7.243:8080",
+					"script-src": "'self' 'unsafe-inline' 'unsafe-eval' https://agi-dev-platform-web.bj.bcebos.com http://10.224.7.243:8080",
+					"connect-src": "'self' wss://* https://agi-dev-platform-web.bj.bcebos.com http://10.224.7.243:8080",
+					"frame-src": "'self' http://10.224.7.243:8080"
+				}
+			},
 			"maps": {
 				"qqmap": {
 					"key": ""
