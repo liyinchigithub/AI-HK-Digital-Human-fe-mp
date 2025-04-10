@@ -108,24 +108,17 @@ var render = function () {
   var _c = _vm._self._c || _h
   var l0 = _vm.__map(_vm.aiPanelMessages, function (item, index) {
     var $orig = _vm.__get_orig(item)
-    var g0 = !_vm.isExpanded && index < _vm.aiPanelMessages.length - 1
+    var g0 = !_vm.isExpanded && index < _vm.aiPanelMessages.length - 2
     return {
       $orig: $orig,
       g0: g0,
     }
   })
-  var g1 = _vm.aiPanelMessages.length
-  if (!_vm._isMounted) {
-    _vm.e0 = function ($event) {
-      _vm.isExpanded = !_vm.isExpanded
-    }
-  }
   _vm.$mp.data = Object.assign(
     {},
     {
       $root: {
         l0: l0,
-        g1: g1,
       },
     }
   )
@@ -306,6 +299,11 @@ var _default = {
 
                   // 弹窗只保留最新AI回复
                   _this.aiPanelMessages = [{
+                    role: 'user',
+                    content: question,
+                    // 使用发送时的question变量
+                    time: _this.getCurrentTime()
+                  }, {
                     role: 'ai',
                     content: aiResponse,
                     time: _this.getCurrentTime()
@@ -480,6 +478,10 @@ var _default = {
     getCurrentTime: function getCurrentTime() {
       var now = new Date();
       return "".concat(now.getHours(), ":").concat(now.getMinutes().toString().padStart(2, '0'));
+    },
+    handleClosePanel: function handleClosePanel() {
+      this.showAIPanel = false;
+      console.log('关闭弹窗，当前状态：', this.showAIPanel);
     },
     // 滚动到底部
     scrollToBottom: function scrollToBottom() {

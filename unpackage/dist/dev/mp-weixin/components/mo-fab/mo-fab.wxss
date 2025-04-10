@@ -43,8 +43,7 @@
   flex-direction: column;
 }
 .ai-panel-header.data-v-0cae30c4 {
-  height: 30%;
-  position: relative;
+  height: 2%;
 }
 .ai-gif.data-v-0cae30c4 {
   width: 100%;

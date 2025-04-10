@@ -30,10 +30,9 @@
 		</view>
 		<!-- 新增AI弹窗面板 -->
 		<view class="ai-panel" v-if="showAIPanel">
-			<view class="ai-panel-header">
-				<image class="ai-gif" src="/static/ai-animation.gif" mode="aspectFit"></image>
+			<!-- <view class="ai-panel-header">
 				<view class="close-btn" @click.stop="toggleAIPanel">×</view>
-			</view>
+			</view> -->
 			<view class="ai-panel-content">
 				<slot name="ai-content"></slot>
 			</view>
@@ -270,8 +269,8 @@ export default {
 }
 
 .ai-panel-header {
-	height: 30%;
-	position: relative;
+	height: 2%;
+	// position: relative;
 }
 
 .ai-gif {

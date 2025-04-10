@@ -284,20 +284,6 @@ exports.default = void 0;
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default = {
   data: function data() {
     return {
@@ -309,16 +295,16 @@ var _default = {
       isLoggedIn: false,
       showPopup: false,
       tabList: [{
-        name: "我的收藏",
+        name: "收藏",
         icon: "collect.png"
       }, {
-        name: "我优惠券",
+        name: "优惠券",
         icon: "coupon.png"
       }, {
-        name: "我的积分",
+        name: "吉币",
         icon: "points.png"
       }, {
-        name: "我的消息",
+        name: "消息",
         icon: "notice.png"
       }],
       hasUnreadMessages: false // 是否有未读消息
@@ -341,9 +327,14 @@ var _default = {
       var userInfo = uni.getStorageSync("userInfo");
       this.nickName = userInfo.nickName || "";
       this.openID = uni.getStorageSync("openID");
-      this.phoneNumber = uni.getStorageSync("phoneNumber");
-      this.isLoggedIn = !!this.openID;
-      this.avatarSrc = this.isLoggedIn ? userInfo.avatarUrl : this.baseUrl + 'avatar.png';
+      this.token = uni.getStorageSync("token");
+      this.phoneNumber = uni.getStorageSync("phoneNumber") || "未绑定手机"; // 手机号获取
+
+      this.isLoggedIn = !!this.token; // 修改为用token判断登录状态
+      this.avatarSrc = this.isLoggedIn ? '/static/avatar.png' : this.baseUrl + 'avatar.png'; // 修改头像路径
+
+      // this.isLoggedIn = !!this.openID;
+      // this.avatarSrc = this.isLoggedIn ? userInfo.avatarUrl : this.baseUrl + 'avatar.png';
     },
     // 分享赚佣金
     shareCommission: function shareCommission() {
@@ -552,13 +543,13 @@ var _default = {
   },
   onShareAppMessage: function onShareAppMessage() {
     return {
-      title: "师傅服务平台-用户端",
+      title: "好服务就用上上吉",
       path: "/pages/home/home"
     };
   },
   onShareTimeline: function onShareTimeline() {
     return {
-      title: "师傅服务平台-用户端",
+      title: "好服务就用上上吉",
       imageUrl: "https://mp-e51575a6-5952-4ad5-bb31-45ff909d7f65.cdn.bspapp.com/cloudstorage/c89fedc8-0f75-4e8e-b151-ce90a17e7ce3.jpg"
     };
   }

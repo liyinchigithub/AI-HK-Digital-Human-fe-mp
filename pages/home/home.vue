@@ -15,31 +15,34 @@
 		</scroll-view>
 		<!-- 输入区域 -->
 		<view class="input-area">
-			<input class="input" v-model="inputText" placeholder="请输入问题" @confirm="sendMessage" :disabled="loading" />
-
-			<button class="send-button" @click="sendMessage" :disabled="loading">
-				{{ loading ? '发送中...' : '发送' }}
-			</button>
+				<input class="input" v-model="inputText" placeholder="请输入问题" @confirm="sendMessage"
+					:disabled="loading" />
+				<button class="send-button" @click="sendMessage" :disabled="loading">
+					{{ loading ? '发送中...' : '发送' }}
+				</button>
 		</view>
+
 		<moFab v-model:showPanel="showAIPanel" @click="handleFabClick" @panel-toggle="handlePanelToggle">
 			<template #content>
 				<image src="/static/ai语音管家.png" style="width: 60rpx; height: 60rpx;"></image>
 			</template>
 			<template #ai-content>
 				<view class="ai-panel-content">
+					<view class="close-btn" @tap="handleClosePanel">×</view>
 					<scroll-view class="ai-message-list" scroll-y :style="{ maxHeight: isExpanded ? 'none' : '70vh' }">
-						<view v-for="(item, index) in aiPanelMessages" :key="index" class="message-item">
+						<view v-for="(item, index) in aiPanelMessages" :key="index" class="message-item"
+							:class="[item.role === 'user' ? 'user-message' : 'ai-message']">
 							<view class="message-content"
-								:class="{ collapsed: !isExpanded && index < aiPanelMessages.length - 1 }">
+								:class="{ collapsed: !isExpanded && index < aiPanelMessages.length - 2 }">
 								{{ item.content }}
 							</view>
 						</view>
 					</scroll-view>
 
 					<!-- 添加展开/收起控制 -->
-					<view v-if="aiPanelMessages.length > 1" class="expand-control" @click="isExpanded = !isExpanded">
+					<!-- <view v-if="aiPanelMessages.length > 1" class="expand-control" @click="isExpanded = !isExpanded">
 						{{ isExpanded ? '收起' : '展开历史记录' }}
-					</view>
+					</view> -->
 
 					<!-- 修改语音按钮定位 -->
 					<button class="voice-btn" @touchstart="startVoiceInput" @touchend="endVoiceInput"
@@ -151,11 +154,17 @@ export default {
 					});
 
 					// 弹窗只保留最新AI回复
-					this.aiPanelMessages = [{
-						role: 'ai',
-						content: aiResponse,
-						time: this.getCurrentTime()
-					}];
+					this.aiPanelMessages = [
+						{
+							role: 'user',
+							content: question,  // 使用发送时的question变量
+							time: this.getCurrentTime()
+						},
+						{
+							role: 'ai',
+							content: aiResponse,
+							time: this.getCurrentTime()
+						}];
 
 					if (result.data?.conversation_id) {
 						session.conversation_id = result.data.conversation_id;
@@ -268,7 +277,10 @@ export default {
 			const now = new Date();
 			return `${now.getHours()}:${now.getMinutes().toString().padStart(2, '0')}`;
 		},
-
+		handleClosePanel() {
+			this.showAIPanel = false;
+			console.log('关闭弹窗，当前状态：', this.showAIPanel);
+		},
 		// 滚动到底部
 		scrollToBottom() {
 			this.$nextTick(() => {
@@ -308,7 +320,8 @@ export default {
 }
 
 .message-content {
-	padding-top: 10rpx; /* 增加内容顶部间距 */
+	padding-top: 10rpx;
+	/* 增加内容顶部间距 */
 	padding: 20rpx;
 	border-radius: 10rpx;
 	font-size: 28rpx;
@@ -316,13 +329,6 @@ export default {
 	word-break: break-word;
 }
 
-.input-area {
-	display: flex;
-	padding: 20rpx;
-	background-color: #fff;
-	border-top: 1rpx solid #eee;
-	width: 100vw;
-}
 
 .user-message {
 	margin-left: auto;
@@ -348,31 +354,37 @@ export default {
 	text-align: right;
 }
 
+.input-area {
+  display: flex;
+  padding: 20rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #eee;
+}
+
 .input {
-	flex: 1;
-	border: 1rpx solid #ddd;
-	border-radius: 40rpx;
-	padding: 15rpx 30rpx;
-	margin-right: 15rpx;
+  flex: 1;
+  border: 1rpx solid #ddd;
+  border-radius: 40rpx;
+  padding: 15rpx 30rpx;
+  margin-right: 20rpx;  
 }
 
 .send-button {
-	background-color: #007AFF;
-	color: white;
-	border-radius: 40rpx;
-	padding: 0 30rpx;
-	min-width: 120rpx;
-	transition: opacity 0.3s;
+  background-color: #007AFF;
+  color: white;
+  border-radius: 40rpx;
+  padding: 0 40rpx;
+  transition: opacity 0.3s;
 }
 
 .send-button[disabled] {
-	opacity: 0.6;
+  opacity: 0.6;
 }
 
 .loading-text {
-	color: #999;
-	text-align: center;
-	padding: 20rpx;
+  color: #999;
+  text-align: center;
+  padding: 20rpx;
 }
 
 /* AI悬浮窗口样式 */
@@ -381,8 +393,8 @@ export default {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 80%;
-	height: 70%;
+	width: 90%;
+	height: 85%;
 	background: white;
 	border-radius: 20rpx;
 	box-shadow: 0 0 30rpx rgba(0, 0, 0, 0.2);
@@ -416,58 +428,88 @@ export default {
 }
 
 .ai-panel-content {
-  position: static;  /* 修改定位方式 */
-  height: 80vh;
-  padding: 0 20rpx 150rpx; 
-  display: flex;
-  flex-direction: column;
+	position: relative;
+	height: 90vh;
+	padding: 0 20rpx 150rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* 新增垂直居中 */
 }
 
 .ai-message-list {
-  flex: 1;
-  padding-top: 0; /* 移除顶部间距 */
+	width: 100%;
+	/* 使用全宽 */
+	padding: 0 20rpx;
+	/* 添加左右内边距 */
+	max-height: 80vh !important;
 }
 
 .message-item {
-	margin: 0 0 20rpx; /* 调整外边距 */
-  	width: 100%;
+	margin: 0 0 20rpx;
+	/* 调整外边距 */
+	width: 100%;
 }
 
-/* 消息内容折叠效果 */
+/* 弹窗用户消息样式 */
+.ai-panel-content .user-message .message-content {
+	background: transparent !important;
+	/* 移除背景 */
+	border: none !important;
+	/* 移除边框 */
+	color: #2B85E4;
+	margin: 10rpx 0;
+	/* 简化边距 */
+	padding: 10rpx;
+	/* 减少内边距 */
+	box-shadow: none !important;
+	/* 移除阴影 */
+}
+
+/* 弹窗AI消息样式 */
+.ai-panel-content .ai-message .message-content {
+	background: transparent !important;
+	border: none !important;
+	color: #333;
+	margin: 10rpx 0;
+	padding: 10rpx;
+	box-shadow: none !important;
+}
+
+/* 调整折叠条件 */
 .message-content.collapsed {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-height: 80rpx;
-  transition: all 0.3s;
+	-webkit-line-clamp: 3;
+	/* 显示更多行数 */
+	max-height: 120rpx;
 }
 
 /* 展开控制按钮 */
 .expand-control {
-  text-align: center;
-  color: #007AFF;
-  padding: 10rpx;
-  font-size: 24rpx;
+	text-align: center;
+	color: #007AFF;
+	padding: 10rpx;
+	font-size: 24rpx;
 }
 
 .voice-btn {
-  position: fixed;
-  bottom: 120rpx;  /* 增加底部间距 */
-  left: 50%;
-  transform: translateX(-50%) scale(1);
-  width: 150rpx;
-  height: 150rpx;
-  border-radius: 50%;
-  background: linear-gradient(90deg, #CD56FF, #833AD6);
-  border: 4rpx solid rgba(250, 121, 255, 0.8);
-  box-shadow: 0px 7rpx 18rpx 0px rgba(107, 14, 195, 0.38);
-  background-image: url('/static/语音.png');
-  background-size: 80rpx 80rpx;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 9999;  /* 提升层级 */
+	position: fixed;
+	margin-top: 20rpx;
+	bottom: 40rpx;
+	/* 增加底部间距 */
+	left: 50%;
+	transform: translateX(-50%) scale(1);
+	width: 150rpx;
+	height: 150rpx;
+	border-radius: 50%;
+	background: linear-gradient(90deg, #CD56FF, #833AD6);
+	border: 4rpx solid rgba(250, 121, 255, 0.8);
+	box-shadow: 0px 7rpx 18rpx 0px rgba(107, 14, 195, 0.38);
+	background-image: url('/static/语音.png');
+	background-size: 80rpx 80rpx;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 9999;
+	/* 提升层级 */
 }
 
 .voice-btn.recording {
@@ -481,14 +523,18 @@ export default {
 }
 
 @keyframes pulse {
-  0% {
-    transform: translateX(-50%) scale(1); /* 保持定位转换 */
-  }
-  50% {
-    transform: translateX(-50%) scale(1.1); /* 合并转换属性 */
-  }
-  100% {
-    transform: translateX(-50%) scale(1);
-  }
-  }
+	0% {
+		transform: translateX(-50%) scale(1);
+		/* 保持定位转换 */
+	}
+
+	50% {
+		transform: translateX(-50%) scale(1.1);
+		/* 合并转换属性 */
+	}
+
+	100% {
+		transform: translateX(-50%) scale(1);
+	}
+}
 </style>

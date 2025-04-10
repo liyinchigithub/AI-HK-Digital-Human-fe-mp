@@ -282,6 +282,7 @@ var _default = {
                 // 判断登录是否成功
                 if (res[1].data.code === 0) {
                   uni.setStorageSync('token', res[1].data.data);
+                  uni.setStorageSync('phoneNumber', _this.phone); // 新增手机号
                   uni.switchTab({
                     url: '/pages/home/home'
                   });
