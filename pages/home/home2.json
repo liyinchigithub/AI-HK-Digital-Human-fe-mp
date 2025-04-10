@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "adaptive-card": "/node_modules/adaptivecards-vue/dist/adaptive-card.vue"
+  }
+}

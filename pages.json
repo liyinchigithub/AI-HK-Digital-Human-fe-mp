@@ -6,6 +6,12 @@
 		// npm安装方式
 		// "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
 	},
+	"plugins": {
+		"WechatSI": {
+			"version": "0.3.1",
+			"provider": "wx069ba97219f66d99"
+		}
+	},
 	"pages": [
 		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
@@ -25,6 +31,7 @@
 		{
 			"path": "pages/aiDeigtalHuman/aiDeigtalHuman",
 			"style": {
+				"navigationStyle": "custom",
 				"navigationBarTitleText": "AI数字人",
 				"enablePullDownRefresh": false
 			}
@@ -35,7 +42,6 @@
 				"navigationBarTitleText": "个人中心",
 				"enablePullDownRefresh": true
 			}
-
 		},
 		{
 			"path": "pages/common/webview/webview",
@@ -43,7 +49,6 @@
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-
 		},
 		{
 			"path": "uni_modules/uni-feedback/pages/opendb-feedback/opendb-feedback",
@@ -133,7 +138,8 @@
 				"backgroundColor": "#F8F8F8",
 				"navigationBarTitleText": "支付成功"
 			}
-		}, {
+		},
+		{
 			"path": "uni_modules/uni-pay/pages/ad-interactive-webview/ad-interactive-webview",
 			"style": {
 				"backgroundColor": "#F8F8F8",
@@ -147,112 +153,112 @@
 				"navigationBarTitleText": "收银台"
 			}
 		}
-		
 	],
-	"subPackages": [{
-		"root": "uni_modules/uni-pay/pages",
-		"pages": [{
-				"path": "success/success",
-				"style": {
-					"navigationBarTitleText": "支付成功",
-					"backgroundColor": "#F8F8F8"
-				}
-			},
-			{
-				"path": "ad-interactive-webview/ad-interactive-webview",
-				"style": {
-					"navigationBarTitleText": "ad",
-					"backgroundColor": "#F8F8F8"
-				}
-			}
-		]
-	}],
-	"subPackages": [{
-		"root": "pages/business/",
-		"pages": [
-			{
-				"path": "payOrder/payOrder",
-				"style": {
-					"navigationBarTitleText": "支付页面"
-				}
-			},
-			{
-				"path": "payOrderResult/payOrderResult",
-				"style": {
-					"navigationBarTitleText": "支付结果"
-				}
-			}, {
-				"path": "webView/webView",
-				"style": {
-					"navigationBarTitleText": "",
-					"enablePullDownRefresh": false
-				}
-
-			}, {
-				"path": "articlesAgreement/articlesAgreement",
-				"style": {
-					"navigationBarTitleText": "平台入驻服务协议",
-					"enablePullDownRefresh": false
-				}
-
-			},
-			{
-				"path": "login/login",
-				"style": {
-					"navigationBarTitleText": "登录",
-					"enablePullDownRefresh": false
-				}
-			},
-			 {
-				"path": "test/test",
-				"style": {
-					"navigationBarTitleText": "测试",
-					"enablePullDownRefresh": false
-				}
-			}, {
-				"path": "pay/pay",
-				"style": {
-					"navigationBarTitleText": "支付",
-					"enablePullDownRefresh": false
-				}
-
-			},
-			{
-				"path": "about/about",
-				"style": {
-					"navigationBarTitleText": "关于我们"
-				}
-			},
-			{
-				"path": "feedback/feedback",
-				"style": {
-					"navigationBarTitleText": "意见反馈"
-				}
-			},
-			{
-				"path": "feedback/feedbackRecord",
-				"style": {
-					"navigationBarTitleText": "意见反馈记录"
-				}
-			},
+	"subPackages": [
 		{
-			"path" : "serviceAgreement/serviceAgreement",
-			"style" : 
-			{
-				"navigationBarTitleText" : "服务协议"
-			}
-		},
-		{
-			"path" : "disclaimer/disclaimer",
-			"style" : 
-			{
-				"navigationBarTitleText" : "责任声明"
-			}
+			"root": "uni_modules/uni-pay/pages",
+			"pages": [
+				{
+					"path": "success/success",
+					"style": {
+						"navigationBarTitleText": "支付成功",
+						"backgroundColor": "#F8F8F8"
+					}
+				},
+				{
+					"path": "ad-interactive-webview/ad-interactive-webview",
+					"style": {
+						"navigationBarTitleText": "ad",
+						"backgroundColor": "#F8F8F8"
+					}
+				}
+			]
 		}
-
-		]
-	}],
-
+	],
+	"subPackages": [
+		{
+			"root": "pages/business/",
+			"pages": [
+				{
+					"path": "payOrder/payOrder",
+					"style": {
+						"navigationBarTitleText": "支付页面"
+					}
+				},
+				{
+					"path": "payOrderResult/payOrderResult",
+					"style": {
+						"navigationBarTitleText": "支付结果"
+					}
+				},
+				{
+					"path": "webView/webView",
+					"style": {
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "articlesAgreement/articlesAgreement",
+					"style": {
+						"navigationBarTitleText": "平台入驻服务协议",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "login/login",
+					"style": {
+						"navigationBarTitleText": "登录",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "test/test",
+					"style": {
+						"navigationBarTitleText": "测试",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "pay/pay",
+					"style": {
+						"navigationBarTitleText": "支付",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "about/about",
+					"style": {
+						"navigationBarTitleText": "关于我们"
+					}
+				},
+				{
+					"path": "feedback/feedback",
+					"style": {
+						"navigationBarTitleText": "意见反馈"
+					}
+				},
+				{
+					"path": "feedback/feedbackRecord",
+					"style": {
+						"navigationBarTitleText": "意见反馈记录"
+					}
+				},
+				{
+					"path": "serviceAgreement/serviceAgreement",
+					"style": {
+						"navigationBarTitleText": "服务协议"
+					}
+				},
+				{
+					"path": "disclaimer/disclaimer",
+					"style": {
+						"navigationBarTitleText": "责任声明"
+					}
+				}
+			]
+		}
+	],
 	"globalStyle": {
 		// #ifdef H5
 		"h5": {
@@ -270,9 +276,11 @@
 		// "rpxCalcIncludeWidth":0
 	},
 	"condition": {
-		"list": [{
+		"list": [
+			{
 				"path": "pages/list/detail"
-			}, {
+			},
+			{
 				"path": "pages/list/list"
 			},
 			{
@@ -286,24 +294,25 @@
 		"selectedColor": "#71d5a1",
 		"borderStyle": "black",
 		"backgroundColor": "#FFFFFF",
-		"list": [{
+		"list": [
+			{
 				"pagePath": "pages/home/home",
 				"iconPath": "static/image/home.png",
 				"selectedIconPath": "static/image/homeSelected.png",
 				"text": "首页"
-			}, 
+			},
 			{
 				"pagePath": "pages/home/home2",
 				"iconPath": "static/image/ai.png",
 				"selectedIconPath": "static/image/aiSelected.png",
 				"text": ""
-			}, 
-			{
-				"pagePath": "pages/aiDeigtalHuman/aiDeigtalHuman",
-				"iconPath": "static/image/order.png",
-				"selectedIconPath": "static/image/orderSelected.png",
-				"text": "数字人"
 			},
+			// {
+			// 	"pagePath": "pages/aiDeigtalHuman/aiDeigtalHuman",
+			// 	"iconPath": "static/image/order.png",
+			// 	"selectedIconPath": "static/image/orderSelected.png",
+			// 	"text": "数字人"
+			// },
 			{
 				"pagePath": "pages/my/my",
 				"iconPath": "static/image/my.png",

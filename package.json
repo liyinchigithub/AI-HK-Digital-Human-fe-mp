@@ -1,9 +1,9 @@
 {
-    "id": "Madman-tabBar",
-    "name": "自定义底部导航 tabBar 凸起展示效果",
-    "displayName": "自定义底部导航 tabBar 凸起展示效果",
+    "id": "AI-HK-Digital-Human-fe-mp",
+    "name": "AI-HK-Digital-Human-fe-mp",
+    "displayName": "AI数字人",
     "version": "1.0.0",
-    "description": "自定义底部导航样式，IOS底部黑条适配，两种文字展示样式，自定义是否凸起样式",
+    "description": "AI数字人",
     "keywords": [
         "底部导航",
         "tabBar",
@@ -14,5 +14,9 @@
             "前端组件",
             "通用组件"
         ]
+    },
+    "dependencies": {
+        "adaptivecards": "^3.0.5",
+		"adaptivecards-vue": "^1.4.0"
     }
 }

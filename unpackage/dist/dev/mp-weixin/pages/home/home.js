@@ -166,12 +166,12 @@ var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 32));
 var moFab = function moFab() {
   __webpack_require__.e(/*! require.ensure | components/mo-fab/mo-fab */ "components/mo-fab/mo-fab").then((function () {
-    return resolve(__webpack_require__(/*! @/components/mo-fab/mo-fab.vue */ 341));
+    return resolve(__webpack_require__(/*! @/components/mo-fab/mo-fab.vue */ 339));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var moFabTab = function moFabTab() {
   __webpack_require__.e(/*! require.ensure | components/mo-fab/mo-fab-tabbar */ "components/mo-fab/mo-fab-tabbar").then((function () {
-    return resolve(__webpack_require__(/*! @/components/mo-fab/mo-fab-tabbar.vue */ 348));
+    return resolve(__webpack_require__(/*! @/components/mo-fab/mo-fab-tabbar.vue */ 346));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {

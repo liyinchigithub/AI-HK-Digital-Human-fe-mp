@@ -16,6 +16,8 @@
 
     <!-- 输入区域 -->
     <view class="input-area">
+      <button class="voice-btn" @touchstart="startRecord" @touchend="stopRecord"
+        :class="{ recording: isRecording }"></button>
       <input class="input" v-model="inputText" placeholder="请输入问题" @confirm="sendMessage" :disabled="loading" />
       <button class="send-button" @click="sendMessage" :disabled="loading">
         {{ loading ? '发送中...' : '发送' }}
@@ -25,6 +27,12 @@
 </template>
 
 <script>
+// 修改插件引入方式
+let manager = null;
+if (uni.getSystemInfoSync().platform === 'mp-weixin') {
+  const plugin = requirePlugin("WechatSI");
+  manager = plugin.getRecordRecognitionManager();
+}
 export default {
   data() {
     return {
@@ -32,6 +40,7 @@ export default {
       inputText: '',      // 输入内容
       loading: false,     // 加载状态
       scrollTop: 0,       // 滚动位置
+      isRecording: false, // 录音状态
     };
   },
   methods: {
@@ -44,91 +53,89 @@ export default {
         time: this.getCurrentTime()
       };
       this.messages.push(userMessage);
-      const question = this.inputText;
       this.inputText = '';
       this.scrollToBottom();
 
       try {
         this.loading = true;
-        // 修改环境判断逻辑
-        const isH5Dev = process.env.NODE_ENV === 'development' && uni.getSystemInfoSync().platform === 'h5';
+        // 创建AI消息占位
+        const aiMessage = {
+          role: 'ai',
+          content: '',
+          time: this.getCurrentTime()
+        };
+        this.messages.push(aiMessage);
+        const aiIndex = this.messages.length - 1;
 
-        const [err, res] = await uni.request({
-          url: isH5Dev
-            ? '/api/v1/chat/completions'  // 仅H5开发环境使用代理
-            : 'https://homechat-effassits-popgjiyphu.cn-hangzhou.fcapp.run/v1/chat/completions',
+        const requestTask = uni.request({
+          url: 'https://homechat-effassits-popgjiyphu.cn-hangzhou.fcapp.run/v1/chat/completions',
           method: 'POST',
           header: {
             'Content-Type': 'application/json',
-            'token': `${uni.getStorageSync('token')}`
+            'token': uni.getStorageSync('token') || '',
+            'Accept': 'text/event-stream',
+            'Accept-Charset': 'utf-8'
           },
-          withCredentials: isH5Dev, // 跨域凭证
-          timeout: 60000,
           data: {
-            messages: [{ role: 'user', content: question }],
-            stream: false
+            messages: [{ role: 'user', content: userMessage.content }],
+            stream: true
+          },
+          enableChunked: true,
+          success: (res) => {
+            console.log('请求成功:', res);
+            if (!res.data) {
+              this.handleError('响应数据为空');
+              return;
+            }
+
+            // 判断是否为H5环境（非流式数据）
+            if (typeof res.data === 'string') {
+              this.processH5Response(res.data, aiIndex);
+              return;
+            }
+
+            // 微信小程序流式处理
+            if (res.data && typeof res.data.on === 'function') {
+              let buffer = '';
+              const decoder = new TextDecoder('utf-8');
+
+              res.data.on('data', (chunk) => {
+                try {
+                  const text = decoder.decode(chunk, { stream: true });
+                  buffer += text;
+                  this.processStreamData(buffer, aiIndex);
+                } catch (e) {
+                  console.error('处理数据块出错:', e);
+                }
+              });
+
+              res.data.on('end', () => {
+                this.loading = false;
+              });
+
+              res.data.on('error', (err) => {
+                this.handleError('数据流错误');
+              });
+            }
+          },
+          fail: (err) => {
+            this.handleError(`请求失败: ${err.errMsg}`);
           }
         });
-        // 添加网络诊断日志
-        console.log('当前环境:', process.env.NODE_ENV)
 
-        if (err) {
-          throw { errMsg: `请求失败: ${err.errMsg}` };
-        }
-
-        // 处理HTTP状态码错误
-        if (res.statusCode !== 200) {
-          throw {
-            errMsg: `HTTP错误: ${res.statusCode}`,
-            data: res.data // 传递原始响应数据
-          };
-        }
-
-        const data = res.data;  // 获取响应数据
-
-        // 处理业务逻辑错误
-        if (!data.choices?.[0]?.message?.content) {
-          throw { data: { errorMessage: '无效的响应格式' } };
-        }
-        // 新增响应处理逻辑
-        const responseContent = data.choices[0].message.content;
-        const [thinkPart, answerPart] = this.parseResponse(responseContent);
-
-        // 添加思考消息
-        if (thinkPart) {
-          this.messages.push({
-            role: 'think',
-            content: thinkPart,
-            time: this.getCurrentTime()
-          });
-        }
-
-        // 添加回答消息
-        this.messages.push({
-          role: 'ai',
-          content: answerPart || responseContent, // 兼容无标记的情况
-          time: this.getCurrentTime()
-        });
+        this.requestTask = requestTask;
       } catch (error) {
-        const errorMessage = error.data?.errorMessage || error.errMsg || '请求失败';
-        this.messages.push({
-          role: 'ai',
-          content: `出错啦：${errorMessage}`,
-          time: this.getCurrentTime()
-        });
-      } finally {
-        this.loading = false;
-        this.scrollToBottom();
+        console.error('捕获到异常:', error);
+        this.handleError(`系统错误: ${error.message}`);
       }
     },
 
-    // 获取当前时间（HH:MM）
+    // 其他方法保持不变
     getCurrentTime() {
       const now = new Date();
       return `${now.getHours()}:${now.getMinutes().toString().padStart(2, '0')}`;
     },
 
-    // 滚动到底部
     scrollToBottom() {
       this.$nextTick(() => {
         const query = uni.createSelectorQuery().in(this);
@@ -139,31 +146,102 @@ export default {
           }
         });
       });
-    },
-    // 新增响应解析方法
-    parseResponse(content) {
-      try {
-        // 优化后的正则表达式，支持跨行匹配和标签格式变化
-        const thinkPattern = /think\s*([\s\S]*?)\s*answer/i;
-        const answerPattern = /answer\s*([\s\S]*)/i;
+    },// 修改语音识别管理器初始化
+    initVoiceManager() {
+      if (uni.getSystemInfoSync().platform === 'mp-weixin' && manager) {
+        manager.onStart = (res) => {
+          console.log("成功开始录音识别", res);
+        };
 
-        const thinkMatch = content.match(thinkPattern);
-        const answerMatch = content.match(answerPattern);
+        manager.onStop = (res) => {
+          console.log("录音文件路径:", res.tempFilePath);
+          console.log("识别结果:", res.result);
+          if (res.result) {
+            this.inputText = res.result;
+            this.sendMessage();
+          }
+        };
 
-        return [
-          thinkMatch ? thinkMatch[1].trim() : null,
-          answerMatch ? answerMatch[1].trim() : content
-        ];
-      } catch {
-        return [null, content];
+        manager.onError = (res) => {
+          console.error("语音识别错误:", res.msg);
+          uni.showToast({
+            title: '语音识别失败',
+            icon: 'none'
+          });
+        };
       }
+    },
+    processStreamData(buffer, aiIndex) {
+      let currentContent = this.messages[aiIndex].content || '';
+      // 使用正则表达式分割多个换行符
+      const events = buffer.split(/\n\n+/);
+      buffer = events.pop() || '';
+
+      events.forEach(event => {
+        if (event.startsWith('data: ')) {
+          const data = event.substring(6).trim();
+          if (data === '[DONE]') {
+            this.loading = false;
+            return;
+          }
+
+          try {
+            const json = JSON.parse(data);
+            const content = json.choices?.[0]?.delta?.content || '';
+            if (content) {
+              currentContent += content;
+              this.messages[aiIndex].content = currentContent;
+              // 每次拼接后强制刷新视图
+              this.$nextTick(() => {
+                this.$forceUpdate();
+                this.scrollToBottom();
+              });
+            }
+          } catch (e) {
+            console.error('解析JSON失败:', e, '原始数据:', data);
+          }
+        }
+      });
+    },
+
+    processH5Response(data, aiIndex) {
+      let accumulatedContent = '';
+      // 使用正则表达式分割多个换行符
+      const events = data.split(/\n\n+/);
+
+      events.forEach(event => {
+        if (event.startsWith('data: ')) {
+          const jsonStr = event.substring(6).trim();
+          if (jsonStr === '[DONE]') {
+            this.loading = false;
+            return;
+          }
+
+          try {
+            const json = JSON.parse(jsonStr);
+            const content = json.choices?.[0]?.delta?.content || '';
+            if (content) {
+              accumulatedContent += content;
+              this.messages[aiIndex].content = accumulatedContent;
+              this.$forceUpdate();
+              this.scrollToBottom();
+            }
+          } catch (e) {
+            console.error('解析JSON失败:', e, '原始数据:', jsonStr);
+          }
+        }
+      });
+      this.loading = false;
     }
+  },
+  mounted() {
+    this.initVoiceManager();
   }
 }
 </script>
 
 <style scoped>
-/* 从home.vue复制的样式 */
+/* 样式部分保持不变 */
 .container {
   height: 100vh;
   display: flex;
@@ -209,20 +287,16 @@ export default {
   text-align: right;
 }
 
-/* 新增思考消息样式 */
 .think-message .message-content {
   background-color: #fff3d4 !important;
-  /* 浅黄色背景 */
   border: 1rpx solid #ffe6b3;
 }
 
-/* 调整消息项样式 */
 .message-item[class*="-message"] {
   margin: 20rpx 0;
   max-width: 90%;
 }
 
-/* 修改AI消息最大宽度 */
 .ai-message {
   max-width: 85%;
 }
@@ -258,5 +332,47 @@ export default {
   color: #999;
   text-align: center;
   padding: 20rpx;
+}
+
+.voice-btn {
+  position: fixed;
+  margin-top: 20rpx;
+  bottom: 40rpx;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #CD56FF, #833AD6);
+  border: 4rpx solid rgba(250, 121, 255, 0.8);
+  box-shadow: 0px 7rpx 18rpx 0px rgba(107, 14, 195, 0.38);
+  background-image: url('/static/语音.png');
+  background-size: 80rpx 80rpx;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 9999;
+}
+
+.voice-btn.recording {
+  background: #ff4d4d;
+  animation: pulse 1.5s infinite;
+  background-image: url('/static/语音.png');
+  background-size: 80rpx 80rpx;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+
+  50% {
+    transform: translateX(-50%) scale(1.1);
+  }
+
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
 }
 </style>

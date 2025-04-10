@@ -1,1 +1,1 @@
-<view class="render-content"><block wx:if="{{isH5}}"><view data-ref="embedContainer" class="h5-container vue-ref"><block wx:if="{{loading}}"><view class="loading-mask"><text class="loading-text">AI助手加载中...</text></view></block></view></block><web-view class="web-view" src="{{renderUrl}}" webview-styles="titleNView:{autoBack: false, titleText: '慷慷AI助手'}"></web-view></view>
+<view style="height:100vh;width:100vw;position:fixed;top:0;left:0;z-index:9999;isolation:isolate;contain:strict;" id="appbuilder-container" class="_div"></view>

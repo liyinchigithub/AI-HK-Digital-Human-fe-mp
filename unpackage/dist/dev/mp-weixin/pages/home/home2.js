@@ -147,7 +147,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 29));
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 32));
 //
 //
@@ -175,6 +174,15 @@ var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/r
 //
 //
 //
+//
+//
+
+// 修改插件引入方式
+var manager = null;
+if (uni.getSystemInfoSync().platform === 'mp-weixin') {
+  var plugin = requirePlugin("WechatSI");
+  manager = plugin.getRecordRecognitionManager();
+}
 var _default = {
   data: function data() {
     return {
@@ -184,7 +192,9 @@ var _default = {
       // 输入内容
       loading: false,
       // 加载状态
-      scrollTop: 0 // 滚动位置
+      scrollTop: 0,
+      // 滚动位置
+      isRecording: false // 录音状态
     };
   },
 
@@ -192,7 +202,7 @@ var _default = {
     sendMessage: function sendMessage() {
       var _this = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-        var userMessage, question, _data$choices, _data$choices$, _data$choices$$messag, isH5Dev, _yield$uni$request, _yield$uni$request2, err, res, data, responseContent, _this$parseResponse, _this$parseResponse2, thinkPart, answerPart, _error$data, errorMessage;
+        var userMessage, aiMessage, aiIndex, requestTask;
         return _regenerator.default.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -209,117 +219,93 @@ var _default = {
                   time: _this.getCurrentTime()
                 };
                 _this.messages.push(userMessage);
-                question = _this.inputText;
                 _this.inputText = '';
                 _this.scrollToBottom();
-                _context.prev = 7;
-                _this.loading = true;
-                // 修改环境判断逻辑
-                isH5Dev =  true && uni.getSystemInfoSync().platform === 'h5';
-                _context.next = 12;
-                return uni.request({
-                  url: isH5Dev ? '/api/v1/chat/completions' // 仅H5开发环境使用代理
-                  : 'https://homechat-effassits-popgjiyphu.cn-hangzhou.fcapp.run/v1/chat/completions',
-                  method: 'POST',
-                  header: {
-                    'Content-Type': 'application/json',
-                    'token': "".concat(uni.getStorageSync('token'))
-                  },
-                  withCredentials: isH5Dev,
-                  // 跨域凭证
-                  timeout: 60000,
-                  data: {
-                    messages: [{
-                      role: 'user',
-                      content: question
-                    }],
-                    stream: false
-                  }
-                });
-              case 12:
-                _yield$uni$request = _context.sent;
-                _yield$uni$request2 = (0, _slicedToArray2.default)(_yield$uni$request, 2);
-                err = _yield$uni$request2[0];
-                res = _yield$uni$request2[1];
-                // 添加网络诊断日志
-                console.log('当前环境:', "development");
-                if (!err) {
-                  _context.next = 19;
-                  break;
-                }
-                throw {
-                  errMsg: "\u8BF7\u6C42\u5931\u8D25: ".concat(err.errMsg)
-                };
-              case 19:
-                if (!(res.statusCode !== 200)) {
-                  _context.next = 21;
-                  break;
-                }
-                throw {
-                  errMsg: "HTTP\u9519\u8BEF: ".concat(res.statusCode),
-                  data: res.data // 传递原始响应数据
-                };
-              case 21:
-                data = res.data; // 获取响应数据
-                // 处理业务逻辑错误
-                if ((_data$choices = data.choices) !== null && _data$choices !== void 0 && (_data$choices$ = _data$choices[0]) !== null && _data$choices$ !== void 0 && (_data$choices$$messag = _data$choices$.message) !== null && _data$choices$$messag !== void 0 && _data$choices$$messag.content) {
-                  _context.next = 24;
-                  break;
-                }
-                throw {
-                  data: {
-                    errorMessage: '无效的响应格式'
-                  }
-                };
-              case 24:
-                // 新增响应处理逻辑
-                responseContent = data.choices[0].message.content;
-                _this$parseResponse = _this.parseResponse(responseContent), _this$parseResponse2 = (0, _slicedToArray2.default)(_this$parseResponse, 2), thinkPart = _this$parseResponse2[0], answerPart = _this$parseResponse2[1]; // 添加思考消息
-                if (thinkPart) {
-                  _this.messages.push({
-                    role: 'think',
-                    content: thinkPart,
+                try {
+                  _this.loading = true;
+                  // 创建AI消息占位
+                  aiMessage = {
+                    role: 'ai',
+                    content: '',
                     time: _this.getCurrentTime()
-                  });
-                }
+                  };
+                  _this.messages.push(aiMessage);
+                  aiIndex = _this.messages.length - 1;
+                  requestTask = uni.request({
+                    url: 'https://homechat-effassits-popgjiyphu.cn-hangzhou.fcapp.run/v1/chat/completions',
+                    method: 'POST',
+                    header: {
+                      'Content-Type': 'application/json',
+                      'token': uni.getStorageSync('token') || '',
+                      'Accept': 'text/event-stream',
+                      'Accept-Charset': 'utf-8'
+                    },
+                    data: {
+                      messages: [{
+                        role: 'user',
+                        content: userMessage.content
+                      }],
+                      stream: true
+                    },
+                    enableChunked: true,
+                    success: function success(res) {
+                      console.log('请求成功:', res);
+                      if (!res.data) {
+                        _this.handleError('响应数据为空');
+                        return;
+                      }
 
-                // 添加回答消息
-                _this.messages.push({
-                  role: 'ai',
-                  content: answerPart || responseContent,
-                  // 兼容无标记的情况
-                  time: _this.getCurrentTime()
-                });
-                _context.next = 34;
-                break;
-              case 30:
-                _context.prev = 30;
-                _context.t0 = _context["catch"](7);
-                errorMessage = ((_error$data = _context.t0.data) === null || _error$data === void 0 ? void 0 : _error$data.errorMessage) || _context.t0.errMsg || '请求失败';
-                _this.messages.push({
-                  role: 'ai',
-                  content: "\u51FA\u9519\u5566\uFF1A".concat(errorMessage),
-                  time: _this.getCurrentTime()
-                });
-              case 34:
-                _context.prev = 34;
-                _this.loading = false;
-                _this.scrollToBottom();
-                return _context.finish(34);
-              case 38:
+                      // 判断是否为H5环境（非流式数据）
+                      if (typeof res.data === 'string') {
+                        _this.processH5Response(res.data, aiIndex);
+                        return;
+                      }
+
+                      // 微信小程序流式处理
+                      if (res.data && typeof res.data.on === 'function') {
+                        var buffer = '';
+                        var decoder = new TextDecoder('utf-8');
+                        res.data.on('data', function (chunk) {
+                          try {
+                            var text = decoder.decode(chunk, {
+                              stream: true
+                            });
+                            buffer += text;
+                            _this.processStreamData(buffer, aiIndex);
+                          } catch (e) {
+                            console.error('处理数据块出错:', e);
+                          }
+                        });
+                        res.data.on('end', function () {
+                          _this.loading = false;
+                        });
+                        res.data.on('error', function (err) {
+                          _this.handleError('数据流错误');
+                        });
+                      }
+                    },
+                    fail: function fail(err) {
+                      _this.handleError("\u8BF7\u6C42\u5931\u8D25: ".concat(err.errMsg));
+                    }
+                  });
+                  _this.requestTask = requestTask;
+                } catch (error) {
+                  console.error('捕获到异常:', error);
+                  _this.handleError("\u7CFB\u7EDF\u9519\u8BEF: ".concat(error.message));
+                }
+              case 7:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[7, 30, 34, 38]]);
+        }, _callee);
       }))();
     },
-    // 获取当前时间（HH:MM）
+    // 其他方法保持不变
     getCurrentTime: function getCurrentTime() {
       var now = new Date();
       return "".concat(now.getHours(), ":").concat(now.getMinutes().toString().padStart(2, '0'));
     },
-    // 滚动到底部
     scrollToBottom: function scrollToBottom() {
       var _this2 = this;
       this.$nextTick(function () {
@@ -333,19 +319,94 @@ var _default = {
         });
       });
     },
-    // 新增响应解析方法
-    parseResponse: function parseResponse(content) {
-      try {
-        // 优化后的正则表达式，支持跨行匹配和标签格式变化
-        var thinkPattern = /think\s*([\s\S]*?)\s*answer/i;
-        var answerPattern = /answer\s*([\s\S]*)/i;
-        var thinkMatch = content.match(thinkPattern);
-        var answerMatch = content.match(answerPattern);
-        return [thinkMatch ? thinkMatch[1].trim() : null, answerMatch ? answerMatch[1].trim() : content];
-      } catch (_unused) {
-        return [null, content];
+    // 修改语音识别管理器初始化
+    initVoiceManager: function initVoiceManager() {
+      var _this3 = this;
+      if (uni.getSystemInfoSync().platform === 'mp-weixin' && manager) {
+        manager.onStart = function (res) {
+          console.log("成功开始录音识别", res);
+        };
+        manager.onStop = function (res) {
+          console.log("录音文件路径:", res.tempFilePath);
+          console.log("识别结果:", res.result);
+          if (res.result) {
+            _this3.inputText = res.result;
+            _this3.sendMessage();
+          }
+        };
+        manager.onError = function (res) {
+          console.error("语音识别错误:", res.msg);
+          uni.showToast({
+            title: '语音识别失败',
+            icon: 'none'
+          });
+        };
       }
+    },
+    processStreamData: function processStreamData(buffer, aiIndex) {
+      var _this4 = this;
+      var currentContent = this.messages[aiIndex].content || '';
+      // 使用正则表达式分割多个换行符
+      var events = buffer.split(/\n\n+/);
+      buffer = events.pop() || '';
+      events.forEach(function (event) {
+        if (event.startsWith('data: ')) {
+          var data = event.substring(6).trim();
+          if (data === '[DONE]') {
+            _this4.loading = false;
+            return;
+          }
+          try {
+            var _json$choices, _json$choices$, _json$choices$$delta;
+            var json = JSON.parse(data);
+            var content = ((_json$choices = json.choices) === null || _json$choices === void 0 ? void 0 : (_json$choices$ = _json$choices[0]) === null || _json$choices$ === void 0 ? void 0 : (_json$choices$$delta = _json$choices$.delta) === null || _json$choices$$delta === void 0 ? void 0 : _json$choices$$delta.content) || '';
+            if (content) {
+              currentContent += content;
+              _this4.messages[aiIndex].content = currentContent;
+              // 每次拼接后强制刷新视图
+              _this4.$nextTick(function () {
+                _this4.$forceUpdate();
+                _this4.scrollToBottom();
+              });
+            }
+          } catch (e) {
+            console.error('解析JSON失败:', e, '原始数据:', data);
+          }
+        }
+      });
+    },
+    processH5Response: function processH5Response(data, aiIndex) {
+      var _this5 = this;
+      var accumulatedContent = '';
+      // 使用正则表达式分割多个换行符
+      var events = data.split(/\n\n+/);
+      events.forEach(function (event) {
+        if (event.startsWith('data: ')) {
+          var jsonStr = event.substring(6).trim();
+          if (jsonStr === '[DONE]') {
+            _this5.loading = false;
+            return;
+          }
+          try {
+            var _json$choices2, _json$choices2$, _json$choices2$$delta;
+            var json = JSON.parse(jsonStr);
+            var content = ((_json$choices2 = json.choices) === null || _json$choices2 === void 0 ? void 0 : (_json$choices2$ = _json$choices2[0]) === null || _json$choices2$ === void 0 ? void 0 : (_json$choices2$$delta = _json$choices2$.delta) === null || _json$choices2$$delta === void 0 ? void 0 : _json$choices2$$delta.content) || '';
+            if (content) {
+              accumulatedContent += content;
+              _this5.messages[aiIndex].content = accumulatedContent;
+              _this5.$forceUpdate();
+              _this5.scrollToBottom();
+            }
+          } catch (e) {
+            console.error('解析JSON失败:', e, '原始数据:', jsonStr);
+          }
+        }
+      });
+      this.loading = false;
     }
+  },
+  mounted: function mounted() {
+    this.initVoiceManager();
   }
 };
 exports.default = _default;

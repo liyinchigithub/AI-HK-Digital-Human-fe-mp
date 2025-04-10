@@ -20018,6 +20018,12 @@ var _default = {
   "easycom": {
     "^u-(.*)": "@/uni_modules/uview-ui/components/u-$1/u-$1.vue"
   },
+  "plugins": {
+    "WechatSI": {
+      "version": "0.3.1",
+      "provider": "wx069ba97219f66d99"
+    }
+  },
   "pages": [{
     "path": "pages/home/home",
     "style": {
@@ -20033,6 +20039,7 @@ var _default = {
   }, {
     "path": "pages/aiDeigtalHuman/aiDeigtalHuman",
     "style": {
+      "navigationStyle": "custom",
       "navigationBarTitleText": "AI数字人",
       "enablePullDownRefresh": false
     }
@@ -20177,11 +20184,6 @@ var _default = {
       "selectedIconPath": "static/image/aiSelected.png",
       "text": ""
     }, {
-      "pagePath": "pages/aiDeigtalHuman/aiDeigtalHuman",
-      "iconPath": "static/image/order.png",
-      "selectedIconPath": "static/image/orderSelected.png",
-      "text": "数字人"
-    }, {
       "pagePath": "pages/my/my",
       "iconPath": "static/image/my.png",
       "selectedIconPath": "static/image/mySelected.png",
@@ -20235,80 +20237,178 @@ var _default = {
   "pages": {
     "pages/home/home": {
       "navigationBarTitleText": "上上吉",
-      "enablePullDownRefresh": true
+      "enablePullDownRefresh": true,
+      "usingComponents": {
+        "mo-fab": "/components/mo-fab/mo-fab",
+        "mo-fab-tab": "/components/mo-fab/mo-fab-tabbar"
+      },
+      "usingAutoImportComponents": {}
     },
     "pages/home/home2": {
       "navigationBarTitleText": "",
-      "enablePullDownRefresh": true
+      "enablePullDownRefresh": true,
+      "usingComponents": {},
+      "usingAutoImportComponents": {}
     },
     "pages/aiDeigtalHuman/aiDeigtalHuman": {
+      "navigationStyle": "custom",
       "navigationBarTitleText": "AI数字人",
-      "enablePullDownRefresh": false
+      "enablePullDownRefresh": false,
+      "usingComponents": {},
+      "usingAutoImportComponents": {}
     },
     "pages/my/my": {
       "navigationBarTitleText": "个人中心",
-      "enablePullDownRefresh": true
+      "enablePullDownRefresh": true,
+      "usingComponents": {},
+      "usingAutoImportComponents": {
+        "u-row": "/uni_modules/uview-ui/components/u-row/u-row",
+        "u-col": "/uni_modules/uview-ui/components/u-col/u-col",
+        "u-popup": "/uni_modules/uview-ui/components/u-popup/u-popup",
+        "u-button": "/uni_modules/uview-ui/components/u-button/u-button"
+      }
     },
     "pages/common/webview/webview": {
       "navigationBarTitleText": "",
-      "enablePullDownRefresh": false
+      "enablePullDownRefresh": false,
+      "usingComponents": {},
+      "usingAutoImportComponents": {}
     },
     "uni_modules/uni-feedback/pages/opendb-feedback/opendb-feedback": {
       "navigationBarTitleText": "意见反馈",
-      "enablePullDownRefresh": false
+      "enablePullDownRefresh": false,
+      "usingComponents": {},
+      "usingAutoImportComponents": {
+        "uni-file-picker": "/uni_modules/uni-file-picker/components/uni-file-picker/uni-file-picker",
+        "uni-easyinput": "/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput"
+      }
     },
     "uni_modules/uni-pay/pages/success/success": {
       "backgroundColor": "#F8F8F8",
-      "navigationBarTitleText": "支付成功"
+      "navigationBarTitleText": "支付成功",
+      "usingComponents": {},
+      "usingAutoImportComponents": {
+        "ad-interactive": "/node-modules/@dcloudio/uni-cli-shared/components/ad-interactive"
+      },
+      "genericComponents": ["success-ad-interactive-default"]
     },
     "uni_modules/uni-pay/pages/ad-interactive-webview/ad-interactive-webview": {
       "backgroundColor": "#F8F8F8",
-      "navigationBarTitleText": "ad"
+      "navigationBarTitleText": "ad",
+      "usingComponents": {},
+      "usingAutoImportComponents": {}
     },
     "uni_modules/uni-pay/pages/pay-desk/pay-desk": {
       "backgroundColor": "#F8F8F8",
-      "navigationBarTitleText": "收银台"
+      "navigationBarTitleText": "收银台",
+      "usingComponents": {},
+      "usingAutoImportComponents": {
+        "uni-list": "/uni_modules/uni-list/components/uni-list/uni-list",
+        "uni-list-item": "/uni_modules/uni-list/components/uni-list-item/uni-list-item",
+        "uni-pay": "/uni_modules/uni-pay/components/uni-pay/uni-pay"
+      }
     },
     "pages/business/payOrder/payOrder": {
-      "navigationBarTitleText": "支付页面"
+      "navigationBarTitleText": "支付页面",
+      "usingComponents": {},
+      "usingAutoImportComponents": {
+        "u-overlay": "/uni_modules/uview-ui/components/u-overlay/u-overlay",
+        "uni-pay": "/uni_modules/uni-pay/components/uni-pay/uni-pay",
+        "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
+        "u-row": "/uni_modules/uview-ui/components/u-row/u-row",
+        "u-col": "/uni_modules/uview-ui/components/u-col/u-col",
+        "u--image": "/uni_modules/uview-ui/components/u--image/u--image",
+        "u-divider": "/uni_modules/uview-ui/components/u-divider/u-divider",
+        "u-button": "/uni_modules/uview-ui/components/u-button/u-button",
+        "u-back-top": "/uni_modules/uview-ui/components/u-back-top/u-back-top"
+      }
     },
     "pages/business/payOrderResult/payOrderResult": {
-      "navigationBarTitleText": "支付结果"
+      "navigationBarTitleText": "支付结果",
+      "usingComponents": {},
+      "usingAutoImportComponents": {
+        "u-cell-group": "/uni_modules/uview-ui/components/u-cell-group/u-cell-group",
+        "u-cell": "/uni_modules/uview-ui/components/u-cell/u-cell",
+        "u-row": "/uni_modules/uview-ui/components/u-row/u-row",
+        "u-col": "/uni_modules/uview-ui/components/u-col/u-col",
+        "u-button": "/uni_modules/uview-ui/components/u-button/u-button"
+      }
     },
     "pages/business/webView/webView": {
       "navigationBarTitleText": "",
-      "enablePullDownRefresh": false
+      "enablePullDownRefresh": false,
+      "usingComponents": {},
+      "usingAutoImportComponents": {}
     },
     "pages/business/articlesAgreement/articlesAgreement": {
       "navigationBarTitleText": "平台入驻服务协议",
-      "enablePullDownRefresh": false
+      "enablePullDownRefresh": false,
+      "usingComponents": {},
+      "usingAutoImportComponents": {
+        "u-overlay": "/uni_modules/uview-ui/components/u-overlay/u-overlay"
+      }
     },
     "pages/business/login/login": {
       "navigationBarTitleText": "登录",
-      "enablePullDownRefresh": false
+      "enablePullDownRefresh": false,
+      "usingComponents": {},
+      "usingAutoImportComponents": {
+        "u--image": "/uni_modules/uview-ui/components/u--image/u--image",
+        "u--input": "/uni_modules/uview-ui/components/u--input/u--input",
+        "u-button": "/uni_modules/uview-ui/components/u-button/u-button",
+        "u-overlay": "/uni_modules/uview-ui/components/u-overlay/u-overlay"
+      }
     },
     "pages/business/test/test": {
       "navigationBarTitleText": "测试",
-      "enablePullDownRefresh": false
+      "enablePullDownRefresh": false,
+      "usingComponents": {
+        "update-file": "/components/updateFile/updateFile"
+      },
+      "usingAutoImportComponents": {
+        "uni-pay": "/uni_modules/uni-pay/components/uni-pay/uni-pay",
+        "update-file": "/components/updateFile/updateFile"
+      }
     },
     "pages/business/pay/pay": {
       "navigationBarTitleText": "支付",
-      "enablePullDownRefresh": false
+      "enablePullDownRefresh": false,
+      "usingComponents": {},
+      "usingAutoImportComponents": {
+        "uni-pay": "/uni_modules/uni-pay/components/uni-pay/uni-pay"
+      }
     },
     "pages/business/about/about": {
-      "navigationBarTitleText": "关于我们"
+      "navigationBarTitleText": "关于我们",
+      "usingComponents": {},
+      "usingAutoImportComponents": {}
     },
     "pages/business/feedback/feedback": {
-      "navigationBarTitleText": "意见反馈"
+      "navigationBarTitleText": "意见反馈",
+      "usingComponents": {},
+      "usingAutoImportComponents": {
+        "u--form": "/uni_modules/uview-ui/components/u--form/u--form",
+        "u-form-item": "/uni_modules/uview-ui/components/u-form-item/u-form-item",
+        "u--textarea": "/uni_modules/uview-ui/components/u--textarea/u--textarea",
+        "u--input": "/uni_modules/uview-ui/components/u--input/u--input",
+        "uni-file-picker": "/uni_modules/uni-file-picker/components/uni-file-picker/uni-file-picker",
+        "u-button": "/uni_modules/uview-ui/components/u-button/u-button"
+      }
     },
     "pages/business/feedback/feedbackRecord": {
-      "navigationBarTitleText": "意见反馈记录"
+      "navigationBarTitleText": "意见反馈记录",
+      "usingComponents": {},
+      "usingAutoImportComponents": {}
     },
     "pages/business/serviceAgreement/serviceAgreement": {
-      "navigationBarTitleText": "服务协议"
+      "navigationBarTitleText": "服务协议",
+      "usingComponents": {},
+      "usingAutoImportComponents": {}
     },
     "pages/business/disclaimer/disclaimer": {
-      "navigationBarTitleText": "责任声明"
+      "navigationBarTitleText": "责任声明",
+      "usingComponents": {},
+      "usingAutoImportComponents": {}
     }
   },
   "globalStyle": {
@@ -44133,9 +44233,7 @@ exports.default = _default;
 /* 219 */,
 /* 220 */,
 /* 221 */,
-/* 222 */,
-/* 223 */,
-/* 224 */
+/* 222 */
 /*!**********************************************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uni-feedback/js_sdk/validator/opendb-feedback.js ***!
   \**********************************************************************************************************************************/
@@ -44256,15 +44354,15 @@ function filterToWhere(filter, command) {
 }
 
 /***/ }),
+/* 223 */,
+/* 224 */,
 /* 225 */,
 /* 226 */,
 /* 227 */,
 /* 228 */,
 /* 229 */,
 /* 230 */,
-/* 231 */,
-/* 232 */,
-/* 233 */
+/* 231 */
 /*!**********************************************************************************************************!*\
   !*** /Users/liyinchi/workspace/前端/Dcolud/AI-HK-Digital-Human-fe-mp/uni_modules/uni-pay/js_sdk/js_sdk.js ***!
   \**********************************************************************************************************/
@@ -44385,6 +44483,8 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
+/* 232 */,
+/* 233 */,
 /* 234 */,
 /* 235 */,
 /* 236 */,
@@ -44405,9 +44505,7 @@ exports.default = _default;
 /* 251 */,
 /* 252 */,
 /* 253 */,
-/* 254 */,
-/* 255 */,
-/* 256 */
+/* 254 */
 /*!**************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vuex3/dist/vuex.common.js ***!
   \**************************************************************************************/
@@ -45663,6 +45761,8 @@ module.exports = index_cjs;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 3)))
 
 /***/ }),
+/* 255 */,
+/* 256 */,
 /* 257 */,
 /* 258 */,
 /* 259 */,
